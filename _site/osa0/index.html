@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>osa 0</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/osa0/">
+  <link rel="alternate" type="application/rss+xml" title="Full stack open" href="/feed.xml">
+  
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Full stack open</a>
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">osa 0</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="yleistä">Yleistä</h2>
+
+<p>Kurssilla tutustutaan Javascriptilla tapahtuvaan moderniin websovelluskehitykseen. Pääpaino on React-kirjaston avulla toteutettavissa single page -sovelluksissa, ja niitä tukevissa Node.js:llä toteutetuissa REST-rajapinnoissa.</p>
+
+<p>Kurssilla käsitellään myös sovellusten testaamista, konfigurointia ja suoritusympäristöjen hallintaa sekä NoSQL-tietokantoja.</p>
+
+<h2 id="oletetut-esitiedot">Oletetut esitiedot</h2>
+
+<p>Osallistujilta edellytetään vahvaa ohjelmointirutiinia, web-ohjelmoinnin ja tietokantojen perustuntemusta (esim. opintojakson Tietokantasovellus-suoritusta) sekä valmiutta omatoimiseen tiedonhakuun.</p>
+
+<p>Kurssille osallistuminen ei edellytä käsiteltyjen tekniikoiden tai Javascript-kielen hallintaa.</p>
+
+<h2 id="kurssimateriaali">Kurssimateriaali</h2>
+
+<p>Kurssimateriaali on tarkoitettu luettavaksi osa kerrallaan “alusta loppuun”. Materiaalin seassa on tehtäviä, jotka on sijoiteltu siten, että kunkin tehtävän tekemiseen pitäsi olla riittävät tekniset valmiudet sitä edeltävässä materiaalissa. Voit siis tehdä tehtäviä sitä mukaan kun niitä tulee materiaalissa vastaan. Voi myös olla, että koko osan tehtävät kannattaa tehdä vasta luettuaan ensin osan alusta loppuun kertaalleen. Useissa osissa tehtävät ovat samaa ohjelmaa laajentavia pienistä osista koostuvia kokonaisuuksia. Muutamia tehtävien ohjelmia kehitetään eteenpäin useamman osan aikana.</p>
+
+<p>Materiaali perustuu muutamien osasta osaan vaihtuvien esimerkkiohjelmien asteittaiseen laajentamiseen. Materiaali toiminee parhaiten, jos kirjoitat samalla koodin myös itse ja teet koodiin myös pieniä modifikaatioita. Materiaalin käyttämien ohjelmien koodin eri vaiheiden tilanteita on tallennettu Githubiin.</p>
+
+<h2 id="suoritustapa">Suoritustapa</h2>
+
+<p>Kurssi koostuu kahdeksasta osasta, joista ensimmäinen on historiallisista syistä numero nolla. Osat voi tulkita löyhästi ajatellen viikoiksi. Osia kuitenkin ilmestyy nopeampaa tahtia, ja suoritusnopeuskin on melko vapaa.</p>
+
+<p>Materiaalissa osasta <em>n</em> osaan <em>n+1</em> eteneminen ei ole mielekästä ennen kuin riittävä osaaminen osan <em>n</em> asioista on saavutettu. Kurssilla sovelletaankin pedagogisin termein <em>tavoiteoppimista</em>, <a href="https://en.wikipedia.org/wiki/Mastery_learning">engl. mastery learning</a> ja on tarkoitus, että etenet seuraavaan osaan vasta, kun riittävä määrä (noin 80%) edellisen osan tehtävistä on tehty. Jokaisen osan <em>vapaaehtoiset</em> (mutta arvosteluun vaikuttavat) tehtävät on merkattu tähdellä.</p>
+
+<p>Estääksemme sen, että aloitat kurssin tekemisen vasta viimeisellä viikolla, on jokaisella osalla  myös hard deadline. Etenemiselle on siis jonkun verran joustoa, jotta ehdit tekemään kustakin osasta tarvittavan määrän tehtäviä.</p>
+
+<p>Osien <em>hard deadlinet</em> ja arvioidut keskimääräiset (kaikkien tehtävien tekemisen vaatimat) työmäärät seuraavassa:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>osa</th>
+      <th style="text-align: center">deadline   </th>
+      <th style="text-align: center">työmäärä</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>osa 0 ja osa 1</td>
+      <td style="text-align: center">30.1.</td>
+      <td style="text-align: center">11</td>
+    </tr>
+    <tr>
+      <td>osa 2</td>
+      <td style="text-align: center">5.2.</td>
+      <td style="text-align: center">11</td>
+    </tr>
+    <tr>
+      <td>osa 3</td>
+      <td style="text-align: center">12.2.</td>
+      <td style="text-align: center">10</td>
+    </tr>
+    <tr>
+      <td>osa 4</td>
+      <td style="text-align: center">25.2.</td>
+      <td style="text-align: center">14</td>
+    </tr>
+    <tr>
+      <td>osa 5</td>
+      <td style="text-align: center">4.3.</td>
+      <td style="text-align: center">16.5</td>
+    </tr>
+    <tr>
+      <td>osa 6</td>
+      <td style="text-align: center">11.3.</td>
+      <td style="text-align: center">13</td>
+    </tr>
+    <tr>
+      <td>osa 7</td>
+      <td style="text-align: center">11.3.</td>
+      <td style="text-align: center">13</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Keskimääräisten työmäärien arvio perustuu kurssin <a href="https://mluukkai.github.io">betaversiota</a> joululoman aikana testanneilta 15:lta opiskelijalta kerättyyn dataan. Kannattaa huomata, että työmäärissä on suuri varianssi, esim. osan 0 ja 1 yhteenlaskettu ajankäyttö vaihteli 5 ja 20 tunnin väliltä.</p>
+
+<p>Tämän kurssin eri osiin jo tehtyjen palautusten ajankäyttöstatistiikan näet <a href="https://studies.cs.helsinki.fi/fs-stats/">tehtävien palautussivulta</a>.</p>
+
+<p>Suuri jousto suoritusajoissa tuo opiskelijalle entistä suuremman vastuun omasta ajankäytöstä. Nyt ilmoitetuista deadlineista <strong>ei jousteta ollenkaan</strong>. Kannattaa muistaa se, että mitä lähempänä deadlinea tehtävien tekemisen aloittaa, sitä suurempi vaara on joutua eriasteisiin konfiguraatiohelvetteihin. Apuakin on rajallisemmin tarjolla kun kello lähenee deadlinepäivän keskiyötä.</p>
+
+<h2 id="arvosteluperusteet">Arvosteluperusteet</h2>
+
+<p>Arvosana määräytyy kaikkien tehtyjen tehtävien perusteella, myös tähdellä merkityt “vapaavalintaiset” tehtävät siis vaikuttavat arvosanaan. Noin 50% deadlineen mennessä tehdyistä tehtävistä tuo arvosanan 1 ja 80% arvosanan 5. Kurssin lopussa on koe, joka on suoritettava hyväksytysti. Koe ei kuitenkaan vaikuta arvosanaan.</p>
+
+<p>Kurssilta on mahdollisuus ansaita lisäopintopisteitä. Jos teet 87.5% kurssin tehtävistä, saat yhden lisäopintopisteen. Tekemällä 95% tehtävistä saat 2 lisäopintopistettä. Opetushallinnollisista syistä lisäopintopisteet rekisteröidään omana kurssinaan. Kurssin nimi määritellään myöhemmin.</p>
+
+<h2 id="arvosanarajat">Arvosanarajat</h2>
+
+<p>Kurssilla on yhteensä 149 tehtävää. Tehtävien maksimimääräksi lasketaan kuitenkin 141, sillä osan 7 tehtävistä kaikki eivät vaikuta arvosteluun.</p>
+
+<p>Arvosanarajat:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>tehtävää   </th>
+      <th style="text-align: center">arvosana </th>
+      <th style="text-align: center">op</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>70</td>
+      <td style="text-align: center">1/5</td>
+      <td style="text-align: center">5</td>
+    </tr>
+    <tr>
+      <td>81</td>
+      <td style="text-align: center">2/5</td>
+      <td style="text-align: center">5</td>
+    </tr>
+    <tr>
+      <td>92</td>
+      <td style="text-align: center">3/5</td>
+      <td style="text-align: center">5</td>
+    </tr>
+    <tr>
+      <td>103</td>
+      <td style="text-align: center">4/5</td>
+      <td style="text-align: center">5</td>
+    </tr>
+    <tr>
+      <td>113</td>
+      <td style="text-align: center">5/5</td>
+      <td style="text-align: center">5</td>
+    </tr>
+    <tr>
+      <td>124</td>
+      <td style="text-align: center">hyv</td>
+      <td style="text-align: center">6</td>
+    </tr>
+    <tr>
+      <td>134</td>
+      <td style="text-align: center">hyv</td>
+      <td style="text-align: center">7</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Ylimääräiset opintopisteet tullaan kirjaamaan kaikille arvosanalla “hyväksytty”.</p>
+
+<h2 id="alkutoimet">Alkutoimet</h2>
+
+<p>Tällä kurssilla suositellaan Chrome-selaimen käyttöä, sillä se tarjoaa parhaan välineistön web-sovelluskehitystä ajatellen.</p>
+
+<p>Kurssin tehtävät palautetaan GitHubiin, joten Git tulee olla asennettuna ja sitä on syytä osata käyttää.</p>
+
+<p>Asenna myös joku järkevä webkoodausta tukeva tekstieditori, enemmän kuin suositeltava valinta on <a href="https://code.visualstudio.com/">Visual studio code</a>. Myös <a href="https://atom.io/">Atom</a> on tarkoitukseen toimiva.</p>
+
+<p>Älä koodaa nanolla, Notepadilla tai Geditillä. NetBeanskaan ei ole omimmillaan Web-koodauksessa ja se on myös turhan raskas verrattuna esim. Visual Studio Codeen.</p>
+
+<p>Asenna koneeseesi heti myös <a href="https://nodejs.org/en/">Node.js</a>. Materiaali on tehty versiolla 8.6, älä asenna mitään sitä vanhempaa versiota.</p>
+
+<p>Asennusohjeita on koottu <a href="/asennusohjeita">tänne</a>.</p>
+
+<p>Noden myötä koneelle asentuu myös Node package manager <a href="https://www.npmjs.com/get-npm">npm</a>, jota tulemme tarvitsemaan kurssin aikana aktiivisesti. Tuoreen noden kera asentuu myös <a href="https://www.npmjs.com/package/npx">npx</a>, jota tarvitaan myös muutaman kerran.</p>
+
+<h2 id="typoja-materiaalissa">Typoja materiaalissa</h2>
+
+<p>Kurssilla on paljon materiaalia ja se on olosuhteiden pakosta kirjoitettu todella nopeasti. Materiaalissa on betatestauksesta ja oikoluvuista huolimatta kirjoitusvirheitä. Jos löydät kirjoitusvirheen tai joku asia on sanottu epäselvästi tai kielioppisääntöjen vastaisesti, tee <em>pull request</em> repositoriossa <a href="https://github.com/FullStack-HY/FullStack-Hy.github.io">https://github.com/FullStack-HY/FullStack-Hy.github.io</a> olevaan kurssimateriaaliin.</p>
+
+<p>Pull requestin tekeminen on helppoa. Esim. jos tällä sivulla on typo, mene sivun “lähdekoodiin” https://github.com/FullStack-HY/FullStack-Hy.github.io/blob/master/osa0.md klikkaa kynän kuvaa oikealta, tee muutokset ja klikkaa muutama kerta “vihreää” <a href="https://github.com/mluukkai/ohjelmistotuotanto2017/blob/master/laskarit/2.md#typokorjauksia--vinkkejä">Ohtu-kurssin ohjeen mukaan</a>.</p>
+
+<h2 id="osan-0-oppimistavoitteet">Osan 0 oppimistavoitteet</h2>
+
+<ul>
+  <li>Web-sovellusten toiminnan perusteet
+    <ul>
+      <li>HTML:n perusteet</li>
+      <li>HTTP-protokolla: metodit GET ja POST, statuskoodit, headerit</li>
+      <li>palvelimella suoritettavan koodin rooli</li>
+      <li>selaimessa suoritettavan Javascriptin rooli</li>
+      <li>JSON-muotoinen data</li>
+      <li>DOM API</li>
+      <li>sivujen ulkoasun muotoilun periaate CSS:llä</li>
+      <li>single page app -periaate</li>
+      <li>Chrome developer konsolin peruskäyttö</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="web-sovelluksen-toimintaperiaatteita">Web-sovelluksen toimintaperiaatteita</h2>
+
+<p>Ennen kuin aloitamme ohjelmoinnin, käymme läpi web-sovellusten toimintaperiaatteita tarkastelemalla osoitteessa <a href="https://fullstack-exampleapp.herokuapp.com/">https://fullstack-exampleapp.herokuapp.com/</a> olevaa esimerkkisovellusta. Huom. sovelluksen toinen versio on osoitteessa <a href="https://exampleapp-ghqykidlgq.now.sh/">https://exampleapp-ghqykidlgq.now.sh/</a>, voit käyttää kumpaa vaan.</p>
+
+<p>Sovelluksen olemassaolon tarkoitus on ainoastaan havainnollistaa kurssin peruskäsitteistöä, sovellus ei ole missään tapauksessa esimerkki siitä <em>miten</em> web-sovelluksia kannattaisi kehittää, päinvastoin, sovellus demonstroi eräitä historiallisia web-sovellusten toteutukseen käytettäjä tapoja ja tekniikoita, joiden  katsotaan nykyään olevan jopa <em>huonoja käytänteitä</em>.</p>
+
+<p>Kurssin suosittelemaa tyyliä noudattavan koodin kirjoittaminen alkaa <a href="/osa1">osasta 1</a>.</p>
+
+<p>Käytä nyt ja <em>koko ajan</em> tämän kurssin aikana Chrome-selainta.</p>
+
+<p>Avataan selaimella <a href="https://fullstack-exampleapp.herokuapp.com/">esimerkkisovellus</a>. Sivun ensimmäinen lataus kestää joskus hetken.</p>
+
+<div class="important">
+  <h3>Web-sovelluskehityksen sääntö numero yksi</h3>
+  Pidä selaimen developer-konsoli koko ajan auki
+</div>
+
+<p>Konsoli avautuu macilla painamalla yhtä aikaa <em>alt</em> <em>cmd</em> ja <em>i</em>.</p>
+
+<p>Ennen kun jatkat eteenpäin, selvitä miten saat koneellasi konsolin auki (googlaa tarvittaessa) ja muista pitää se auki <em>aina</em> kun teet web-sovelluksia.</p>
+
+<p>Konsoli näyttää seuraavalta:
+<img src="http://localhost:4000/images/1/1.png" alt="" /></p>
+
+<p>Varmista, että välilehti <em>Network</em> on avattuna ja aktivoi valinta <em>Disable cache</em> kuten kuvassa on tehty. Myös <em>Preserve logs</em> on joskus hyödyllinen, se säilyttää sovelluksen tulostamat logit sivujen uudelleenlatauksen yhteydessä.</p>
+
+<p><strong>HUOM:</strong> konsolin tärkein välilehti on <em>Console</em>. Käytämme nyt johdanto-osassa kuitenkin ensin melko paljon välilehteä <em>Network</em>.</p>
+
+<h3 id="http-get">HTTP GET</h3>
+
+<p>Selain ja web-palvelin kommunikoivat keskenään <a href="https://developer.mozilla.org/fi/docs/Web/HTTP">HTTP</a>-protokollaa käyttäen. Avoinna oleva konsolin Network-tabi kertoo miten selain ja palvelin kommunikoivat.</p>
+
+<p>Kun nyt reloadaat sivun, kertoo konsoli, että tapahtuu kaksi asiaa</p>
+<ul>
+  <li>selain hakee web-palvelimelta sivun <em>fullstack-exampleapp.herokuapp.com/</em> sisällön</li>
+  <li>ja lataa kuvan <em>kuva.png</em></li>
+</ul>
+
+<p><img src="http://localhost:4000/images/1/2.png" alt="" /></p>
+
+<p>Jos ruutusi on pieni, saatat joutua isontamaan konsoli-ikkunaa, jotta saat selaimen tekemät haut näkyviin.</p>
+
+<p>Klikkaamalla näistä ensimmäistä, paljastuu tarkempaa tietoa siitä mistä on kyse:</p>
+
+<p><img src="http://localhost:4000/images/1/3.png" alt="" /></p>
+
+<p>Ylimmästä osasta <em>General</em> selviää, että selain teki <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET">GET</a>-metodilla pyynnön osoitteeseen <em>https://fullstack-exampleapp.herokuapp.com/</em> ja että pyyntö oli onnistunut, sillä pyyntöön saatiin vastaus, jonka <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">Status code</a> on 200.</p>
+
+<p>Pyyntöön ja palvelimen lähettämään vastaukseen liittyy erinäinen määrä otsakkeita eli <a href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields">headereita</a>:</p>
+
+<p><img src="http://localhost:4000/images/1/4.png" alt="" /></p>
+
+<p>Ylempänä oleva <em>Response headers</em> kertoo mm. vastauksen koon tavuina ja vastaushetken. Tärkeä headeri <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</a> kertoo, että vastaus on <a href="https://en.wikipedia.org/wiki/UTF-8">utf-8</a>-muodossa oleva tekstitiedosto, jonka sisältö on muotoiltu HTML:llä. Näin selain tietää, että kyseessä on normaali <a href="https://en.wikipedia.org/wiki/HTML">HTML</a>-sivu, joka tulee renderöidä käyttäjän selaimeen “websivun tavoin”.</p>
+
+<p>Välilehti <em>Preview</em> näyttää, miltä pyyntöön vastauksena lähetetty data näyttää. Kyseessä on siis normaali HTML-sivu, jonka <em>body</em>-osassa määritellään selaimessa näytettävän sivun rakenne:</p>
+
+<p><img src="http://localhost:4000/images/1/5.png" alt="" /></p>
+
+<p>Sivu sisältää <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div">div</a>-elementin, jonka sisällä on otsikko sekä tieto luotujen muistiinpanojen määrästä, linkki sivulle <em>muistiinpanot</em> ja kuvaa vastaava <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</a>-tagi.</p>
+
+<p>img-tagin ansiosta selain tekee toisenkin <em>HTTP-pyynnön</em>, jonka avulla se hakee kuvan <em>kuva.png</em> palvelimelta. Pyynnön tiedot näyttävät seuraavalta:</p>
+
+<p><img src="http://localhost:4000/images/1/6.png" alt="" /></p>
+
+<p>eli pyyntö on tehty osoitteeseen <em>https://fullstack-exampleapp.herokuapp.com/kuva.png</em> ja se on tyypiltään HTTP GET. Vastaukseen liittyvät headerit kertovat että vastauksen koko on 89350 tavua ja vastauksen <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type">Content-type</a> on <em>image/png</em>, eli kyseessä on png-tyyppinen kuva. Tämän tiedon ansiosta selain tietää, miten kuva on piirrettävä HTML-sivulle.</p>
+
+<h3 id="perinteinen-web-sovellus">Perinteinen web-sovellus</h3>
+
+<p>Esimerkkisovelluksen pääsivu toimii <em>perinteisen web-sovelluksen</em> tapaan. Mentäessä sivulle, selain hakee palvelimelta sivun strukturoinnin ja tekstuaalisen sisällön määrittelevän HTML-dokumentin.</p>
+
+<p>Palvelin on muodostanut dokumentin jollain tavalla. Dokumentti voi olla <em>staattista sisältöä</em> eli palvelimen hakemistossa oleva tekstitiedosto. Dokumentti voi myös olla <em>dynaaminen</em>, eli palvelin voi muodostaa HTML-dokumentit ohjelmakoodin avulla hyödyntäen esim. tietokannassa olevaa dataa. Esimerkkisovelluksessa sivun HTML-koodi on muodostettu dynaamisesti, sillä se sisältää tiedon luotujen muistiinpanojen lukumäärästä.</p>
+
+<p>Etusivun muodostama koodi näyttää seuraavalta:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">getFrontPageHtml</span> <span class="o">=</span> <span class="p">(</span><span class="nx">noteCount</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span><span class="s2">`
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+      &lt;head&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;div class="container"&gt;
+          &lt;h1&gt;Full stack -esimerkkisovellus&lt;/h1&gt;
+          &lt;p&gt;muistiinpanoja luotu </span><span class="p">${</span><span class="nx">noteCount</span><span class="p">}</span><span class="s2"> kappaletta&lt;/p&gt;
+          &lt;a href="/notes"&gt;muistiinpanot&lt;/a&gt;
+          &lt;img src="kuva.png" width="200" /&gt;
+        &lt;/div&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+  `</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">page</span> <span class="o">=</span> <span class="nx">getFrontPageHtml</span><span class="p">(</span><span class="nx">notes</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">page</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<p>Koodia ei tarvitse vielä ymmärtää, mutta käytännössä HTML-sivun sisältö on talletettu ns. template stringinä, eli merkkijonona, jonka sekaan on mahdollisuus evaluoida esim. muuttujien arvoja. Etusivun dynaamisesti muuttuva osa, eli muistiinpanojen lukumäärä (koodissa <em>noteCount</em>) korvataan template stringissä sen hetkisellä konkreettisella lukuarvolla (koodissa <em>notes.length</em>).</p>
+
+<p>HTML:n kirjoittaminen suoraan koodin sekaan ei tietenkään ole järkevää, mutta vanhan liiton PHP-ohjelmoijille se oli arkipäivää.</p>
+
+<p>Perinteisissä websovelluksissa selain on “tyhmä”, se ainoastaan pyytää palvelimelta HTML-muodossa olevia sisältöjä, kaikki sovelluslogiikka on palvelimessa. Palvelin voi olla tehty esim. kurssin <a href="https://courses.helsinki.fi/fi/tkt21007/119558639">Web-palvelinohjelmointi</a> tapaan Java Springillä tai<a href="http://tsoha.github.io/#/johdanto#top">Tietokantasovelluksessa</a> PHP:llä tai <a href="http://rubyonrails.org/">Ruby on Railsilla</a>. Esimerkissä on käytetty Node.js:n <a href="https://expressjs.com/">Express</a>-sovelluskehystä. Tulemme käyttämään kurssilla Node.js:ää ja Expressiä web-palvelimen toteuttamiseen.</p>
+
+<h3 id="selaimessa-suoritettava-sovelluslogiikka">Selaimessa suoritettava sovelluslogiikka</h3>
+
+<p>Pidä konsoli edelleen auki. Tyhjennä konsolin näkymä painamalla vasemmalla olevaa ∅-symbolia.</p>
+
+<p>Kun menet nyt <a href="https://fullstack-exampleapp.herokuapp.com/notes">muistiinpanojen</a> sivulle, selain tekee 4 HTTP-pyyntöä:</p>
+
+<p><img src="http://localhost:4000/assets/1/7.png" alt="" /></p>
+
+<p>Kaikki pyynnöt ovat <em>eri tyyppisiä</em>. Ensimmäinen pyyntö on tyypiltään <em>document</em>.
+Kyseessä on sivun HTML-koodi, joka näyttää seuraavalta:</p>
+
+<p><img src="http://localhost:4000/assets/1/8.png" alt="" /></p>
+
+<p>Kun vertaamme, selaimen näyttämää sivua ja pyynnön palauttamaa HTML-koodia, huomaamme, että koodi ei sisällä ollenkaan muistiinpanoja sisältävää listaa.</p>
+
+<p>HTML-koodin <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head">head</a>-osio sisältää <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script</a>-tagin, jonka ansiosta selain lataa <em>main.js</em>-nimisen Javascript-tiedoston palvelimelta.</p>
+
+<p>Ladattu Javascript-koodi näyttää seuraavalta:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">xhttp</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">()</span>
+
+<span class="nx">xhttp</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">==</span> <span class="mi">4</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">responseText</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+
+    <span class="kd">var</span> <span class="nx">ul</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'ul'</span><span class="p">)</span>
+    <span class="nx">ul</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">'class'</span><span class="p">,</span> <span class="s1">'notes'</span><span class="p">)</span>
+
+    <span class="nx">data</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">note</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">li</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'li'</span><span class="p">)</span>
+
+      <span class="nx">ul</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">li</span><span class="p">);</span>
+      <span class="nx">li</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">createTextNode</span><span class="p">(</span><span class="nx">note</span><span class="p">.</span><span class="nx">content</span><span class="p">))</span>
+    <span class="p">})</span>
+
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'notes'</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">ul</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">xhttp</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">'GET'</span><span class="p">,</span> <span class="s1">'/data.json'</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+<span class="nx">xhttp</span><span class="p">.</span><span class="nx">send</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Koodin yksityiskohdat eivät ole tässä osassa oleellisia, koodia on kuitenkin liitetty mukaan tekstin ja kuvien mausteeksi. Pääsemme kunnolla koodin pariin vasta osassa 1. Tämän osan esimerkkisovelluksen koodi ei itseasiassa ole ollenkaan relevanttia kurssilla käytettävien ohjelmointitekniikoiden kannalta.</p>
+
+<blockquote>
+  <p>Joku saattaa ihmetellä miksi käytössä on xhttp-olio eikä modernimpi fetch. Syynä on se, että tässä osassa ei haluta mennä ollenkaan promiseihin ja koodin rooli esimerkissä on muutenkin sekundäärinen. Palaamme osassa 2 uudenaikaisempiin tapoihin tehdä pyyntöjä palvelimelle.</p>
+</blockquote>
+
+<p>Heti ladattuaan <em>script</em>-tagin sisältämän Javascriptin selain suorittaa koodin.</p>
+
+<p>Kaksi viimeistä riviä määrittelevät, että selain tekee GET-tyyppisen HTTP-pyynnön palvelimen osoitteeseen <em>/data.json</em>:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">xhttp</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">'GET'</span><span class="p">,</span> <span class="s1">'/data.json'</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+<span class="nx">xhttp</span><span class="p">.</span><span class="nx">send</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Kyseessä on alin Network tabin näyttämistä selaimen tekemistä pyynnöistä.</p>
+
+<p>Voimme kokeilla mennä osoitteeseen <a href="https://fullstack-exampleapp.herokuapp.com/data.json">https://fullstack-exampleapp.herokuapp.com/data.json</a> suoraan selaimella:</p>
+
+<p><img src="http://localhost:4000/assets/1/9.png" alt="" /></p>
+
+<p>Osoitteesta löytyvät muistiinpanot <a href="https://en.wikipedia.org/wiki/JSON">JSON</a>-muotoisena “raakadatana”. Oletusarvoisesti selain ei osaa näyttää JSON-dataa kovin hyvin, mutta on olemassa lukuisia plugineja, jotka hoitavat muotoilun. Asenna nyt chromeen esim. <a href="https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc">JSONView</a> ja lataa sivu uudelleen. Data on nyt miellyttävämmin muotoiltua:</p>
+
+<p><img src="http://localhost:4000/assets/1/10.png" alt="" /></p>
+
+<p>Ylläoleva muistiinpanojen sivun Javascript-koodi siis lataa muistiinpanot sisältävän JSON-muotoisen datan ja muodostaa datan avulla selaimeen “bulletlistan” muistiinpanojen sisällöstä:</p>
+
+<p>Tämän saa aikaan seuraava koodi:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">responseText</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+
+<span class="kd">var</span> <span class="nx">ul</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'ul'</span><span class="p">)</span>
+<span class="nx">ul</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">'class'</span><span class="p">,</span> <span class="s1">'notes'</span><span class="p">)</span>
+
+<span class="nx">data</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">note</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">li</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'li'</span><span class="p">)</span>
+
+  <span class="nx">ul</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">li</span><span class="p">);</span>
+  <span class="nx">li</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">createTextNode</span><span class="p">(</span><span class="nx">note</span><span class="p">.</span><span class="nx">content</span><span class="p">))</span>
+<span class="p">})</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'notes'</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">ul</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Koodi muodostaa ensin järjestämätöntä listaa edustavan <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul">ul</a>-tagin:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">ul</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'ul'</span><span class="p">)</span>
+<span class="nx">ul</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">'class'</span><span class="p">,</span> <span class="s1">'notes'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>ja lisää ul:n sisään yhden <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li">li</a>-elementin kutakin muistiinpanoa kohti. Ainoastaan muistiinpanon <em>content</em>-kenttä tulee li-elementin sisällöksi, raakadatassa olevia aikaleimoja ei käytetä mihinkään.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">data</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">note</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">li</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'li'</span><span class="p">)</span>
+
+  <span class="nx">ul</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">li</span><span class="p">);</span>
+  <span class="nx">li</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">createTextNode</span><span class="p">(</span><span class="nx">note</span><span class="p">.</span><span class="nx">content</span><span class="p">))</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<p>Avaa nyt konsolin <em>Console</em>-välilehti:</p>
+
+<p><img src="http://localhost:4000/assets/1/11.png" alt="" /></p>
+
+<p>Painamalla rivin alussa olevaa kolmiota saat laajennettua konsolissa olevan rivin:</p>
+
+<p><img src="http://localhost:4000/assets/1/12.png" alt="" /></p>
+
+<p>Konsoliin ilmestynyt tulostus johtuu siitä, että koodiin oli lisätty komento <em>console.log</em>:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">responseText</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>eli vastaanotettuaan datan palvelimelta, koodi tulostaa datan konsoliin.</p>
+
+<p>Konsolin välilehti <em>Console</em> sekä komento <em>console.log</em> tulevat varmasti erittäin tutuiksi kurssin kuluessa.</p>
+
+<h3 id="tapahtumankäsittelijä-ja-takaisinkutsu">Tapahtumankäsittelijä ja takaisinkutsu</h3>
+
+<p>Koodin rakenne on hieman erikoinen:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">xhttp</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">()</span>
+
+<span class="nx">xhttp</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// koodi, joka käsittelee palvelimen vastauksen</span>
+<span class="p">}</span>
+
+<span class="nx">xhttp</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">'GET'</span><span class="p">,</span> <span class="s1">'/data.json'</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+<span class="nx">xhttp</span><span class="p">.</span><span class="nx">send</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>eli palvelimelle tehtävä pyyntö suoritetaan vasta viimeisellä rivillä. Palvelimen vastauksen käsittelyn määrittelevä koodi on kirjoitettu jo aiemmin. Mistä on kyse?</p>
+
+<p>Rivillä</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">xhttp</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</code></pre></div></div>
+
+<p>kyselyn tekevään <code>xhttp</code>-olioon määritellään <em>tapahtumankäsittelijä</em> (event handler) tilanteelle <em>onreadystatechange</em>. Kun kyselyn tekevän olion tila muuttuu, kutsuu selain tapahtumankäsittelijänä olevaa funktiota. Funktion koodi tarkastaa, että <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState">readyState</a>:n arvo on 4 (joka kuvaa tilannetta <em>The operation is complete</em>) ja, että vastauksen HTTP-statuskoodi on onnistumisesta kertova 200.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">xhttp</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">==</span> <span class="mi">4</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// koodi, joka käsittelee palvelimen vastauksen</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Tapahtumankäsittelijöihin liittyvä mekanismi koodin suorittamiseen on Javascriptissä erittäin yleistä. Tapahtumankäsittelijöinä olevia Javascript-funktioita kutsutaan <a href="https://developer.mozilla.org/en-US/docs/Glossary/Callback_function">callback</a>- eli takaisinkutsufunktioiksi sillä sovelluksen koodi ei kutsu niitä itse, vaan suoritusympäristö, eli web-selain suorittaa funktion kutsumisen sopivana ajankohtana, eli kyseisen <em>tapahtuman</em> tapahduttua.</p>
+
+<h3 id="document-object-model-eli-dom">Document Object Model eli DOM</h3>
+
+<p>Voimme ajatella, että HTML-sivut muodostavat implisiittisen puurakenteen</p>
+
+<pre>
+html
+  head
+    link
+    script
+  body
+    div
+      h1
+      div
+        ul
+          li
+          li
+          li
+      form
+        input
+        input
+</pre>
+
+<p>Sama puumaisuus on nähtävissä konsolin välilehdellä <em>Elements</em></p>
+
+<p><img src="http://localhost:4000/assets/1/13.png" alt="" /></p>
+
+<p>Selainten toiminta perustuukin ideaan esittää HTML-elementit puurakenteena.</p>
+
+<p>Document Object Model eli <a href="https://en.wikipedia.org/wiki/Document_Object_Model">DOM</a> on ohjelmointirajapinta eli <em>API</em>, joka mahdollistaa selaimessa esitettävien web-sivuja vastaavien <em>elementtipuiden</em> muokkaamisen ohjelmallisesti.</p>
+
+<p>Edellisessä luvussa esittelemämme Javascript-koodi käytti nimenomaan DOM-apia lisätäkseen sivulle muistiinpanojen listan.</p>
+
+<p>Allaoleva koodi luo muuttujaan <em>ul</em> DOM-apin avulla uuden “solmun” ja lisää sille joukon lapsisolmuja:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">ul</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'ul'</span><span class="p">)</span>
+
+<span class="nx">data</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">note</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">li</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'li'</span><span class="p">)</span>
+
+  <span class="nx">ul</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">li</span><span class="p">);</span>
+  <span class="nx">li</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">createTextNode</span><span class="p">(</span><span class="nx">note</span><span class="p">.</span><span class="nx">content</span><span class="p">))</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<p>lopulta muuttujassa <em>ul</em> oleva puun palanen yhdistetään sopivaan paikkaan koko sovelluksen HTML-koodia edustavassa puussa:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'notes'</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">ul</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Toisena esimerkkinä HTML-dokumentin</p>
+
+<p><img src="http://localhost:4000/assets/1/13b.png" alt="" /></p>
+
+<p>DOM:a havainnollistava kuva Wikipedian sivulta:</p>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/428px-DOM-model.svg.png" alt="" /></p>
+
+<h3 id="document-olio-ja-sivun-manipulointi-konsolista">document-olio ja sivun manipulointi konsolista</h3>
+
+<p>HTML-dokumenttia esittävän DOM-puun ylimpänä solmuna on olio nimeltään <em>document</em>. Olioon pääsee käsiksi Console-välilehdeltä:</p>
+
+<p><img src="http://localhost:4000/assets/1/14.png" alt="" /></p>
+
+<p>Tiedot saa esiin komennolla:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span>
+</code></pre></div></div>
+
+<p>Voimme suorittaa konsolista käsin DOM-apin avulla erilaisia operaatioita selaimessa näytettävälle web-sivulle hyödyntämällä <em>document</em>-olioa.</p>
+
+<p>Lisätään nyt sivulle uusi muistiinpano suoraan konsolista.</p>
+
+<p>Haetaan ensin sivulta muistiinpanojen lista, eli sivun ul-elementeistä ensimmäinen:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">lista</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">'ul'</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>luodaan uusi li-elementti ja lisätään sille sopiva tekstisisältö:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">uusi</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'li'</span><span class="p">)</span>
+<span class="nx">uusi</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">'Sivun manipulointi konsolista on helppoa'</span>
+</code></pre></div></div>
+
+<p>liitetään li-elementti listalle:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">lista</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">uusi</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="http://localhost:4000/assets/1/15.png" alt="" /></p>
+
+<p>Vaikka selaimen näyttämä sivu päivittyy, ei muutos ole lopullinen. Jos sivu uudelleenladataan, katoaa uusi muistiinpano, sillä muutos ei mennyt palvelimelle asti. Selaimen lataama Javascript luo muistiinpanojen listan aina palvelimelta osoitteesta <a href="https://fullstack-exampleapp.herokuapp.com/data.json">https://fullstack-exampleapp.herokuapp.com/data.json</a> haettavan JSON-muotoisen raakadatan perusteella.</p>
+
+<h3 id="css">CSS</h3>
+
+<p>Muistiinpanojen sivun HTML-koodin <em>head</em>-osio sisältää <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">link</a>-tagin, joka määrittelee, että selaimen tulee ladata palvelimelta osoitteesta <a href="https://fullstack-exampleapp.herokuapp.com/main.css">main.css</a> sivulla käytettävä <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>-tyylitiedosto.</p>
+
+<p>Cascading Style Sheets eli CSS on kieli, jonka avulla web-sovellusten ulkoasu määritellään.</p>
+
+<p>Ladattu css-tiedosto näyttää seuraavalta:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.container</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.notes</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Tiedosto määrittelee kaksi <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors">luokkaselektoria</a>, joiden avulla valitaan tietty sivun alue ja määritellään alueelle sovellettavat tyylisäännöt.</p>
+
+<p>Luokkaselektori alkaa aina pisteellä ja sisältää luokan nimen.</p>
+
+<p>Luokat ovat <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class">attribuuteja</a> joita voidaan liittää HTML-elementeille.</p>
+
+<p>Konsolin <em>Elements</em>-välilehti mahdollistaa class-attribuuttien tarkastelun:</p>
+
+<p><img src="http://localhost:4000/assets/1/16.png" alt="" /></p>
+
+<p>sovelluksen uloimmalle <em>div</em>-elementille on siis liitetty luokka <em>container</em>. Muistiinpanojen listan sisältävä <em>ul</em>-elementin sisällä oleva lista sisältää luokan <em>notes</em>.</p>
+
+<p>CSS-säännön avulla on määritelty, että <em>container</em>-luokan sisältävä elementti ympäröidään yhden pikselin paksuisella <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border">border</a>:illa. Elementille asetetaan myös 10 pikselin <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding">padding</a>, jonka ansiosta elementin sisältön ja elementin ulkorajan väliin jätetään hieman tilaa.</p>
+
+<p>Toinen määritelty CSS-sääntö asettaa muistiinpanojen kirjainten värin siniseksi.</p>
+
+<p>HTML-elementeillä on muitakin attribuutteja kuin luokkia. Muistiinpanot sisältävä <em>div</em>-elementti sisältää <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id">id</a>-attribuutin. Javascript-koodi hyödyntää attribuuttia elementin etsimiseen.</p>
+
+<p>Konsolin <em>Elements</em>-välilehdellä on mahdollista manipuloida elementtien tyylejä:
+<img src="http://localhost:4000/assets/1/17.png" alt="" /></p>
+
+<p>Tehdyt muutokset eivät luonnollisestikaan jää voimaan kun selaimen sivu uudelleenladataan, eli jos muutokset halutaan pysyviksi, tulee ne konsolissa tehtävien kokeilujen jälkeen tallettaa palvelimella olevaan tyylitiedostoon.</p>
+
+<h3 id="lomake-ja-http-post">Lomake ja HTTP POST</h3>
+
+<p>Tutkitaan seuraavaksi sitä, miten uusien muistiinpanojen luominen tapahtuu. Tätä varten muistiinpanojen sivu sisältää lomakkeen eli <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form">formin</a>.</p>
+
+<p><img src="http://localhost:4000/assets/1/18.png" alt="" /></p>
+
+<p>Kun lomakkeen painiketta painetaan, lähettää selain lomakkeelle syötetyn datan palvelimelle. Avataan <em>Network</em>-tabi ja katsotaan miltä lomakkeen lähettäminen näyttää:</p>
+
+<p><img src="http://localhost:4000/assets/1/19.png" alt="" /></p>
+
+<p>Lomakkeen lähettäminen aiheuttaa yllättäen yhteensä <em>viisi</em> HTTP-pyyntöä. Näistä ensimmäinen vastaa lomakkeen lähetystapahtumaa. Tarkennetaan siihen:</p>
+
+<p><img src="http://localhost:4000/assets/1/20.png" alt="" /></p>
+
+<p>Kyseessä on siis <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST">HTTP POST</a> -pyyntö ja se on tehty palvelimen osoitteeseen <em>new_note</em>. Palvelin vastaa pyyntöön HTTP-statuskoodilla 302. Kyseessä on ns. <a href="https://en.wikipedia.org/wiki/URL_redirection">uudelleenohjauspyyntö</a> eli redirectaus, minkä avulla palvelin kehoittaa selainta tekemään automaattisesti uuden HTTP GET -pyynnön headerin <em>Location</em> kertomaan paikkaan, eli osoitteeseen <em>notes</em>.</p>
+
+<p>Selain siis lataa uudelleen muistiinpanojen sivun. Sivunlataus saa aikaan myös kolme muuta HTTP-pyyntöä: tyylitiedoston (main.css), Javascript-koodin (main.js) ja muistiinpanojen raakadatan (data.json) lataamisen.</p>
+
+<p>Network-välilehti näyttää myös lomakkeen mukana lähetetyn datan:</p>
+
+<p><img src="http://localhost:4000/assets/1/21.png" alt="" /></p>
+
+<p>Jos käytät normaalia Chrome-selainta, ei konsoli ehkä näytä lähetettävää dataa. Kyseessä on eräissä Chromen versioissa oleva <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=766715">bugi</a>. Bugi on korjattu Chromen uusimpaan versioon.</p>
+
+<p>Lomakkeen lähettäminen tapahtuu HTTP POST -pyyntönä ja osoitteeseen <em>new_note</em> form-tagiin määriteltyjen attribuuttien <em>action</em> ja <em>method</em> ansiosta:</p>
+
+<p><img src="/assets/1/22.png" height="150" /></p>
+
+<p>POST-pyynnöstä huolehtiva palvelimen koodi on yksinkertainen (huom: tämä koodi on siis palvelimella eikä näy selaimen lataamassa Javascript-tiedostossa):</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'/new_note'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">notes</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+    <span class="na">content</span><span class="p">:</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">note</span><span class="p">,</span>
+    <span class="na">date</span><span class="p">:</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">()</span>
+  <span class="p">})</span>
+
+  <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">redirect</span><span class="p">(</span><span class="s1">'/notes'</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<p>POST-pyyntöihin liitettävä data lähetetään pyynnön mukana “runkona” eli <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST">bodynä</a>. Palvelin saa POST-pyynnön datan pyytämällä sitä pyyntöä vastaavan olion <em>req</em> kentästä <em>req.body</em>.</p>
+
+<p>Tekstikenttään kirjoitettu data on avaimen <em>note</em> alla, eli palvelin viittaa siihen <em>req.body.note</em>.</p>
+
+<p>Palvelin luo uutta muistiinpanoa vastaavan olion ja laittaa sen muistiinpanot sisältävään taulukkoon nimeltään <em>notes</em>:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">notes</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+  <span class="na">content</span><span class="p">:</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">note</span><span class="p">,</span>
+  <span class="na">date</span><span class="p">:</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">()</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<p>Muistiinpano-olioilla on siis kaksi kenttää, varsinaisen sisällön kuvaava <em>content</em> ja luomishetken kertova <em>date</em>.</p>
+
+<p>Palvelin ei talleta muistiinpanoja tietokantaan, joten uudet muistiinpanot katoavat aina Herokun uudelleenkäynnistäessä palvelun.</p>
+
+<h3 id="ajax">AJAX</h3>
+
+<p>Sovelluksen muistiinpanojen sivu noudattaa vuosituhannen alun tyyliä ja se “käyttää AJAX:ia”, eli on silloisen kehityksen aallonharjalla.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Ajax_(programming)">AJAX</a> (Asynchronous Javascript and XML) on termi, joka lanseerattiin vuoden 2005 helmikuussa kuvaamaan selainten kehityksen mahdollistamaa vallankumouksellista tapaa, missä HTML-sivulle sisällytetyn Javascriptin avulla oli mahdollista ladata sivulle lisää sisältöä lataamatta itse sivua uudelleen.</p>
+
+<p>Ennen AJAX:in aikakautta jokainen sivu toimi aiemmassa luvussa olevan <a href="/osa0/#Perinteinen-web-sovellus">perinteisen web-sovelluksen</a> tapaan, eli oleellisesti ottaen kaikki sivuilla näytettävä data tuli palvelimen generoimassa HTML-koodissa.</p>
+
+<p>Muistiinpanojen sivu siis lataa näytettävän datan AJAX:illa. Lomakkeen lähetys sen sijaan tapahtuu perinteisen web-lomakkeen lähetysmekanismin kautta.</p>
+
+<p>Sovelluksen urlit heijastavat vanhaa huoletonta aikaa. JSON-muotoinen data haetaan urlista <a href="https://fullstack-exampleapp.herokuapp.com/data.json">https://fullstack-exampleapp.herokuapp.com/data.json</a> ja uuden muistiinpanon tiedot lähetetään urliin <a href="https://fullstack-exampleapp.herokuapp.com/new_note">https://fullstack-exampleapp.herokuapp.com/new_note</a>. Nykyään näin valittuja urleja ei pidettäisi ollenkaan hyvinä, ne eivät noudata ns. <a href="https://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_Web_services">RESTful</a>-apien yleisesti hyväksyttyjä konventioita. Käsittelemme asiaa tarkemmin <a href="/osa3">osassa 3</a>.</p>
+
+<p>AJAXiksi kutsuttu asia on arkipäiväistynyt, ja muuttunut itsestäänselvyydeksi. Koko termi on hiipunut unholaan ja nuori polvi ei ole sitä edes ikinä kuullut.</p>
+
+<h2 id="single-page-app">Single page app</h2>
+
+<p>Esimerkkisovelluksemme pääsivu toimii perinteisten web-sivujen tapaan, kaikki sovelluslogiikka on palvelimella, selain ainoastaan renderöi palvelimen lähettämää HTML-koodia.</p>
+
+<p>Muistiinpanoista huolehtivassa sivussa osa sovelluslogiikasta, eli olemassaolevien muistiinpanojen HTML-koodin generointi on siirretty selaimen vastuulle. Selain hoitaa tehtävän suorittamalla palvelimelta lataamansa Javascript-koodin. Selaimella suoritettava koodi hakee ensin muistiinpanot palvelimelta JSON-muotoisena raakadatana ja lisää sivulle muistiinpanoja edustavat HTML-elementit <a href="/osa0#document-object-model-eli-dom">DOM-apia</a> hyödyntäen.</p>
+
+<p>Viimeisten vuosien aikana on noussut esiin tyyli tehdä web-sovelukset käyttäen <a href="https://en.wikipedia.org/wiki/Single-page_application">Single-page application</a> (SPA) -tyyliä, missä sovelluksille ei enää tehdä esimerkkisovelluksemme tapaan erillisiä, palvelimen sille lähettämiä sivuja, vaan sovellus koostuu ainoastaan yhdestä palvelimen lähettämästä HTML-sivusta, jonka sisältöä manipuloidaan selaimessa suoritettavalla Javascriptillä.</p>
+
+<p>Sovelluksemme muistiinpanosivu muistuttaa jo hiukan SPA-tyylistä sovellusta, sitä se ei kuitenkaan vielä ole, sillä vaikka muistiinpanojen renderöintilogiikka on toteutettu selaimessa, käyttää sivu vielä perinteistä mekanisimia uusien muistiinpanojen luomiseen, eli se lähettää uuden muistiinpanon tiedot lomakkeen avulla ja palvelin pyytää <em>uudelleenohjauksen</em> avulla selainta lataamaan muistiinpanojen sivun uudelleen.</p>
+
+<p>Osoitteesta <a href="https://fullstack-exampleapp.herokuapp.com/spa">https://fullstack-exampleapp.herokuapp.com/spa</a> löytyy sovelluksen single page app -versio.</p>
+
+<p>Sovellus näyttää ensivilkaisulta täsmälleen samalta kuin edellinen versio.</p>
+
+<p>HTML-koodi on lähes samanlainen, erona on ladattava Javascript-tiedosto (<em>spa.js</em>) ja pieni muutos form-tagin määrittelyssä:</p>
+
+<p><img src="http://localhost:4000/assets/1/23.png" alt="" /></p>
+
+<p>Avaa nyt <em>Network</em>-tabi ja tyhjennä se ∅-symbolilla. Kun luot uuden muistiinpanon, huomaat, että selain lähettää ainoastaan yhden pyynnön palvelimelle:</p>
+
+<p><img src="http://localhost:4000/assets/1/24.png" alt="" /></p>
+
+<p>Pyyntö kohdistuu osoitteeseen <em>new_note_spa</em>, on tyypiltään POST ja se sisältää JSON-muodossa olevan uuden muistiinpanon, johon kuuluu sekä sisältö (<em>content</em>), että aikaleima (<em>date</em>):</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="nl">content</span><span class="p">:</span> <span class="s2">"single page app ei tee turhia sivun latauksia"</span><span class="p">,</span>
+  <span class="nx">date</span><span class="p">:</span> <span class="s2">"2017-12-11T10:51:29.025Z"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Pyyntöön liitetty headeri <em>Content-Type</em> kertoo palvelimelle, että pyynnön mukana tuleva data on JSON-muotoista:</p>
+
+<p><img src="http://localhost:4000/assets/1/25.png" alt="" /></p>
+
+<p>Ilman headeria palvelin ei osaisi parsia pyynnön mukana tulevaa dataa oiken.</p>
+
+<p>Palvelin vastaa kyselyyn statuskoodilla <a href="https://httpstatuses.com/201">201 created</a>. Tällä kertaa palvelin ei pyydä uudelleenohjausta kuten aiemmassa versiossamme. Selain pysyy samalla sivulla ja muita HTTP-pyyntöjä ei suoriteta.</p>
+
+<p>Ohjelman single page app -versiossa lomakkeen tietoja ei lähetetä selaimen “normaalin” lomakkeiden lähetysmekanismin avulla, lähettämisen hoitaa selaimen lataamassa Javascript-tiedostossa määritelty koodi. Katsotaan hieman koodia vaikka yksityiskohdista ei tarvitse nytkään välittää liikaa.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">form</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'notes_form'</span><span class="p">)</span>
+<span class="nx">form</span><span class="p">.</span><span class="nx">onsubmit</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+ <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span>
+
+  <span class="kd">var</span> <span class="nx">note</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">content</span><span class="p">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">elements</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">value</span><span class="p">,</span>
+    <span class="na">date</span><span class="p">:</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">()</span>
+  <span class="p">}</span>
+
+  <span class="nx">notes</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">note</span><span class="p">)</span>
+  <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">elements</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">value</span> <span class="o">=</span> <span class="s1">''</span>
+  <span class="nx">redrawNotes</span><span class="p">()</span>
+  <span class="nx">sendToServer</span><span class="p">(</span><span class="nx">note</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Komennolla <code>document.getElementById('notes_form')</code> koodi hakee sivulta lomake-elementin ja rekisteröi sille <em>tapahtumankäsittelijän</em> hoitamaan tilanteen, missä lomake “submitoidaan”, eli lähetetään. Tapahtumankäsittelijä kutsuu heti metodia <code>e.preventDefault()</code> jolla se estää lomakkeen lähetyksen oletusarvoisen toiminnan. Oletusarvoinen toiminta aiheuttaisi lomakkeen lähettämisen ja sivun uuden lataamisen, sitä emme single page -sovelluksissa halua tapahtuvan.</p>
+
+<p>Tämän jälkeen se luo muistiinpanon, lisää sen muistiinpanojen listalle komennolla <code>notes.push(note)</code>, piirtää ruudun sisällön eli muistiinpanojen listan uudelleen ja lähettää uuden muistiinpanon palvelimelle.</p>
+
+<p>Palvelimelle muistiinpanon lähettävä koodi seuraavassa:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">sendToServer</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">note</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">xhttpForPost</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">()</span>
+  <span class="c1">// ...</span>
+
+  <span class="nx">xhttpForPost</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">'POST'</span><span class="p">,</span> <span class="s1">'/new_note_spa'</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+  <span class="nx">xhttpForPost</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s1">'Content-type'</span><span class="p">,</span> <span class="s1">'application/json'</span><span class="p">)</span>
+  <span class="nx">xhttpForPost</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">note</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Koodissa siis määritellään, että kyse on HTTP POST -pyynnöstä, määritellään headerin <em>Content-type</em> avulla lähetettävän datan tyypiksi JSON, ja lähetetään data JSON-merkkijonona.</p>
+
+<p>Sovelluksen koodi on nähtävissä osoitteessa <a href="https://github.com/mluukkai/example_app">https://github.com/mluukkai/example_app</a>. Kannattaa huomata, että sovellus on tarkoitettu ainoastaan kurssin käsitteistöä demonstroivaksi esimerkiksi, koodi on osin tyyliltään huonoa ja siitä ei tule ottaa mallia omia sovelluksia tehdessä. Sama koskee käytettyjä urleja, single page app -tyyliä noudattavan sivun käyttämä uusien muistiinpanojen kohdeosoite <em>new_note_spa</em> ei noudata nykyisin suositeltavia käytäntöjä.</p>
+
+<h2 id="javascript-kirjastot">Javascript-kirjastot</h2>
+
+<p>Kurssin esimerkkisovellus on tehty ns. <a href="https://medium.freecodecamp.org/is-vanilla-javascript-worth-learning-absolutely-c2c67140ac34">vanilla Javascriptillä</a> eli käyttäen pelkkää DOM-apia ja Javascript-kieltä sivujen rakenteen manipulointiin.</p>
+
+<p>Pelkän Javascriptin ja DOM-apin käytön sijaan Web-ohjelmoinnissa hyödynnetään yleensä kirjastoja, jotka sisältävät DOM-apia helpommin käytettäviä työkaluja sivujen muokkaamiseen. Eräs tälläinen kirjasto on edelleenkin hyvin suosittu <a href="https://jquery.com/">JQuery</a>.</p>
+
+<p>JQuery on kehitetty aikana, jolloin web-sivut olivat vielä suurimmaksi osaksi perinteisiä, eli palvelin muodosti HTML-sivuja joiden toiminnallisuutta rikastettiin selaimessa JQueryllä kirjoitetun Javascript-koodin avulla.</p>
+
+<p>Single page app -tyylin noustua suosioon on ilmestynyt useita JQueryä “modernimpia” tapoja sovellusten kehittämiseen. Ensimmäisen aallon suosikki oli <a href="http://backbonejs.org/">BackboneJS</a>. Googlen kehittämä <a href="https://angularjs.org/">AngularJS</a> nousi 2012 tapahtuneen <a href="https://github.com/angular/angular.js/blob/master/CHANGELOG.md#100-temporal-domination-2012-06-13">julkaisun</a> jälkeen erittäin nopeasti lähes de facto -standardin asemaan modernissa web-sovelluskehityksessä.</p>
+
+<p>Angularin suosio kuitenkin romahti siinä vaiheessa kun Angular-tiimi <a href="https://jaxenter.com/angular-2-0-announcement-backfires-112127.html">ilmoitti</a> lokakuussa 2014, että version 1 tuki lopetetaan ja Angular 2 ei tule olemaan taaksepäin yhteensopiva ykkösversion kanssa. Angular 2 ja uudemmat versiot eivät ole saaneet kovin innostunutta vastaanottoa.</p>
+
+<p>Nykyisin suosituin tapa toteuttaa web-sovellusten selainpuolen logiikka on Facebookin kehittämä <a href="https://reactjs.org/">React</a>-kirjasto. Tulemme tutustumaan kurssin aikana Reactiin ja sen kanssa yleisesti käytettyyn <a href="https://github.com/reactjs/redux">Redux</a>-kirjastoon.</p>
+
+<p>Reactin asema näyttää tällä hetkellä vahvalta, mutta Javascript-maailma ei lepää koskaan. Viime aikoina kiinnostusta on alkanut herättää mm. uudempi tulokas <a href="https://vuejs.org/">VueJS</a>.</p>
+
+<h2 id="full-stack--websovelluskehitys">Full stack -websovelluskehitys</h2>
+
+<p>Mitä tarkoitetaan kurssin nimellä <em>Full stack -websovelluskehitys</em>? Full stack on hypenomainen termi; kaikki puhuvat siitä, mutta kukaan ei oikein tiedä mitä se tarkoittaa tai ainakaan mitään yhteneväistä määritelmää termille ei ole.</p>
+
+<p>Käytännössä kaikki websovellukset sisältävät (ainakin) kaksi “kerrosta”, ylempänä, eli lähempänä loppukäyttäjää olevan selaimen ja alla olevan palvelimen. Palvelimen alapuolella on usein vielä tietokanta. Näin websovelluksen <em>arkkitehtuurin</em> voi ajatella muodostavan pinon, englanniksi <em>stack</em>.</p>
+
+<p>Websovelluskehityksen yhteydessä puhutaan usein myös “frontista” (<a href="https://en.wikipedia.org/wiki/Front_and_back_ends">frontend</a>) ja “backistä” (<a href="https://en.wikipedia.org/wiki/Front_and_back_ends">backend</a>). Selain on frontend ja selaimessa suoritettava Javascript on frontend-koodia. Palvelimella taas pyörii backend-koodi.</p>
+
+<p>Tämän kurssin kontekstissa full stack -sovelluskehitys tarkoittaa sitä, että fokus on kaikissa sovelluksen osissa, niin frontendissä kuin backendissä sekä taustalla olevassa tietokannassa.</p>
+
+<p>Ohjelmoimme myös palvelinpuolta, eli backendia Javascriptilla, käyttäen <a href="https://nodejs.org/en/">Node.js</a>-suoritusympäristöä. Näin full stack -sovelluskehitys saa vielä uuden ulottuvuuden, käytämme samaa kieltä pinon kaikissa osissa. Full stack -sovelluskehitys ei välttämättä edellytä sitä, että kaikissa “sovelluspinon” kerroksissa on käytössä sama kieli (Javascript). Termi “full stack” on kuitenkin (todennäköisesti) lanseerattu vasta sen jälkeen kun Node.js mahdollisti Javascriptin käyttämisen kaikkialla.</p>
+
+<p>Aiemmin on ollut yleisempää, että sovelluskehittäjät ovat erikoistuneet tiettyyn sovelluksen osaan, esim. backendiin. Tekniikat backendissa ja frontendissa ovat saattaneet olla hyvin erilaisia. Full stack -trendin myötä on tullut tavanomaiseksi, että sovelluskehittäjä hallitsee riittävästi kaikkia sovelluksen tasoja ja tietokantaa. Usein full stack -kehittäjän on myös omattava riittävä määrä konfiguraatio- ja ylläpito-osaamista, jotta kehittäjä pystyy operoimaan sovellustaan esim. pilvipalveluissa.</p>
+
+<h2 id="javascript-fatigue">Javascript fatigue</h2>
+
+<p>Full stack -sovelluskehitys on monella tapaa haastavaa. Asioita tapahtuu monessa paikassa ja mm. debuggaaminen on oleellisesti normaalia työpöytäsovellusta hankalampaa. Javascript ei toimi aina niin kuin sen olettaisi toimivan (verrattuna moniin muihin kieliin) ja sen suoritusympäristöjen asynkroninen toimintamalli aiheuttaa monenlaisia haasteita. Verkon yli tapahtuva kommunikointi edellyttää HTTP-protokollan tuntemusta. On tunnettava myös tietokantoja ja hallittava palvelinten konfigurointia ja ylläpitoa. Hyvä olisi myös hallita riittävästi CSS:ää, jotta sovellukset saataisiin edes siedettävän näköisiksi.</p>
+
+<p>Oman haasteensa tuo vielä se, että Javascript-maailma etenee koko ajan todella kovaa vauhtia eteenpäin. Kirjastot, työkalut ja itse kielikin ovat jatkuvan kehityksen alla. Osa alkaa kyllästyä nopeaan kehitykseen ja sitä kuvaamaan on lanseerattu termi <a href="https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4">Javascript</a> <a href="https://auth0.com/blog/how-to-manage-javascript-fatigue/">fatigue</a> eli <a href="https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f">Javascript</a>-väsymys.</p>
+
+<p>Javascript-väsymys tulee varmasti iskemään myös tällä kurssilla. Onneksi nykyään on olemassa muutamia tapoja loiventaa oppimiskäyrää, ja voimme aloittaa keskittymällä konfiguraation sijaan koodaamiseen. Konfiguraatioita ei voi välttää, mutta seuraavat viikot voimme edetä iloisin mielin vailla pahimpia konfiguraatiohelvettejä.</p>
+
+<h3 id="tehtäviä-web-sovelluksen-perusteista">Tehtäviä web-sovelluksen perusteista</h3>
+
+<p>Tee nyt <a href="/tehtävät#web-sovellusten-perusteet">tehtävät 0.1-0.6</a>. Niiden jälkeen olet valmiina siirtymään <a href="/osa1">osaan 1</a> ja itse asiaan eli Web-sovellusten toteuttamiseen.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading"></h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+             Full stack open 
+          </li>
+          <li>
+            <a href="mailto:mluukkai@cs.helsinki.fi">mluukkai@cs.helsinki.fi</a>
+          </li>
+          <li>
+            <a href="https://github.com/mluukkai"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">mluukkai</span></a>
+
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+           
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>
+          <a href="https://courses.helsinki.fi/fi/TKT21009/121540749">https://courses.helsinki.fi/fi/TKT21009/121540749</a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+  </body>
+
+</html>
