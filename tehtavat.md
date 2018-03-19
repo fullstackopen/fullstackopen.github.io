@@ -6,60 +6,44 @@ permalink: /tehtävät/
 
 # tehtävät
 
-* [osa0](#osa-0) deadline 30.1. klo 23:59
-* [osa1](#osa-1) deadline 30.1. klo 23:59
-* [osa2](#osa-2) deadline 5.2. klo 23:59
-* [osa3](#osa-3) deadline 12.2. klo 23:59
-* [osa4](#osa-4) deadline 25.2. klo 23:59
-* [osa5](#osa-5) deadline 4.3. klo 23:59
-* [osa6](#osa-6) deadline 11.3. klo 23:59
-* [osa7](#osa-7) deadline 11.3. klo 23:59
+* [osa0](#osa-0) 
+* [osa1](#osa-1) 
+* [osa2](#osa-2)
+* [osa3](#osa-3) 
+* [osa4](#osa-4) 
+* [osa5](#osa-5)
+* [osa6](#osa-6) 
+* [osa7](#osa-7) 
+
+Kaikkien osien deadline on 15.12.2018 klo 23:59
 
 ## Pakolliset tehtävät ja tehtävien vaikuttaminen arvosteluun
 
-Osa tehtävistä on "pakollisia" ja osa vapaaehtoisia. Vapaaehtoiset on merkattu tähdellä. Pakolliset eivät ole absoluuttisen pakollisia, mutta niiden tekemättä jättäminen saattaa aiheuttaa haasteita seuraaviin osiin.
+Osa tehtävistä on seuraavaan osaan etenemisen kannalta suositeltavia ja osa vapaaehtoisia. Vapaaehtoiset on merkattu tähdellä. 
 
-Arvosananja opintopistemäärä lasketaan _kaikkien_ tehtävien summan perusteella. Katso tarkemmin osan 0 luvut [suoritustapa](/osa0#suoritustapa) ja [arvosteluperusteet](/osa0#arvosteluperusteet). Vain deadlineja ennen tehdyt ja merkatut tehtävät huomioidaan arvostelussa.
+Voit toki jättää tähdellä merkkaamattomiakin tehtäviä tekemättä. mutta niiden tekemättä jättäminen saattaa aiheuttaa haasteita seuraaviin osiin. Huomaa myös, että kaikkien osien 0-3 tähdellä merkkaamattomien tehtävien tekeminen on edellytyksenä 3 opintopisteen laajuiseen suoritukseen!.
 
-## Arvosanarajat
-
-Kurssilla on yhteensä 149 tehtävää. Tehtävien maksimimääräksi lasketaan kuitenkin 141, sillä osan 7 tehtävistä kaikki eivät vaikuta arvosteluun.
-
-Arvosanarajat:
-
-| tehtävää  &nbsp;       | arvosana&nbsp;    | op  |
-| -------------- |:-----------------:       |:-----:|
-| 70    | 1/5  | 5   |
-| 81    | 2/5  | 5   |
-| 92    | 3/5  | 5   |
-| 103   | 4/5  | 5   |
-| 113   | 5/5  | 5   |
-| 124   | hyv  | 6   |
-| 134   | hyv  | 7   |
-
-
-Ylimääräiset opintopisteet tullaan kirjaamaan kaikille arvosanalla "hyväksytty".
-
+Arvosananja opintopistemäärä lasketaan _kaikkien_ tehtävien summan perusteella. Katso tarkemmin osan 0 luvut [suoritustapa](/osa0#suoritustapa) ja [arvosteluperusteet](/osa0#arvosteluperusteet). 
 
 ## Palauttaminen
 
 Olethan lukenut huolellisesti kurssimateriaalin osan 0 luvun [Suoritustapa](/osa0/#Suoritustapa)?
 
-Tehtävät palautetaan GitHubin kautta ja merkitsemällä tehdyt tehtävät [palautussovellukseen](https://studies.cs.helsinki.fi/fs-stats/).
+Tehtävät palautetaan GitHubin kautta ja merkitsemällä tehdyt tehtävät [palautussovellukseen](https://studies.cs.helsinki.fi/fullstackopen/).
 
 Jos palautat eri osien tehtäviä samaan repositorioon, käytä järkevää hakemistojen nimentää.
 
-Tehtävät palautetaan yksi osa kerrallaan. Kun olet palauttanut osan tehtävät, et voi enää palauttaa saman osan tekemättä jättämiäsi tehtäviä.
+Tehtävät palautetaan yksi osa kerrallaan. **Kun olet palauttanut osan tehtävät, et voi enää palauttaa saman osan tekemättä jättämiäsi tehtäviä.**
 
-GitHubiin palautettuja tehtäviä tarkastetaan pistokokein. Jos GitHubista löytyy kurssin mallivastausten koodia tai useammalta opiskelijalta löytyy samaa koodia, käsitellään tilanne yliopiston [vilppikäytäntöjen](http://blogs.helsinki.fi/alakopsaa/opettajalle/epailen-opiskelijaa-vilpista-mita-tehda/) mukaan.
+GitHubiin palautettuja tehtäviä tarkastetaan [MOSS](https://theory.stanford.edu/~aiken/moss/)-plagiaattitunnistusjärjestelmän avulla. Jos GitHubista löytyy kurssin mallivastausten koodia tai useammalta opiskelijalta löytyy samaa koodia, käsitellään tilanne yliopiston [vilppikäytäntöjen](http://blogs.helsinki.fi/alakopsaa/opettajalle/epailen-opiskelijaa-vilpista-mita-tehda/) mukaan.
 
 Suurin osa tehtävistä on moniosaisia, samaa ohjelmaa pala palalta rakentavia kokonaisuuksia. Tälläisissä tehtäväsarjoissa ohjelman lopullisen version palauttaminen riittää, voit toki halutessasi tehdä commitin jokaisen tehtävän jälkeisestä tilanteesta, mutta se ei ole välttämätöntä.
 
 ## Osa 0
 
-Deadline 30.1. klo 23:59
+Deadline 15.12.2018 klo 23:59
 
-Osassa on 6 tehtävää joista kaikki ovat pakollisia. Voit edetä osaan 1 vasta tehtävät palautettuasi.
+Osassa on 6 tehtävää, jotka kaikki ovat osaan 1 etenemisen kannalta suositeltavia tehdä.
 
 ### web-sovellusten perusteet ###
 
@@ -123,19 +107,21 @@ Tee kaavio tilanteesta, missä käyttäjä luo uuden muistiinpanon single page -
 
 ### Tehtävien palautus
 
-Palauta tehtävät [palautussovellukseen](https://studies.cs.helsinki.fi/fs-stats/).
+Palauta tehtävät [palautussovellukseen](https://studies.cs.helsinki.fi/fullstackopen/).
 
 ## Osa 1
 
-Deadline 30.1. klo 23:59
+Deadline 15.12.2018 klo 23:59
 
-Osassa on 14 tehtävää, joista pakollisia on 9. Voit edetä osaan 2 kun olet tehnyt kaikki pakolliset tehtävät. Palautuksen tekemisen jälkeen et voi enää palauttaa osan tehtäviä.
+Osassa on 14 tehtävää, joista tähdellä merkkaamattomia eli ennen seuraavaan osaan etenemistä tehtäväksi suositeltavia on 10.
+
+Palautuksen tekemisen jälkeen et voi enää palauttaa osan tehtäviä.
 
 Osa sisältää muutaman tehtäväsarjan, joissa yksittäistä ohjelmaa laajennetaan pala palalta. Ohjelmien lopullisen version palauttaminen riittää, voit toki halutessasi tehdä commitin jokaisen tehtävän jälkeisestä tilanteesta, mutta se ei ole välttämätöntä.
 
 <div class='important'>
 
-<p>Ennen kun teet tehtäviä, on enemmän kuin suositeltavaa, että käyt huolellisesti läpi <a href='https://fullstack-hy.github.io/osa1/'>osan 1 materiaalin</a>. Tehtävien tekeminen ilman materiaalin lukemista tapahtuu täysin omalla vastuulla.</p>
+<p>Ennen kun teet tehtäviä, on enemmän kuin suositeltavaa, että käyt huolellisesti läpi <a href='https://fullstackopen.github.io/osa1/'>osan 1 materiaalin</a>. Tehtävien tekeminen ilman materiaalin lukemista tapahtuu täysin omalla vastuulla.</p>
 
 </div>
 
@@ -350,7 +336,7 @@ Tee sovellukseen ainakin seuraavat komponentit:
 - _Statistics_ huolehtii tilastojen näyttämisestä
 - _Statistic_ huolehtii yksittäisen tilastorivin, esim. keskiarvon näyttämisestä
 
-#### 1.9* unicafe osa4
+#### 1.9 unicafe osa4
 
 Muuta sovellusta siten, että numeeriset tilastot näytetään ainoastaan jos palautteita on jo annettu:
 
@@ -484,20 +470,22 @@ Youtubessa on kohtuullisen hyvä [johdatus funktionaaliseen javascript-ohjelmoin
 
 ### Tehtävien palautus
 
-Palauta tehtävät [palautussovellukseen](https://studies.cs.helsinki.fi/fs-stats/).
+Palauta tehtävät [palautussovellukseen](https://studies.cs.helsinki.fi/fullstackopen/).
 
 
 ## Osa 2
 
-deadline 5.2. klo 23:59
+Deadline 15.12.2018 klo 23:59
 
-Osassa on 19 tehtävää, joista "pakollisia" on 13. On suositeltavaa että etenet seuraavaan osaan vasta kun olet tehnyt kaikki pakolliset tehtävät. Palautuksen tekemisen jälkeen et voi enää palauttaa osan tehtäviä.
+Osassa on 19 tehtävää, joista tähdellä merkkaamattomia eli ennen seuraavaan osaan etenemistä tehtäväksi suositeltavia on 13.
+
+Palautuksen tekemisen jälkeen et voi enää palauttaa osan tehtäviä.
 
 Osa sisältää kolme tehtäväsarjaa, joissa yksittäistä ohjelmaa laajennetaan pala palalta. Ohjelmien lopullisen version palauttaminen riittää, voit toki halutessasi tehdä commitin jokaisen tehtävän jälkeisestä tilanteesta, mutta se ei ole välttämätöntä.
 
 <div class='important'>
 
-<p>Ennen kun teet tehtäviä, on enemmän kuin suositeltavaa, että käyt huolellisesti läpi <a href='https://fullstack-hy.github.io/osa2/'>osan 2 materiaalin</a>. Tehtävien tekeminen ilman materiaalin lukemista tapahtuu täysin omalla vastuulla.</p>
+<p>Ennen kun teet tehtäviä, on enemmän kuin suositeltavaa, että käyt huolellisesti läpi <a href='https://fullstackopen.github.io/osa2/'>osan 2 materiaalin</a>. Tehtävien tekeminen ilman materiaalin lukemista tapahtuu täysin omalla vastuulla.</p>
 
 </div>
 ### Kokoelmien renderöinti
@@ -903,13 +891,15 @@ Korjaa ongelma osan 2 esimerkin [promise ja virheet](/osa2/#promise-ja-virheet) 
 
 ### Tehtävien palautus
 
-Palauta tehtävät [palautussovellukseen](https://studies.cs.helsinki.fi/fs-stats/).
+Palauta tehtävät [palautussovellukseen](https://studies.cs.helsinki.fi/fullstackopen/).
 
 ## Osa 3
 
-Deadline 12.2. klo 23:59
+Deadline 15.12.2018 klo 23:59
 
-Osassa on 22 tehtävää, joista "pakollisia" on 15. On suositeltavaa että etenet seuraavaan osaan vasta kun olet tehnyt kaikki pakolliset tehtävät. Palautuksen tekemisen jälkeen et voi enää palauttaa osan tehtäviä.
+Osassa on 22 tehtävää, joista tähdellä merkkaamattomia eli ennen seuraavaan osaan etenemistä tehtäväksi suositeltavia on 16.
+
+Palautuksen tekemisen jälkeen et voi enää palauttaa osan tehtäviä.
 
 Tämän osan tehtävissä teemme backendin edellisen osan puhelinluettelosovellukseen. Lopullisen version palauttaminen riittää, voit toki halutessasi tehdä commitin jokaisen tehtävän jälkeisestä tilanteesta, mutta se ei ole välttämätöntä.
 
@@ -919,7 +909,7 @@ Tämän osan tehtävissä teemme backendin edellisen osan puhelinluettelosovellu
 
 <div class='important'>
 
-<p>Ennen kun teet tehtäviä, on enemmän kuin suositeltavaa, että käyt huolellisesti läpi <a href='https://fullstack-hy.github.io/osa3/'>osan 3 materiaalin</a>. Tehtävien tekeminen ilman materiaalin lukemista tapahtuu täysin omalla vastuulla.</p>
+<p>Ennen kun teet tehtäviä, on enemmän kuin suositeltavaa, että käyt huolellisesti läpi <a href='https://fullstackopen.github.io/osa3/'>osan 3 materiaalin</a>. Tehtävien tekeminen ilman materiaalin lukemista tapahtuu täysin omalla vastuulla.</p>
 
 </div>
 
@@ -973,7 +963,7 @@ Laajenna backendia siten, että uusia puhelintietoja on mahdollista lisätä oso
 
 Generoi uuden puhelintiedon tunniste funktiolla [Math.random](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random). Käytä riittävän isoa arvoväliä jotta arvottu id on riittävän suurella todennäköisyydellä sellainen, joka ei ole jo käytössä.
 
-#### 3.6* puhelinluettelon backend osa 6
+#### 3.6 puhelinluettelon backend osa 6
 
 Tee uuden numeron lisäykseen virheiden käsittely. Pyyntö ei saa onnistua, jos
 - nimi tai numero puuttuu
@@ -1223,7 +1213,7 @@ Tutustumme seuraavassa osassa async/await-tekniikkaan, minkä avulla tämäkin t
 
 Mielenkiintoinen mutta enemmän omatoimista opiskelua edellyttävä tapa toiminnallisuuden toteuttamiseen on [mongoosen validaatioiden](http://mongoosejs.com/docs/validation.html) hyödyntäminen, tällöin riittää yhden asynkronisen operaation suorittaminen.
 
-#### 3.20 tietokantaa käyttävä versio herokuun
+#### 3.20 tietokantaa käyttävä versio internettiin
 
 Generoi päivitetystä sovelluksesta "full stack"-versio, eli tee frontendista uusi production build ja kopioi se backendin repositorioon. Varmista että kaikki toimii paikallisesti käyttämällä koko sovellusta backendin osoitteesta <https://localhost:3001>.
 
@@ -1241,23 +1231,23 @@ Ota sovellukseesi käyttöön ESlint.
 
 ### Tehtävien palautus
 
-Palauta tehtävät [palautussovellukseen](https://studies.cs.helsinki.fi/fs-stats/).
+Palauta tehtävät [palautussovellukseen](https://studies.cs.helsinki.fi/fullstackopen/).
 
 ## Osa 4
 
-Deadline 25.2. klo 23:59
+Deadline 15.12.2018 klo 23:59
 
-Osassa on 21 tehtävää, joista "pakollisia" on 11. On suositeltavaa että etenet seuraavaan osaan vasta kun olet tehnyt kaikki pakolliset tehtävät. Palautuksen tekemisen jälkeen et voi enää palauttaa osan tehtäviä.
+Osassa on 21 tehtävää, joista tähdellä merkkaamattomia eli ennen seuraavaan osaan etenemistä tehtäväksi suositeltavia on 11.
+
+Palautuksen tekemisen jälkeen et voi enää palauttaa osan tehtäviä.
 
 Rakennamme tämän osan tehtävissä _blogilistasovellusta_, jonka avulla käyttäjien on mahdollista tallettaa tietoja internetistä löytämistään mielenkiintoisista blogeista. Kustakin blogista talletetaan sen kirjoittaja (author), aihe (title), url sekä blogilistasovelluksen käyttäjien antamien äänien määrä.
 
 Lopullisen version palauttaminen riittää, voit toki halutessasi tehdä commitin jokaisen tehtävän jälkeisestä tilanteesta, mutta se ei ole välttämätöntä.
 
-Blogilistasovellus muistuttaa huomattavasti syksyn ohjelmistotuotantokurssin miniprojekteissa tehtyä [ohjelmistoa](https://github.com/mluukkai/ohjelmistotuotanto2017/wiki/miniprojekti-speksi).
-
 <div class='important'>
 
-<p>Ennen kun teet tehtäviä, on enemmän kuin suositeltavaa, että käyt huolellisesti läpi <a href='https://fullstack-hy.github.io/osa4/'>osan 4 materiaalin</a>. Tehtävien tekeminen ilman materiaalin lukemista tapahtuu täysin omalla vastuulla.</p>
+<p>Ennen kun teet tehtäviä, on enemmän kuin suositeltavaa, että käyt huolellisesti läpi <a href='https://fullstackopen.github.io/osa4/'>osan 4 materiaalin</a>. Tehtävien tekeminen ilman materiaalin lukemista tapahtuu täysin omalla vastuulla.</p>
 
 </div>
 
@@ -1660,13 +1650,15 @@ if ( blog.user.toString() === userid.toString() ) ...
 
 ### Tehtävien palautus
 
-Palauta tehtävät [palautussovellukseen](https://studies.cs.helsinki.fi/fs-stats/).
+Palauta tehtävät [palautussovellukseen](https://studies.cs.helsinki.fi/fullstackopen/).
 
 ## Osa 5
 
-Deadline 4.3. klo 23:59
+Deadline 15.12.2018 klo 23:59
 
-Osassa on 21 tehtävää, joista "pakollisia" on 11. On suositeltavaa että etenet seuraavaan osaan vasta kun olet tehnyt kaikki pakolliset tehtävät.  Palautuksen tekemisen jälkeen et voi enää palauttaa osan tehtäviä.
+Osassa on 21 tehtävää, joista tähdellä merkkaamattomia eli ennen seuraavaan osaan etenemistä tehtäväksi suositeltavia on 11.
+
+Palautuksen tekemisen jälkeen et voi enää palauttaa osan tehtäviä.
 
 Teemme nyt edellisen osan tehtävissä tehtyä bloglist-backendia käyttävän frontendin. Voit ottaa tehtävien pohjaksi [Githubista](https://github.com/FullStack-HY/bloglist-frontend) olevan sovellusrungon. Sovellus olettaa, että backend on käynnissä koneesi portissa 3003.
 Lopullisen version palauttaminen riittää, voit toki halutessasi tehdä commitin jokaisen tehtävän jälkeisestä tilanteesta, mutta se ei ole välttämätöntä.
@@ -1677,7 +1669,7 @@ Muista tehtäviä tehdessäsi kaikki debuggaukseen liittyvät käytänteet, erit
 
 <div class='important'>
 
-<p>Ennen kun teet tehtäviä, on enemmän kuin suositeltavaa, että käyt huolellisesti läpi <a href='https://fullstack-hy.github.io/osa5/'>osan 5 materiaalin</a>. Tehtävien tekeminen ilman materiaalin lukemista tapahtuu täysin omalla vastuulla.</p>
+<p>Ennen kun teet tehtäviä, on enemmän kuin suositeltavaa, että käyt huolellisesti läpi <a href='https://fullstackopen.github.io/osa5/'>osan 5 materiaalin</a>. Tehtävien tekeminen ilman materiaalin lukemista tapahtuu täysin omalla vastuulla.</p>
 
 </div>
 
@@ -2163,17 +2155,19 @@ Tee sovellukseen mahdollisuus uusien anekdoottien lisäämiselle.
 
 ### Tehtävien palautus
 
-Palauta tehtävät [palautussovellukseen](https://studies.cs.helsinki.fi/fs-stats/).
+Palauta tehtävät [palautussovellukseen](https://studies.cs.helsinki.fi/fullstackopen/).
 
 ## Osa 6
 
-Deadline 11.3. klo 23:59
+Deadline 15.12.2018 klo 23:59
 
-Osassa on 23 tehtävää, joista **mikään ei ole pakollinen**. Palautuksen tekemisen jälkeen et voi enää palauttaa osan tehtäviä.
+Osassa on 23 tehtävää, osa 7 tehtävät eivät ole riippuvaisia tämän osan tehtävistä.
+
+Palautuksen tekemisen jälkeen et voi enää palauttaa osan tehtäviä.
 
 <div class='important'>
 
-<p>Ennen kun teet tehtäviä, on enemmän kuin suositeltavaa, että käyt huolellisesti läpi <a href='https://fullstack-hy.github.io/osa6/'>osan 6 materiaalin</a>. Tehtävien tekeminen ilman materiaalin lukemista tapahtuu täysin omalla vastuulla.</p>
+<p>Ennen kun teet tehtäviä, on enemmän kuin suositeltavaa, että käyt huolellisesti läpi <a href='https://fullstackopen.github.io/osa6/'>osan 6 materiaalin</a>. Tehtävien tekeminen ilman materiaalin lukemista tapahtuu täysin omalla vastuulla.</p>
 
 </div>
 
@@ -2512,15 +2506,13 @@ Lisää vielä vapaavalintaisia tyylejä valitsemallasi UI frameworkilla. Voit m
 
 ### Tehtävien palautus
 
-Palauta tehtävät [palautussovellukseen](https://studies.cs.helsinki.fi/fs-stats/).
+Palauta tehtävät [palautussovellukseen](https://studies.cs.helsinki.fi/fullstackopen/).
 
 ## osa 7
 
-Deadline 11.3. klo 23:59
+Deadline 15.12.2018 klo 23:59
 
-Osassa on 23 tehtävää, arvostelussa tehtävien maksimiin tässä osassa lasketaan kuitenkin ainoastaan 15. Tekemällä enemmän kuin 15 tehtävää, voit paikata edellisten osien tekemättä jääneitä tehtäviä.
-
-Tämän osan tehtävissä jatketaan osissa 4 ja 5 tehtyä Bloglist-sovellusta. Suurin osa tämän osan tehtävistä on toisistaan riippumattomia "featureita", eli tehtäviä ei tarvitse tehdä järjestyksessä, voit jättää osan aivan hyvin toteuttamatta.
+Osassa on 23 tehtävää joissa jatketaan osissa 4 ja 5 tehtyä Bloglist-sovellusta. Suurin osa tämän osan tehtävistä on toisistaan riippumattomia "featureita", eli tehtäviä ei tarvitse tehdä järjestyksessä, voit jättää osan aivan hyvin toteuttamatta.
 
 Voit ottaa pohjaksi oman sovelluksesi sijaan myös mallivastauksen koodin.
 
@@ -2661,8 +2653,8 @@ Toteuta sovelluksellesi esim. [Travis CI](https://travis-ci.org/):n avulla jatku
 
 ### 7.23 Kurssipalaute
 
-Anna kurssille palautetta osoitteessa <https://ilmo.cs.helsinki.fi/kurssit/servlet/Valinta>
+Anna kurssille palautetta osoitteessa <https://tba.fi>
 
 ### Tehtävien palautus
 
-Palauta tehtävät [palautussovellukseen](https://studies.cs.helsinki.fi/fs-stats/).
+Palauta tehtävät [palautussovellukseen](https://studies.cs.helsinki.fi/fullstackopen/).

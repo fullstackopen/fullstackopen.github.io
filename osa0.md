@@ -1,6 +1,7 @@
 ---
 layout: page
 title: osa 0
+inheader: yes
 permalink: /osa0/
 ---
 
@@ -12,66 +13,58 @@ Kurssilla käsitellään myös sovellusten testaamista, konfigurointia ja suorit
 
 ## Oletetut esitiedot
 
-Osallistujilta edellytetään vahvaa ohjelmointirutiinia, web-ohjelmoinnin ja tietokantojen perustuntemusta (esim. opintojakson Tietokantasovellus-suoritusta) sekä valmiutta omatoimiseen tiedonhakuun.
+Osallistujilta edellytetään vahvaa ohjelmointirutiinia, web-ohjelmoinnin ja tietokantojen perustuntemusta, kykyä pitkäjänteiseen työskentelyyn sekä valmiutta omatoimiseen tiedonhakuun ja ongelmanratkaisuun. 
 
-Kurssille osallistuminen ei edellytä käsiteltyjen tekniikoiden tai Javascript-kielen hallintaa.
+Osallistuminen ei kuitenkaan edellytä kurssilla käsiteltävien tekniikoiden tai Javascript-kielen hallintaa.
 
 ## Kurssimateriaali
 
 Kurssimateriaali on tarkoitettu luettavaksi osa kerrallaan "alusta loppuun". Materiaalin seassa on tehtäviä, jotka on sijoiteltu siten, että kunkin tehtävän tekemiseen pitäsi olla riittävät tekniset valmiudet sitä edeltävässä materiaalissa. Voit siis tehdä tehtäviä sitä mukaan kun niitä tulee materiaalissa vastaan. Voi myös olla, että koko osan tehtävät kannattaa tehdä vasta luettuaan ensin osan alusta loppuun kertaalleen. Useissa osissa tehtävät ovat samaa ohjelmaa laajentavia pienistä osista koostuvia kokonaisuuksia. Muutamia tehtävien ohjelmia kehitetään eteenpäin useamman osan aikana.
 
-Materiaali perustuu muutamien osasta osaan vaihtuvien esimerkkiohjelmien asteittaiseen laajentamiseen. Materiaali toiminee parhaiten, jos kirjoitat samalla koodin myös itse ja teet koodiin myös pieniä modifikaatioita. Materiaalin käyttämien ohjelmien koodin eri vaiheiden tilanteita on tallennettu Githubiin.
+Materiaali perustuu muutamien osasta osaan vaihtuvien esimerkkiohjelmien asteittaiseen laajentamiseen. Materiaali toiminee parhaiten, jos kirjoitat samalla koodin myös itse ja teet koodiin myös pieniä modifikaatioita. Materiaalin käyttämien ohjelmien koodin eri vaiheiden tilanteita on tallennettu GitHubiin.
 
 ## Suoritustapa
 
-Kurssi koostuu kahdeksasta osasta, joista ensimmäinen on historiallisista syistä numero nolla. Osat voi tulkita löyhästi ajatellen viikoiksi. Osia kuitenkin ilmestyy nopeampaa tahtia, ja suoritusnopeuskin on melko vapaa.
+Kurssi koostuu kahdeksasta osasta, joista ensimmäinen on historiallisista syistä numero nolla. Kunkin osan tekemiseen kannattaa varata aikaa noin 5-25 tuntia. 
 
-Materiaalissa osasta _n_ osaan _n+1_ eteneminen ei ole mielekästä ennen kuin riittävä osaaminen osan _n_ asioista on saavutettu. Kurssilla sovelletaankin pedagogisin termein _tavoiteoppimista_, [engl. mastery learning](https://en.wikipedia.org/wiki/Mastery_learning) ja on tarkoitus, että etenet seuraavaan osaan vasta, kun riittävä määrä (noin 80%) edellisen osan tehtävistä on tehty. Jokaisen osan _vapaaehtoiset_ (mutta arvosteluun vaikuttavat) tehtävät on merkattu tähdellä.
+Materiaalissa osasta _n_ osaan _n+1_ eteneminen ei ole mielekästä ennen kuin riittävä osaaminen osan _n_ asioista on saavutettu. Kurssilla sovelletaankin pedagogisin termein _tavoiteoppimista_, [engl. mastery learning](https://en.wikipedia.org/wiki/Mastery_learning) ja on tarkoitus, että etenet seuraavaan osaan vasta, kun riittävä määrä edellisen osan tehtävistä on tehty. 
 
-Estääksemme sen, että aloitat kurssin tekemisen vasta viimeisellä viikolla, on jokaisella osalla  myös hard deadline. Etenemiselle on siis jonkun verran joustoa, jotta ehdit tekemään kustakin osasta tarvittavan määrän tehtäviä.
+Oletuksena on, että teet kunkin osan tehtävistä _ainakin ne_ jotka eivät ole merkattu tähdellä. Myös tähdellä merkatut tehtävät vaikuttavat arvosteluun, mutta niiden tekemättäjättäminen ei aiheuta liian suuria esteitä seuraavan osan (tähdellä merkkaamattomien) tehtävien tekemiseen.
 
-Osien _hard deadlinet_ ja arvioidut keskimääräiset (kaikkien tehtävien tekemisen vaatimat) työmäärät seuraavassa:
+Etenemisnopeus kurssilla on vapaa, tehtäviä voi palauttaa 15.12. klo 23:59 asti.
 
-| osa            | deadline&nbsp; &nbsp;    | työmäärä  |
-| -------------- |:-----------------:       |:-----:|
-| osa 0 ja osa 1 | 30.1.                    | 11   |
-| osa 2          | 5.2.                     | 11   |
-| osa 3          | 12.2.                    | 10   |
-| osa 4          | 25.2.                    | 14   |
-| osa 5          | 4.3.                     | 16.5 |
-| osa 6          | 11.3.                    | 13   |
-| osa 7          | 11.3.                    | 13   |
-
-
-Keskimääräisten työmäärien arvio perustuu kurssin [betaversiota](https://mluukkai.github.io) joululoman aikana testanneilta 15:lta opiskelijalta kerättyyn dataan. Kannattaa huomata, että työmäärissä on suuri varianssi, esim. osan 0 ja 1 yhteenlaskettu ajankäyttö vaihteli 5 ja 20 tunnin väliltä.
-
-Tämän kurssin eri osiin jo tehtyjen palautusten ajankäyttöstatistiikan näet [tehtävien palautussivulta](https://studies.cs.helsinki.fi/fs-stats/).
-
-Suuri jousto suoritusajoissa tuo opiskelijalle entistä suuremman vastuun omasta ajankäytöstä. Nyt ilmoitetuista deadlineista **ei jousteta ollenkaan**. Kannattaa muistaa se, että mitä lähempänä deadlinea tehtävien tekemisen aloittaa, sitä suurempi vaara on joutua eriasteisiin konfiguraatiohelvetteihin. Apuakin on rajallisemmin tarjolla kun kello lähenee deadlinepäivän keskiyötä.
+Tämän kurssin eri osiin jo tehtyjen palautusten ajankäyttöstatistiikan näet [tehtävien palautussivulta](https://studies.cs.helsinki.fi/fullstackopen/).
 
 ## Arvosteluperusteet
 
-Arvosana määräytyy kaikkien tehtyjen tehtävien perusteella, myös tähdellä merkityt "vapaavalintaiset" tehtävät siis vaikuttavat arvosanaan. Noin 50% deadlineen mennessä tehdyistä tehtävistä tuo arvosanan 1 ja 80% arvosanan 5. Kurssin lopussa on koe, joka on suoritettava hyväksytysti. Koe ei kuitenkaan vaikuta arvosanaan.
+Kurssi voidaan suorittaa joko 3 tai 5-7 opintopisteen laajuisena.
 
-Kurssilta on mahdollisuus ansaita lisäopintopisteitä. Jos teet 87.5% kurssin tehtävistä, saat yhden lisäopintopisteen. Tekemällä 95% tehtävistä saat 2 lisäopintopistettä. Opetushallinnollisista syistä lisäopintopisteet rekisteröidään omana kurssinaan. Kurssin nimi määritellään myöhemmin.
+Laajuus ja arvosana määräytyy kaikkien tehtyjen tehtävien perusteella, myös tähdellä merkityt tehtävät siis vaikuttavat arvosanaan. Kurssin lopussa on koe, joka on suoritettava hyväksytysti. Koe ei kuitenkaan vaikuta arvosanaan.
 
-## Arvosanarajat
+Kurssin koe suoritetaan _moodlessa_. Kokeen voi suorittaa 1.5. alkaen. Lisätietoa kokeen suorituksesta myöhemmin.
 
-Kurssilla on yhteensä 149 tehtävää. Tehtävien maksimimääräksi lasketaan kuitenkin 141, sillä osan 7 tehtävistä kaikki eivät vaikuta arvosteluun.
+### Kolmen opintopisteen suoritus
 
-Arvosanarajat:
+Kolmen opintopisteen suoritukseen edellytetään osien 0-3 kaikkien tähdellä merkitsemättömien tehtävien tekeminen sekä hyväksytty suoritus 3 opintopisteen laajuuden kokeesta. 
+
+Suoritus rekisteröidään arvosanalla _hyväksytty_.
+ 
+### 5-7 opintopisteen suoritus
+
+Laajan suorituksen opintopistemäärä ja arvosana  määräytyy _kaikkien_ tehtyjen tehtävien (myös tähdellä merkittyjen)  perusteella. Noin 50% deadlineen 15.12. mennessä tehdyistä tehtävistä tuo arvosanan 1 ja 80% arvosanan 5. 
+Kurssilla on yhteensä 148 tehtävää. 
+
+Arvosana/opintopisterajat:
 
 | tehtävää  &nbsp;       | arvosana&nbsp;    | op  |
 | -------------- |:-----------------:       |:-----:|
-| 70    | 1/5  | 5   |
-| 81    | 2/5  | 5   |
-| 92    | 3/5  | 5   |
-| 103   | 4/5  | 5   |
-| 113   | 5/5  | 5   |
-| 124   | hyv  | 6   |
-| 134   | hyv  | 7   |
-
-Ylimääräiset opintopisteet tullaan kirjaamaan kaikille arvosanalla "hyväksytty".
+| 75    | 1/5  | 5   |
+| 85    | 2/5  | 5   |
+| 95    | 3/5  | 5   |
+| 105   | 4/5  | 5   |
+| 115   | 5/5  | 5   |
+| 128   | 5/5  | 6   |
+| 140   | 5/5  | 7   |
 
 ## Alkutoimet
 
@@ -91,9 +84,9 @@ Noden myötä koneelle asentuu myös Node package manager [npm](https://www.npmj
 
 ## Typoja materiaalissa
 
-Kurssilla on paljon materiaalia ja se on olosuhteiden pakosta kirjoitettu todella nopeasti. Materiaalissa on betatestauksesta ja oikoluvuista huolimatta kirjoitusvirheitä. Jos löydät kirjoitusvirheen tai joku asia on sanottu epäselvästi tai kielioppisääntöjen vastaisesti, tee _pull request_ repositoriossa <https://github.com/FullStack-HY/FullStack-Hy.github.io> olevaan kurssimateriaaliin.
+Kurssilla on paljon materiaalia ja se on olosuhteiden pakosta kirjoitettu todella nopeasti. Materiaalissa on betatestauksesta ja oikoluvuista huolimatta kirjoitusvirheitä. Jos löydät kirjoitusvirheen tai joku asia on sanottu epäselvästi tai kielioppisääntöjen vastaisesti, tee _pull request_ repositoriossa <https://github.com/fullstackopen/fullstackopen.github.io> olevaan kurssimateriaaliin.
 
-Pull requestin tekeminen on helppoa. Esim. jos tällä sivulla on typo, mene sivun "lähdekoodiin" https://github.com/FullStack-HY/FullStack-Hy.github.io/blob/master/osa0.md klikkaa kynän kuvaa oikealta, tee muutokset ja klikkaa muutama kerta "vihreää" [Ohtu-kurssin ohjeen mukaan](https://github.com/mluukkai/ohjelmistotuotanto2017/blob/master/laskarit/2.md#typokorjauksia--vinkkejä).
+Pull requestin tekeminen on helppoa. Esim. jos tällä sivulla on typo, mene sivun "lähdekoodiin" https://github.com/fullstackopen/fullstackopen.github.io/blob/master/osa0.md klikkaa kynän kuvaa oikealta, tee muutokset ja klikkaa muutama kerta "vihreää" [Ohtu-kurssin ohjeen mukaan](https://github.com/mluukkai/ohjelmistotuotanto2017/blob/master/laskarit/2.md#typokorjauksia--vinkkejä).
 
 ## Osan 0 oppimistavoitteet
 

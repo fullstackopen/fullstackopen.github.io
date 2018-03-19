@@ -1,6 +1,7 @@
 ---
 layout: page
 title: osa 4
+inheader: yes
 permalink: /osa4/
 ---
 ## Osan 4 oppimistavoitteet

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: osa 6
+inheader: yes
 permalink: /osa6/
 ---
 
