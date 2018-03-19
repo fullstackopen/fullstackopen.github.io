@@ -5,11 +5,10 @@ inheader: yes
 permalink: /osa1/
 ---
 
-<!--
-<div class='important warn'>
-  <p><strong>dokumenttia päivitetään</strong> lukeminen omalla vastuulla</p>
-</div>
--->
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+  <img alt="Creative Commons -lisenssi" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"
+  />
+</a>
 
 ## Osan 1 oppimistavoitteet
 
