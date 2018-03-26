@@ -180,7 +180,7 @@ Esimerkkisovelluksen pääsivu toimii _perinteisen web-sovelluksen_ tapaan. Ment
 
 Palvelin on muodostanut dokumentin jollain tavalla. Dokumentti voi olla _staattista sisältöä_ eli palvelimen hakemistossa oleva tekstitiedosto. Dokumentti voi myös olla _dynaaminen_, eli palvelin voi muodostaa HTML-dokumentit ohjelmakoodin avulla hyödyntäen esim. tietokannassa olevaa dataa. Esimerkkisovelluksessa sivun HTML-koodi on muodostettu dynaamisesti, sillä se sisältää tiedon luotujen muistiinpanojen lukumäärästä.
 
-Etusivun muodostama koodi näyttää seuraavalta:
+Etusivun muodostava koodi näyttää seuraavalta:
 
 ```js
 const getFrontPageHtml = (noteCount) => {
