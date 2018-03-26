@@ -46,18 +46,19 @@ Kurssi voidaan suorittaa joko 3 tai 5-7 opintopisteen laajuisena.
 
 Laajuus ja arvosana määräytyy kaikkien tehtyjen tehtävien perusteella, myös tähdellä merkityt tehtävät siis vaikuttavat arvosanaan. Kurssin lopussa on koe, joka on suoritettava hyväksytysti. Koe ei kuitenkaan vaikuta arvosanaan.
 
-Kurssin koe suoritetaan _moodlessa_. Kokeen voi suorittaa 1.5. alkaen. Lisätietoa kokeen suorituksesta myöhemmin.
-
 ### Kolmen opintopisteen suoritus
 
-Kolmen opintopisteen suoritukseen edellytetään osien 0-3 kaikkien tähdellä merkitsemättömien tehtävien tekeminen sekä hyväksytty suoritus 3 opintopisteen laajuuden kokeesta. 
+Kolmen opintopisteen suorituksen edellytyksenä on osien 0-3 kaikkien tähdellä merkitsemättömien tehtävien tekeminen sekä hyväksytty suoritus 3 opintopisteen laajuuden kokeesta. 
+
+Koe suoritetaan _Moodlessa_. Kokeen voi suorittaa 1.5. alkaen. Kokeen viimeinen suorituspäivä on 15.12. Voit osallistua kokeeseen vasta siinä vaiheessa kun olet tehnyt _kaikki_ kolmen opintopisteen suorituksen edellyttämät tehtävät.
 
 Suoritus rekisteröidään arvosanalla _hyväksytty_.
  
+Voit halutessasi laajentaa 3 op suorituksen myöhemmin laajempaan 5-7 op suoritukseen. Jos tähtäät suoraan laajempaan suoritukseen, 3 op:n koetta ei kannata suorittaa.
+
 ### 5-7 opintopisteen suoritus
 
-Laajan suorituksen opintopistemäärä ja arvosana  määräytyy _kaikkien_ tehtyjen tehtävien (myös tähdellä merkittyjen)  perusteella. Noin 50% deadlineen 15.12. mennessä tehdyistä tehtävistä tuo arvosanan 1 ja 80% arvosanan 5. 
-Kurssilla on yhteensä 148 tehtävää. 
+Laajan suorituksen opintopistemäärä ja arvosana määräytyy _kaikkien_ tehtyjen tehtävien (myös tähdellä merkittyjen) perusteella. 
 
 Arvosana/opintopisterajat:
 
@@ -70,6 +71,8 @@ Arvosana/opintopisterajat:
 | 115   | 5/5  | 5   |
 | 128   | 5/5  | 6   |
 | 140   | 5/5  | 7   |
+
+Myös 5-7 op:n suorituksen edellytyksenä on _hyväksytyisti suoritettu koe_. Koe suoritetaan _Moodlessa_. Kokeen voi suorittaa 1.5. alkaen. Kokeen viimeinen suorituspäivä on 15.12. Voit osallistua kokeeseen vasta siinä vaiheessa kun olet tehnyt riittävästi tehtäviä 5 opintopisteen suoritukseen. Käytännössä kokeeseen ei kuitenkaan kannata  osallistua heti kun riittävä tehtäväpistemäärä on suoritetu. Koe on sisällöltään sama riippumatta onko suorituksesi laajuus 5-7 opintopistettä. Koe ei vaikuta kurssilta saamaasi arvosanaan.
 
 ## Alkutoimet
 
