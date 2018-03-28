@@ -495,7 +495,7 @@ Tiedosto määrittelee kaksi [luokkaselektoria](https://developer.mozilla.org/en
 
 Luokkaselektori alkaa aina pisteellä ja sisältää luokan nimen.
 
-Luokat ovat [attribuuteja](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class) joita voidaan liittää HTML-elementeille.
+Luokat ovat [attribuutteja](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class) joita voidaan liittää HTML-elementeille.
 
 Konsolin _Elements_-välilehti mahdollistaa class-attribuuttien tarkastelun:
 
