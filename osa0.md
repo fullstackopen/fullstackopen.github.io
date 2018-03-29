@@ -72,7 +72,7 @@ Arvosana/opintopisterajat:
 | 128   | 5/5  | 6   |
 | 140   | 5/5  | 7   |
 
-Myös 5-7 op:n suorituksen edellytyksenä on _hyväksytyisti suoritettu koe_. Koe suoritetaan _Moodlessa_. Kokeen voi suorittaa 1.5. alkaen. Kokeen viimeinen suorituspäivä on 15.12. Voit osallistua kokeeseen vasta siinä vaiheessa kun olet tehnyt riittävästi tehtäviä 5 opintopisteen suoritukseen. Käytännössä kokeeseen ei kuitenkaan kannata  osallistua heti kun riittävä tehtäväpistemäärä on suoritetu. Koe on sisällöltään sama riippumatta onko suorituksesi laajuus 5-7 opintopistettä. Koe ei vaikuta kurssilta saamaasi arvosanaan.
+Myös 5-7 op:n suorituksen edellytyksenä on _hyväksytysti suoritettu koe_. Koe suoritetaan _Moodlessa_. Kokeen voi suorittaa 1.5. alkaen. Kokeen viimeinen suorituspäivä on 15.12. Voit osallistua kokeeseen vasta siinä vaiheessa kun olet tehnyt riittävästi tehtäviä 5 opintopisteen suoritukseen. Käytännössä kokeeseen ei kuitenkaan kannata  osallistua heti kun riittävä tehtäväpistemäärä on suoritetu. Koe on sisällöltään sama riippumatta onko suorituksesi laajuus 5-7 opintopistettä. Koe ei vaikuta kurssilta saamaasi arvosanaan.
 
 ## Alkutoimet
 
