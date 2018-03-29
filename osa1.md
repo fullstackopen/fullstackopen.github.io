@@ -190,6 +190,15 @@ Reactia olisi myös mahdollista kirjoittaa "suoraan Javascriptinä" käyttämät
 
 Käytännössä JSX on melkein kuin HTML:ää sillä erotuksella, että mukaan voi upottaa helposti dynaamista sisältöä kirjoittamalla sopivaa Javascriptiä aaltosulkeiden sisälle. Idealtaan JSX on melko lähellä monia palvelimella käytettäviä templating-kieliä kuten Java Springin yhteydessä käytettävää thymeleafia.
 
+JSX on "XML:n kaltainen", eli jokainen tagi tulee sulkea. Esimerkiksi rivinvaihto on tyhjä elementti, joka kirjoitetaan HTML:ssä tyypillisesti
+```html
+<br>
+```
+mutta JSX:ää kirjoittaessa tagi on pakko sulkea:
+```html
+<br />
+```
+
 ## Monta komponenttia
 
 Muutetaan sovellusta seuraavasti (yläreunan importit jätetään nyt ja jatkossa pois):
