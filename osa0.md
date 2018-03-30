@@ -72,7 +72,7 @@ Arvosana/opintopisterajat:
 | 128   | 5/5  | 6   |
 | 140   | 5/5  | 7   |
 
-Myös 5-7 op:n suorituksen edellytyksenä on _hyväksytyisti suoritettu koe_. Koe suoritetaan _Moodlessa_. Kokeen voi suorittaa 1.5. alkaen. Kokeen viimeinen suorituspäivä on 15.12. Voit osallistua kokeeseen vasta siinä vaiheessa kun olet tehnyt riittävästi tehtäviä 5 opintopisteen suoritukseen. Käytännössä kokeeseen ei kuitenkaan kannata  osallistua heti kun riittävä tehtäväpistemäärä on suoritetu. Koe on sisällöltään sama riippumatta onko suorituksesi laajuus 5-7 opintopistettä. Koe ei vaikuta kurssilta saamaasi arvosanaan.
+Myös 5-7 op:n suorituksen edellytyksenä on _hyväksytysti suoritettu koe_. Koe suoritetaan _Moodlessa_. Kokeen voi suorittaa 1.5. alkaen. Kokeen viimeinen suorituspäivä on 15.12. Voit osallistua kokeeseen vasta siinä vaiheessa kun olet tehnyt riittävästi tehtäviä 5 opintopisteen suoritukseen. Käytännössä kokeeseen ei kuitenkaan kannata  osallistua heti kun riittävä tehtäväpistemäärä on suoritetu. Koe on sisällöltään sama riippumatta onko suorituksesi laajuus 5-7 opintopistettä. Koe ei vaikuta kurssilta saamaasi arvosanaan.
 
 ## Alkutoimet
 
@@ -180,7 +180,7 @@ Esimerkkisovelluksen pääsivu toimii _perinteisen web-sovelluksen_ tapaan. Ment
 
 Palvelin on muodostanut dokumentin jollain tavalla. Dokumentti voi olla _staattista sisältöä_ eli palvelimen hakemistossa oleva tekstitiedosto. Dokumentti voi myös olla _dynaaminen_, eli palvelin voi muodostaa HTML-dokumentit ohjelmakoodin avulla hyödyntäen esim. tietokannassa olevaa dataa. Esimerkkisovelluksessa sivun HTML-koodi on muodostettu dynaamisesti, sillä se sisältää tiedon luotujen muistiinpanojen lukumäärästä.
 
-Etusivun muodostama koodi näyttää seuraavalta:
+Etusivun muodostava koodi näyttää seuraavalta:
 
 ```js
 const getFrontPageHtml = (noteCount) => {
@@ -495,7 +495,7 @@ Tiedosto määrittelee kaksi [luokkaselektoria](https://developer.mozilla.org/en
 
 Luokkaselektori alkaa aina pisteellä ja sisältää luokan nimen.
 
-Luokat ovat [attribuuteja](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class) joita voidaan liittää HTML-elementeille.
+Luokat ovat [attribuutteja](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class) joita voidaan liittää HTML-elementeille.
 
 Konsolin _Elements_-välilehti mahdollistaa class-attribuuttien tarkastelun:
 
