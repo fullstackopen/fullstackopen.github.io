@@ -111,7 +111,7 @@ Pull requestin tekeminen on helppoa. Esim. jos tällä sivulla on typo, mene siv
 
 ## Web-sovelluksen toimintaperiaatteita ##
 
-Ennen kuin aloitamme ohjelmoinnin, käymme läpi web-sovellusten toimintaperiaatteita tarkastelemalla osoitteessa <https://fullstack-exampleapp.herokuapp.com/> olevaa esimerkkisovellusta. Huom. sovelluksen toinen versio on osoitteessa <https://exampleapp-ghqykidlgq.now.sh/>, voit käyttää kumpaa vaan.
+Ennen kuin aloitamme ohjelmoinnin, käymme läpi web-sovellusten toimintaperiaatteita tarkastelemalla osoitteessa <https://fullstack-exampleapp.herokuapp.com/> olevaa esimerkkisovellusta. Huom. sovelluksen toinen versio on osoitteessa <https://fullstack-example.now.sh>, voit käyttää kumpaa vaan.
 
 Sovelluksen olemassaolon tarkoitus on ainoastaan havainnollistaa kurssin peruskäsitteistöä, sovellus ei ole missään tapauksessa esimerkki siitä _miten_ web-sovelluksia kannattaisi kehittää, päinvastoin, sovellus demonstroi eräitä historiallisia web-sovellusten toteutukseen käytettäjä tapoja ja tekniikoita, joiden  katsotaan nykyään olevan jopa _huonoja käytänteitä_.
 
