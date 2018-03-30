@@ -2654,7 +2654,7 @@ Toteuta sovelluksellesi esim. [Travis CI](https://travis-ci.org/):n avulla jatku
 
 ### 7.23 Kurssipalaute
 
-Anna kurssille palautetta osoitteessa <https://tba.fi>
+Anna kurssille palautetta osoitteessa *(osoite julkaistaan myöhemmin)*.
 
 ### Tehtävien palautus
 
