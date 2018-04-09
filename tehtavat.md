@@ -18,7 +18,7 @@ permalink: /tehtävät/
 
 Kaikkien osien deadline on 15.12.2018 klo 23:59
 
-## Pakolliset tehtävät ja tehtävien vaikuttaminen arvosteluun
+## Suositeltavat ja vapaaehtoiset tehtävät, tehtävien vaikuttaminen arvosteluun
 
 Osa tehtävistä on seuraavaan osaan etenemisen kannalta suositeltavia ja osa vapaaehtoisia. Vapaaehtoiset on merkattu tähdellä. 
 
