@@ -970,7 +970,7 @@ CORS:ista voi lukea tarkemmin esim. [Mozillan sivuilta](https://developer.mozill
 
 Kun koko "stäkki" on saatu vihdoin kuntoon, siirretään sovellus internettiin. Viime aikoina on tullut uusia mielenkiintoisa sovellusten hostausmahdollisuuksia, esim. [Zeit](https://zeit.co). Käytetään seuraavassa vanhaa kunnon [Herokua](https://www.heroku.com).
 
-Lisätään projektin juureen tiedosto _Procfile_, joka kertoo herokulle, miten sovellus käynnistetään
+Lisätään projektin juureen tiedosto _Procfile_, joka kertoo Herokulle, miten sovellus käynnistetään
 
 ```bash
 web: node index.js
@@ -1007,9 +1007,9 @@ Esim. tätä materiaalia tehdessä törmättiin ongelmaan joka aiheutti seuraava
 
 Syynä ongelmalle oli se, että middlewarea _cors_ asennettaessa oli unohtunut antaa optio __--save__, joka tallentaa tiedon riippuvuudesta tiedostoon _package.json_. Koska näin kävi, ei Heroku ollut asentanut corsia sovelluksen käyttöön.
 
-> **HUOM** ainakin alussa on järkevää tarkkailla herokussa olevan sovelluksen lokeja koko ajan. Parhaiten tämä onnistuu antamalla komento _heroku logs -t_, jolloin logit tulevat konsoliin sitä mukaan kun palvelimella tapahtuu jotain.
+> **HUOM** ainakin alussa on järkevää tarkkailla Herokussa olevan sovelluksen lokeja koko ajan. Parhaiten tämä onnistuu antamalla komento _heroku logs -t_, jolloin logit tulevat konsoliin sitä mukaan kun palvelimella tapahtuu jotain.
 
-Myös frontend toimii herokussa olevan backendin avulla. Voit varmistaa asian muuttamalla frontendiin määritellyn backendin osoitteen viittaamaan _localhost:3001_:n sijaan herokussa olevaan backendiin.
+Myös frontend toimii Herokussa olevan backendin avulla. Voit varmistaa asian muuttamalla frontendiin määritellyn backendin osoitteen viittaamaan _localhost:3001_:n sijaan Herokussa olevaan backendiin.
 
 Seuraavaksi herää kysymys miten saamme myös frontendin internettiin? Vaihtoehtoja on useita.
 

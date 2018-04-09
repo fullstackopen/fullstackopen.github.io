@@ -1008,15 +1008,16 @@ Joudut todennäköisesti tekemään frontendiin erinäisiä pieniä muutoksia ai
 
 #### 3.10 puhelinluettelon backend osa 10
 
-Vie sovelluksen backend internetiin, esim. Herokuun.
+Vie sovelluksen backend internetiin, esim. Herokuun. Toinen, käyttäjän kannalta helpompi vaihtoehto on Zeit.co:n [now](
+https://zeit.co/now).
 
-**Huom1** komento _heroku_ toimii laitoksen koneilla ja fuksikannettavilla 9.2. alkaen. Jos et jostain syystä saa asennettua herokua koneellesi, voit käyttää komentoa [npx heroku-cli](https://www.npmjs.com/package/heroku-cli).
+**Huom1** komento _heroku_ toimii laitoksen koneilla ja fuksikannettavilla 9.2. alkaen. Jos et jostain syystä saa [asennettua](https://devcenter.heroku.com/articles/heroku-cli) herokua koneellesi, voit käyttää komentoa [npx heroku-cli](https://www.npmjs.com/package/heroku-cli).
 
 **Huom2** eihän hakemisto _build_ ole gitignoroituna projektissasi?
 
 Testaa selaimen ja postmanin tai VS Code REST clientin avulla, että internetissä oleva backend toimii.
 
-**PRO TIP:** kun deployaat sovelluksen herokuun, kannattaa ainakin alkuvaiheissa pitää **KOKO AJAN** näkyvillä herokussa olevan sovelluksen loki antamalla komento <code>heroku logs -t</code>:
+**PRO TIP:** kun deployaat sovelluksen herokuun, kannattaa ainakin alkuvaiheissa pitää **KOKO AJAN** näkyvillä Herokussa olevan sovelluksen loki antamalla komento <code>heroku logs -t</code>:
 
 ![]({{ "/assets/teht/22.png" | absolute_url }})
 
