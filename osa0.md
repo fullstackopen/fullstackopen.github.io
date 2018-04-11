@@ -271,7 +271,7 @@ xhttp.open('GET', '/data.json', true)
 xhttp.send()
 ```
 
-Kyseessä on alin Network tabin näyttämistä selaimen tekemistä pyynnöistä.
+Kyseessä on alin Network-välilehden näyttämistä selaimen tekemistä pyynnöistä.
 
 Voimme kokeilla mennä osoitteeseen <https://fullstack-exampleapp.herokuapp.com/data.json> suoraan selaimella:
 
@@ -520,7 +520,7 @@ Tutkitaan seuraavaksi sitä, miten uusien muistiinpanojen luominen tapahtuu. Tä
 
 ![]({{ "/assets/1/18.png" | absolute_url }})
 
-Kun lomakkeen painiketta painetaan, lähettää selain lomakkeelle syötetyn datan palvelimelle. Avataan _Network_-tabi ja katsotaan miltä lomakkeen lähettäminen näyttää:
+Kun lomakkeen painiketta painetaan, lähettää selain lomakkeelle syötetyn datan palvelimelle. Avataan _Network_-välilehti ja katsotaan miltä lomakkeen lähettäminen näyttää:
 
 ![]({{ "/assets/1/19.png" | absolute_url }})
 
@@ -604,7 +604,7 @@ HTML-koodi on lähes samanlainen, erona on ladattava Javascript-tiedosto (_spa.j
 
 ![]({{ "/assets/1/23.png" | absolute_url }})
 
-Avaa nyt _Network_-tabi ja tyhjennä se &empty;-symbolilla. Kun luot uuden muistiinpanon, huomaat, että selain lähettää ainoastaan yhden pyynnön palvelimelle:
+Avaa nyt _Network_-välilehti ja tyhjennä se &empty;-symbolilla. Kun luot uuden muistiinpanon, huomaat, että selain lähettää ainoastaan yhden pyynnön palvelimelle:
 
 ![]({{ "/assets/1/24.png" | absolute_url }})
 
