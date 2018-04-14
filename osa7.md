@@ -472,7 +472,7 @@ Transpilointi hajoaa, ja CSS:ää varten onkin otettava käyttöön [css](https:
 
 ```js
 {
-  loaders: [
+  rules: [
     {
       test: /\.js$/,
       loader: 'babel-loader',
