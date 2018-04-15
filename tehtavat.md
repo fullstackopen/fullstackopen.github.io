@@ -866,7 +866,7 @@ Palvelimelta tiettyä henkilöä vastaava resurssi tuhotaan tekemällä HTTP DEL
 
 #### 2.17* puhelinluettelo osa 10
 
-Muuta toiminnallisuutta siten, että jos jo olemassaolevalle henkilölle lisätään numero, korvaa lisätty numero aiemman numeron.
+Muuta toiminnallisuutta siten, että jos jo olemassaolevalle henkilölle lisätään numero, korvaa lisätty numero aiemman numeron. Korvaaminen kannattaa tehdä HTTP PUT -pyynnöllä.
 
 Jos henkilön tiedot löytyvät jo luettelosta, voi ohjelma kysyä käyttäjältä varmistuksen korvataanko numero
 
@@ -1173,7 +1173,7 @@ Varmista, että frontend toimii muutosten jälkeen.
 
 #### 3.17* puhelinluettelo ja tietokanta, osa 5
 
-Jos frontendissä annetaan numero henkilölle, joka on jo olemassa, päivittää frontend tiedot uudella tekemällä HTTP PUT -pyynnön henkilön tietoja vastaavaan url:iin.
+Jos frontendissä annetaan numero henkilölle, joka on jo olemassa, päivittää frontend tehtävässä 2.17 tehdyn toteutuksen ansiosta tiedot uudella tekemällä HTTP PUT -pyynnön henkilön tietoja vastaavaan url:iin.
 
 Laajenna backendisi käsittelemään tämä tilanne.
 
