@@ -530,7 +530,7 @@ Javascriptissä olioilla voi luonnollisesti olla myös metodeja. Palaamme aihees
 
 Olioita on myös mahdollista määritellä ns. konstruktorifunktioiden avulla, jolloin saadaan aikaan hieman monien ohjelmointikielten, esim. Javan luokkia (class) muistuttava mekanismi. Javascriptissä ei kuitenkaan ole luokkia samassa mielessä kuin olio-ohjelmointikielissä. Kieleen on kuitenkin lisätty versiosta ES6 alkaen _luokkasyntaksi_, joka helpottaa tietyissä tilanteissa olio-ohjelmointikielimäisten luokkien esittämistä. Palaamme asiaan hetken kuluttua.
 
-Reactissa konstruktorifunktioihin perustuvalle olioiden määrittelyyn ei ole kovin usein tarvetta, joten sivuutamme sen tällä kurssilla.
+Reactissa konstruktorifunktioihin perustuvalle olioiden määrittelylle ei ole kovin usein tarvetta, joten sivuutamme sen tällä kurssilla.
 
 ### Funktiot
 
