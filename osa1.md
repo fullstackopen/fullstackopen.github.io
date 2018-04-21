@@ -1014,7 +1014,7 @@ ReactDOM.render(
 
 Komponentilla on nyt metodin _render_ lisäksi _konstruktori_. Komponentin konstruktori saa parametrikseen sille välitettävät muuttujat parametrin _props_ välityksellä, konstruktorin ensimmäisen rivin on oltava kutsu <code>super(props)</code>.
 
-Luokkiin perustuvalla komponenteilla voi olla _tila_, joka talletetaan muuttujaan _state_.
+Luokkiin perustuvilla komponenteilla voi olla _tila_, joka talletetaan muuttujaan _state_.
 
 Konstruktori määrittelee komponentin alkutilan olevan:
 
@@ -1048,7 +1048,7 @@ class App extends React.Component {
 }
 ```
 
-Ruudulle renderöity laskurin arvo päivittyy sillä aina komponenentin tilan muuttuessa _React_ kutsuu komponentin metodia _render_.
+Ruudulle renderöity laskurin arvo päivittyy sillä aina komponentin tilan muuttuessa _React_ kutsuu komponentin metodia _render_.
 
 Jos komponentti ei renderöidy vaikka sen omasta mielestä pitäisi, tai se renderöityy "väärään aikaan", debuggaamista auttaa joskus metodiin _render_ liitetty konsoliin tulostus. Esim. jos lisäämme koodiin seuraavan,
 
@@ -1398,7 +1398,7 @@ class App extends React.Component {
 
 Jos et ole aiemmin törmännyt tekniikkaan, siihen totutteluun voi mennä tovi.
 
-Olemme siis määritelleen komponentin metodin _asetaArvoon_ seuraavasti:
+Olemme siis määritelleet komponentin metodin _asetaArvoon_ seuraavasti:
 
 ```js
 asetaArvoon = (arvo) => {
@@ -1475,7 +1475,7 @@ Jo muutamaan kertaan mainittu termi _funktionaalinen ohjelmointi_ ei ole vältt�
 
 ### Tilan vieminen alikomponenttiin
 
-Reactissa suositaan pieniä komponentteja, joita on mahdollista uusiokäyttää monessa osissa sovellusta ja jopa useissa eri sovelluksessa. Refaktoroidaan koodiamme vielä siten, että yhden komponentin sijaan koostamme laskurin näytöstä ja kahdesta painikkeesta.
+Reactissa suositaan pieniä komponentteja, joita on mahdollista uusiokäyttää monessa osissa sovellusta ja jopa useissa eri sovelluksissa. Refaktoroidaan koodiamme vielä siten, että yhden komponentin sijaan koostamme laskurin näytöstä ja kahdesta painikkeesta.
 
 Tehdään ensin näytöstä vastaava komponentti _Display_.
 
@@ -1775,7 +1775,7 @@ ja muussa tapauksessa näppäilyhistorian:
 </div>
 ```
 
-Komponentin _App_ ulkoasun muodostomat React-elementit siis ovat erilaisia riippuen sovelluksen tilasta, eli komponentissa on _ehdollista renderöintiä_.
+Komponentin _App_ ulkoasun muodostamat React-elementit siis ovat erilaisia riippuen sovelluksen tilasta, eli komponentissa on _ehdollista renderöintiä_.
 
 Reactissa on monia muitakin tapoja [ehdolliseen renderöintiin](https://reactjs.org/docs/conditional-rendering.html). Katsotaan niitä tarkemmin [seuraavassa osassa](/osa2).
 
