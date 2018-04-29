@@ -50,7 +50,9 @@ Laajuus ja arvosana määräytyy kaikkien tehtyjen tehtävien perusteella, myös
 
 Kolmen opintopisteen suorituksen edellytyksenä on osien 0-3 kaikkien tähdellä merkitsemättömien tehtävien tekeminen sekä hyväksytty suoritus 3 opintopisteen laajuuden kokeesta. 
 
-Koe suoritetaan _Moodlessa_. Kokeen voi suorittaa 1.5. alkaen. Kokeen viimeinen suorituspäivä on 15.12. Voit osallistua kokeeseen vasta siinä vaiheessa kun olet tehnyt _kaikki_ kolmen opintopisteen suorituksen edellyttämät tehtävät.
+Koe suoritetaan _Moodlessa_. Pääset Moodleen Avoimen yliopiston [kurssisivun](https://courses.helsinki.fi/fi/aytkt21009/123929162) kautta. Kokeen voi suorittaa 1.5. alkaen. Kokeen viimeinen suorituspäivä on 15.12. Voit osallistua kokeeseen vasta siinä vaiheessa kun olet tehnyt _kaikki_ kolmen opintopisteen suorituksen edellyttämät tehtävät.
+
+Kokeen tuloksen näet [palautussovelluksen](https://studies.cs.helsinki.fi/fullstackopen) välilehdeltä _my submissions_ viimeistään 4 viikkoa kokeen suorittamisen jälkeen (heinäkuu saatta aiheuttaa kokeen tarkastamiseen pidemmän viiveen).
 
 Suoritus rekisteröidään arvosanalla _hyväksytty_.
  
@@ -72,7 +74,11 @@ Arvosana/opintopisterajat:
 | 128   | 5/5  | 6   |
 | 140   | 5/5  | 7   |
 
-Myös 5-7 op:n suorituksen edellytyksenä on _hyväksytysti suoritettu koe_. Koe suoritetaan _Moodlessa_. Kokeen voi suorittaa 1.5. alkaen. Kokeen viimeinen suorituspäivä on 15.12. Voit osallistua kokeeseen vasta siinä vaiheessa kun olet tehnyt riittävästi tehtäviä 5 opintopisteen suoritukseen. Käytännössä kokeeseen ei kuitenkaan kannata  osallistua heti kun riittävä tehtäväpistemäärä on suoritetu. Koe on sisällöltään sama riippumatta onko suorituksesi laajuus 5-7 opintopistettä. Koe ei vaikuta kurssilta saamaasi arvosanaan.
+Myös 5-7 op:n suorituksen edellytyksenä on _hyväksytysti suoritettu koe_. Koe suoritetaan _Moodlessa_. Pääset Moodleen Avoimen yliopiston [kurssisivun](https://courses.helsinki.fi/fi/aytkt21009/123929162) kautta. Kokeen voi suorittaa 1.5. alkaen. Kokeen viimeinen suorituspäivä on 15.12. 
+
+Voit osallistua kokeeseen vasta siinä vaiheessa kun olet tehnyt riittävästi tehtäviä 5 opintopisteen suoritukseen. Käytännössä kokeeseen ei kuitenkaan kannata  osallistua heti kun riittävä tehtäväpistemäärä on suoritetu. Koe on sisällöltään sama riippumatta onko suorituksesi laajuus 5-7 opintopistettä. Koe ei vaikuta kurssilta saamaasi arvosanaan.
+
+Kokeen tuloksen näet [palautussovelluksen](https://studies.cs.helsinki.fi/fullstackopen) välilehdeltä _my submissions_ viimeistään 4 viikkoa kokeen suorittamisen jälkeen (heinäkuu saatta aiheuttaa kokeen tarkastamiseen pidemmän viiveen).
 
 ## Alkutoimet
 
