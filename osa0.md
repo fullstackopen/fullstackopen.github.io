@@ -524,7 +524,7 @@ Tehdyt muutokset eivät luonnollisestikaan jää voimaan kun selaimen sivu uudel
 
 ### Lomake ja HTTP POST ###
 
-Tutkitaan seuraavaksi sitä, miten uusien muistiinpanojen luominen tapahtuu. Tätä varten muistiinpanojen sivu sisältää lomakkeen eli [formin](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form).
+Tutkitaan seuraavaksi sitä, miten uusien muistiinpanojen luominen tapahtuu. Tätä varten muistiinpanojen sivu sisältää lomakkeen eli [form-elementin](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form).
 
 ![]({{ "/assets/1/18.png" | absolute_url }})
 
