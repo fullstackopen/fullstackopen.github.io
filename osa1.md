@@ -1159,7 +1159,7 @@ Sovelluksemme on valmis!
 
 ### Metodien käyttö ja _this_
 
-Tapahtumankäsittelijöiden määrittely suoraan JSX-templatejen sisällä ei useimmiten ole kovin viisasta. Eriytetään nappien tapahtumankäsittelijä omaksi metodeikseen:
+Tapahtumankäsittelijöiden määrittely suoraan JSX-templatejen sisällä ei useimmiten ole kovin viisasta. Eriytetään nappien tapahtumankäsittelijät omiksi metodeikseen:
 
 ```react
 class App extends React.Component {
