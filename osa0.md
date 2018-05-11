@@ -652,7 +652,7 @@ form.onsubmit = function (e) {
 }
 ```
 
-Komennolla <code>document.getElementById('notes_form')</code> koodi hakee sivulta lomake-elementin ja rekisteröi sille _tapahtumankäsittelijän_ hoitamaan tilanteen, missä lomake "submitoidaan", eli lähetetään. Tapahtumankäsittelijä kutsuu heti metodia <code>e.preventDefault()</code> jolla se estää lomakkeen lähetyksen oletusarvoisen toiminnan. Oletusarvoinen toiminta aiheuttaisi lomakkeen lähettämisen ja sivun uuden lataamisen, sitä emme single page -sovelluksissa halua tapahtuvan.
+Komennolla <code>document.getElementById('notes_form')</code> koodi hakee sivulta lomake-elementin ja rekisteröi sille _tapahtumankäsittelijän_ hoitamaan tilanteen, missä lomake "submitoidaan", eli lähetetään. Tapahtumankäsittelijä kutsuu heti metodia <code>e.preventDefault()</code> jolla se estää lomakkeen lähetyksen oletusarvoisen toiminnan. Oletusarvoinen toiminta aiheuttaisi lomakkeen lähettämisen ja sivun uudelleen lataamisen, sitä emme single page -sovelluksissa halua tapahtuvan.
 
 Tämän jälkeen se luo muistiinpanon, lisää sen muistiinpanojen listalle komennolla <code>notes.push(note)</code>, piirtää ruudun sisällön eli muistiinpanojen listan uudelleen ja lähettää uuden muistiinpanon palvelimelle.
 
