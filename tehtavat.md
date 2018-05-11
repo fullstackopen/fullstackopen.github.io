@@ -24,7 +24,7 @@ Osa tehtävistä on seuraavaan osaan etenemisen kannalta suositeltavia ja osa va
 
 Voit toki jättää tähdellä merkkaamattomiakin tehtäviä tekemättä. mutta niiden tekemättä jättäminen saattaa aiheuttaa haasteita seuraaviin osiin. Huomaa myös, että kaikkien osien 0-3 tähdellä merkkaamattomien tehtävien tekeminen on edellytyksenä 3 opintopisteen laajuiseen suoritukseen!.
 
-Arvosananja opintopistemäärä lasketaan _kaikkien_ tehtävien summan perusteella. Katso tarkemmin osan 0 luvut [suoritustapa](/osa0#suoritustapa) ja [arvosteluperusteet](/osa0#arvosteluperusteet). 
+Arvosana ja opintopistemäärä lasketaan _kaikkien_ tehtävien summan perusteella. Katso tarkemmin osan 0 luvut [suoritustapa](/osa0#suoritustapa) ja [arvosteluperusteet](/osa0#arvosteluperusteet). 
 
 ## Palauttaminen
 
