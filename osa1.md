@@ -201,7 +201,7 @@ mutta JSX:ää kirjoittaessa tagi on pakko sulkea:
 
 ## Monta komponenttia
 
-Muutetaan sovellusta seuraavasti (yläreunan importit jätetään nyt ja jatkossa pois):
+Muutetaan sovellusta seuraavasti (yläreunan importit jätetään *esimerkeistä* nyt ja jatkossa pois):
 
 ```react
 const Hello = () => {
