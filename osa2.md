@@ -72,7 +72,7 @@ Jos yhdistät merkkijonoon olion, tuloksena on suhteellisen hyödytön tulostust
 propsin arvo on [Object object]
 ```
 
-kun taas pilkulla tulostettavat asiat erotellessa saat developer-konsoliin olion, jonka sisältöä on mahdollista tarkastella.
+kun taas pilkulla erotellessa saat tulostettavat asiat developer-konsoliin oliona, jonka sisältöä on mahdollista tarkastella.
 
 ### Tapahtumankäsittely revisited
 
