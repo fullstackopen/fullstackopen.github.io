@@ -307,7 +307,7 @@ eli funktio saa parametrikseen muistiinpano-olion ja _palauttaa_ sen kentän _id
 Muuttamalla komento muotoon
 
 ```js
-const result = notes.map(note=>note.content)
+const result = notes.map(note => note.content)
 ```
 
 tuloksena on taulukko, joka koostuu muistiinpanojen sisällöistä.
