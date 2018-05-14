@@ -1314,7 +1314,7 @@ this.setState((prevState) => ({
 
 Nyt metodin parametrina on funktio, jonka parametrina on edellinen tila _prevState_ ja tilan päivitys tapahtuu varmuudella kutsuhetken edellisen tilan perusteella.
 
-Emme nyt viitsi käyttää tätä monimutkaisempa muotoa, sillä emme välitä vaikka sovelluksessamme ilmenisikin silloin tällöin pieni epäkonsistenssi (on epäselvää olisiko se sovelluksessamme edes teoriassa mahdollista).
+Emme nyt viitsi käyttää tätä monimutkaisempaa muotoa, sillä emme välitä vaikka sovelluksessamme ilmenisikin silloin tällöin pieni epäkonsistenssi (on epäselvää olisiko se sovelluksessamme edes teoriassa mahdollista).
 
 Asia tulee kuitenkin ehdottomasti pitää mielessä, _setState_:n vääränlainen käyttö saattaa aiheuttaa hankalasti löydettäviä, harvoin toistuvia bugeja.
 
