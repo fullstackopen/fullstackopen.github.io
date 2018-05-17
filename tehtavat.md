@@ -1632,7 +1632,7 @@ blogsRouter.post('/', async (request, response) => {
 })
 ```
 
-#### 4.21* blogilistan laajennus, osa 9
+#### 4.21* blogilistan laajennus, osa 10
 
 Muuta blogin poistavaa operaatiota siten, että poisto onnistuu ainoastaan jos poisto-operaation tekijä (eli se kenen token on pyynnön mukana) on sama kuin blogin lisääjä.
 
