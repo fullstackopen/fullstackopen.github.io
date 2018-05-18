@@ -804,7 +804,7 @@ Voisimme esim. määritellä metodin seuraavasti:
 ```react
 class Hello extends React.Component {
   bornYear() {
-    const yearNow = 1900 + new Date().getYear()
+    const yearNow = new Date().getFullYear()
     return yearNow - this.props.age
   }
   render() {
@@ -828,7 +828,7 @@ Tässä tilanteessa ei kuitenkaan ole varsinaisesti mitään hyötyä määritel
 class Hello extends React.Component {
   render() {
     const bornYear = () => {
-      const yearNow = 1900 + new Date().getYear()
+      const yearNow = new Date().getFullYear()
       return yearNow - this.props.age
     }
 
@@ -865,7 +865,7 @@ voimme suoraviivaistaa metodia _render_ siten, että sijoitamme kenttien arvot m
 render() {
   const name = this.props.name
   const age = this.props.age
-  const bornYear = () => 1900 + new Date().getYear() - age
+  const bornYear = () => new Date().getFullYear() - age
 
   return (
     <div>
@@ -886,7 +886,7 @@ Destrukturointi tekee asian vielä helpommaksi, sen avulla voimme "kerätä" oli
 class Hello extends React.Component {
   render() {
     const {name, age} = this.props
-    const bornYear = () => 1900 + new Date().getYear() - age
+    const bornYear = () => new Date().getFullYear() - age
 
     return (
       <div>
