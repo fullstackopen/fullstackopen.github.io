@@ -1400,7 +1400,7 @@ export const initializeNotes = () => {
 }
 ```
 
-Sisemmässä funktiossaan, eli _asynkroonisessa actionissa_ operaatio hakee ensin palvelimelta kaikki muistiinpanot ja sen jälkeen _dispatchaa_ muistiinpanot storeen lisäävän actionin.
+Sisemmässä funktiossaan, eli _asynkronisessa actionissa_ operaatio hakee ensin palvelimelta kaikki muistiinpanot ja sen jälkeen _dispatchaa_ muistiinpanot storeen lisäävän actionin.
 
 Komponentti _App_ voidaan nyt määritellä seuraavasti:
 
