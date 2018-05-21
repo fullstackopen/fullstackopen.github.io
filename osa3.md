@@ -43,9 +43,9 @@ permalink: /osa3/
 
 ## Muutama huomio
 
-### setState on asynkrooninen
+### setState on asynkroninen
 
-Muutamat ovat jo törmänneet siihen, että **React kutsuu funktiota setState asynkroonisesti**, eli jos meillä on seuraava koodi
+Muutamat ovat jo törmänneet siihen, että **React kutsuu funktiota setState asynkronisesti**, eli jos meillä on seuraava koodi
 
 ```js
 console.log(this.state.counter)
