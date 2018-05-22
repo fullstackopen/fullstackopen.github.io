@@ -745,7 +745,7 @@ addNote = (event) => {
   event.preventDefault()
   const noteObject = {
     content: this.state.newNote,
-    date: new Date().new,
+    date: new Date().toISOString(),
     important: Math.random() > 0.5,
     id: this.state.notes.length + 1
   }
