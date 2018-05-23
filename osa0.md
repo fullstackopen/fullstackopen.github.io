@@ -78,7 +78,7 @@ Arvosana/opintopisterajat:
 
 Myös 5-7 op:n suorituksen edellytyksenä on _hyväksytysti suoritettu koe_. Koe suoritetaan _Moodlessa_. Pääset Moodleen Avoimen yliopiston [kurssisivun](https://courses.helsinki.fi/fi/aytkt21009/123929162) kautta. Kokeen voi suorittaa 1.5. alkaen. Kokeen viimeinen suorituspäivä on 15.12. 
 
-Voit osallistua kokeeseen vasta siinä vaiheessa kun olet tehnyt riittävästi tehtäviä 5 opintopisteen suoritukseen. Käytännössä kokeeseen ei kuitenkaan kannata  osallistua heti kun riittävä tehtäväpistemäärä on suoritetu. Koe on sisällöltään sama riippumatta onko suorituksesi laajuus 5-7 opintopistettä. Koe ei vaikuta kurssilta saamaasi arvosanaan.
+Voit osallistua kokeeseen vasta siinä vaiheessa kun olet tehnyt riittävästi tehtäviä 5 opintopisteen suoritukseen. Käytännössä kokeeseen ei kuitenkaan kannata osallistua heti kun riittävä tehtäväpistemäärä on suoritettu. Koe on sisällöltään sama riippumatta onko suorituksesi laajuus 5-7 opintopistettä. Koe ei vaikuta kurssilta saamaasi arvosanaan.
 
 Kokeen tuloksen näet [palautussovelluksen](https://studies.cs.helsinki.fi/fullstackopen) välilehdeltä _my submissions_ viimeistään 4 viikkoa kokeen suorittamisen jälkeen (heinäkuu saatta aiheuttaa kokeen tarkastamiseen pidemmän viiveen). Muista tallettaa opiskelijanumerosi palautussovellukseen.
 
