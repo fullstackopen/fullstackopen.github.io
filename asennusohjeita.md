@@ -42,7 +42,7 @@ Tarkista komennoilla _node -v_ ja _npm -v_ että asennus onnistui ja koneella on
 
 ### Windows
 
-Tapoja on kaksi, voit jos sinulla on pääkäyttäjän oikeudet, kannattaa käyttää [Windows-installeria](https://nodejs.org/en/download/)
+Tapoja on kaksi. Jos sinulla on pääkäyttäjän oikeudet, kannattaa käyttää [Windows-installeria](https://nodejs.org/en/download/).
 
 Tarkista komennoilla _node -v_ ja _npm -v_ että asennus onnistui ja koneella on riittävän uudet versiot Nodesta (8.9.4 tai suurempi) ja npm:stä (5.3 tai suurempi).
 
