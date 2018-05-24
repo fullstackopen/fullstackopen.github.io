@@ -2068,7 +2068,7 @@ Koska _handler_ on nyt komponentin metodi, päästään siihen käsiki viitteen 
 
 Mennään lopuksi funktioita palauttavaan funktioon.
 
-Muutetaa koodia seuraavasti
+Muutetaan koodia seuraavasti
 
 ```react
 render() {
