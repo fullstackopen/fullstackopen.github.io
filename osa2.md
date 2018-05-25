@@ -1333,7 +1333,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    console.log('will mount')
+    console.log('did mount')
     axios
       .get('http://localhost:3001/notes')
       .then(response => {
@@ -1358,7 +1358,7 @@ Konsoliin tulostuu
 <pre>
 constructor
 render
-will mount
+did mount
 promise fulfilled
 render
 </pre>
