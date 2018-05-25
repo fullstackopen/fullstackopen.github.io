@@ -1914,7 +1914,7 @@ Ehkä yleisempi tapa kuin kahden tapahtumankäsittelijän käyttö on liittää 
 Käytännössä virhetilanteen käsittelijän rekisteröiminen tapahtuisi seuraavasti
 
 ```js
-axios.get('http://example.com/propably_will_fail')
+axios.get('http://example.com/probably_will_fail')
   .then(response => {
     console.log('success!')
   })
@@ -1925,7 +1925,7 @@ axios.get('http://example.com/propably_will_fail')
 
 Jos pyyntö epäonnistuu, kutsutaan _catch_-metodin avulla rekisteröityä käsittelijää.
 
-Metodia _catch_ hyödynnetän usein siten, että se sijoitetaan syvemmälle promiseketjuun.
+Metodia _catch_ hyödynnetään usein siten, että se sijoitetaan syvemmälle promiseketjuun.
 
 Kun sovelluksemme tekee HTTP-operaation syntyy oleellisesti ottaen [promiseketju](https://javascript.info/promise-chaining):
 
