@@ -344,7 +344,23 @@ test('palindrom of saippuakauppias', () => {
 })
 ```
 
-Edellisessä osassa käyttöön ottamamme ESlint valittaa testien käyttämistä komennoista _test_ ja _expect_ sillä käyttämämme konfiguraatio kieltää _globaalina_ määriteltyjen asioiden käytön. Poistetaan valitus lisäämällä tiedostoon _.eslintrc.js_ kenttä _globals_:
+Edellisessä osassa käyttöön ottamamme ESlint valittaa testien käyttämistä komennoista _test_ ja _expect_ sillä käyttämämme konfiguraatio kieltää _globaalina_ määriteltyjen asioiden käytön. Poistetaan valitus lisäämällä _.eslintrc.js_-tiedoston kenttään _env_ arvo `"jest": true`. Näin kerromme eslintille, että käytämme projektissamme Jestiä ja sen globaaleja muuttujia. 
+
+```js
+module.exports = {
+    "env": {
+        "es6": true,
+        "node": true,
+        "jest": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+      //...
+    }
+}
+```
+
+Toinen tapa olisi lisätä kenttä _globals_ ja määrittää käytetyt globaalit muuttujat seuraavasti:
 
 ```js
 module.exports = {
