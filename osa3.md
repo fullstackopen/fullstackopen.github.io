@@ -911,7 +911,7 @@ Middleware otetaan käyttöön seuraavasti:
 app.use(logger)
 ```
 
-Middlewaret suoritetaan siinä järjestyksessä, jossa ne on otettu käyttään sovellusolion metodilla _use_. Middlewaret tulee myös määritellä ennen routeja jos ne halutaan suorittaa ennen niitä. On myös eräitä tapauksia, joissa middleware tulee määritellä vasta routejen jälkeen, käytännössä tällöin on kyse middlewareista, joita suoritetaan vain, jos mikään route ei käsittele HTTP-pyyntöä.
+Middlewaret suoritetaan siinä järjestyksessä, jossa ne on otettu käyttöön sovellusolion metodilla _use_. Middlewaret tulee myös määritellä ennen routeja jos ne halutaan suorittaa ennen niitä. On myös eräitä tapauksia, joissa middleware tulee määritellä vasta routejen jälkeen, käytännössä tällöin on kyse middlewareista, joita suoritetaan vain, jos mikään route ei käsittele HTTP-pyyntöä.
 
 Lisätään routejen jälkeen seuraava middleware, jonka ansiosta saadaan routejen käsittelemättömistä virhetilanteista JSON-muotoinen virheilmoitus:
 
@@ -1099,7 +1099,7 @@ Kun mennään selaimella osoitteeseen <http://localhost:3001> palauttaa palvelin
 
 Sivu sisältää ohjeen ladata sovelluksen tyylit määrittelevän CSS-tiedoston, sekä _script_-tagin, jonka ansiosta selain lataa sovelluksen Javascript-koodin, eli varsinaisen React-sovelluksen.
 
-React-koodi hakee palvelimelta muistiinpanot osoitteesta <http://localhost:3001/api/notes> ja renderöi ne ruudulle. Selaimen ja palvelimen kommunikaatio selviää tuttuun tapaan konsolin välilehdeltä _Network_:
+React-koodi hakee palvelimelta muistiinpanot osoitteesta <http://localhost:3001/notes> ja renderöi ne ruudulle. Selaimen ja palvelimen kommunikaatio selviää tuttuun tapaan konsolin välilehdeltä _Network_:
 
 ![]({{ "/images/3/11g.png" | absolute_url }})
 
