@@ -1656,7 +1656,7 @@ Pari huomioita. Miksi teimme muutettavasta oliosta kopion vaikka myös seuraava 
 const note = this.state.notes.find(n => n.id === id)
 note.important = !note.important
 
-axios.put(url, changedNote).then(response => {
+axios.put(url, note).then(response => {
 ```
 
 Näin ei ole suositetavaa tehdä, sillä muuttuja _note_ on viite komponentin tilassa, eli _this.state.notes_-taulukossa olevaan olioon, ja kuten muistamme tilaa ei Reactissa saa muuttaa suoraan!
