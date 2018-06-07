@@ -2192,4 +2192,4 @@ Sovelluksen tämän hetkinen koodi on kokonaisuudessaan [githubissa](https://git
 
 ### Tehtäviä
 
-Tee nyt viimeinen tehtävä [3.22](/tehtävät#lint)
+Tee nyt viimeinen tehtävä [3.22](/tehtävät#eslint)
