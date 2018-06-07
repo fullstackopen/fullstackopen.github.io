@@ -1152,7 +1152,7 @@ Muuta backendiä siten, että uudet numerot tallennetaan tietokantaan. Tässä v
 
 Varmista, että frontend toimii muutosten jälkeen.
 
-### lisää operaatiota
+### lisää operaatioita
 
 **HUOM:** vaikka et jostain syystä käsittelisikään promiseihin liittyviä virhetilanteita, on viisasta rekisteröidä promiseille virheenkäsittelijä, joka tulostaa virheen syyn konsoliin:
 
