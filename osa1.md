@@ -836,7 +836,7 @@ class Hello extends React.Component {
       <div>
         <p>
           Hello {this.props.name}, you are {this.props.age} years old <br />
-          So you were propably born {bornYear()}
+          So you were probably born {bornYear()}
         </p>
       </div>
     )
