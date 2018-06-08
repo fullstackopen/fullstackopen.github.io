@@ -812,7 +812,7 @@ class Hello extends React.Component {
       <div>
         <p>
           Hello {this.props.name}, you are {this.props.age} years old <br />
-          So you were propably born {this.bornYear()}
+          So you were probably born {this.bornYear()}
         </p>
       </div>
     )
@@ -871,7 +871,7 @@ render() {
     <div>
       <p>
         Hello {name}, you are {age} years old <br />
-        So you were propably born {bornYear()}
+        So you were probably born {bornYear()}
       </p>
     </div>
   )
@@ -892,7 +892,7 @@ class Hello extends React.Component {
       <div>
         <p>
           Hello {name}, you are {age} years old <br />
-          So you were propably born {bornYear()}
+          So you were probably born {bornYear()}
         </p>
       </div>
     )
