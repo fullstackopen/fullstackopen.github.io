@@ -442,7 +442,7 @@ Laajenna sovellusta siten, että näytettävää anekdoottia on mahdollista ää
 Olio voidaan kopioida esim. seuraavasti:
 
 ```js
-this.state.pisteet = { 0: 1, 1: 3, 2: 4, 3: 2}
+pisteet = { 0: 1, 1: 3, 2: 4, 3: 2}
 
 const kopio = {...pisteet}
 kopio[2] += 1   // kasvatetaan olion kentän 2 arvoa yhdellä
@@ -451,7 +451,7 @@ kopio[2] += 1   // kasvatetaan olion kentän 2 arvoa yhdellä
 ja taulukko esim. seuraavasti:
 
 ```js
-this.state.pisteet = [1, 4, 6, 3]
+pisteet = [1, 4, 6, 3]
 
 const kopio = [...pisteet]
 kopio[2] += 1   // kasvatetaan taulukon paikan 2 arvoa yhdellä
@@ -678,7 +678,7 @@ Joskus tilan muuttujia ja tarvittaessa muitakin voi olla hyödyllistä renderöi
 </div>
 ```
 
-Muista myös osan 1 luku [React-sovellusten debuggaus](#React-sovellusten-debuggaus), erityisesti [react developer tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) on välillä todella kätevä tilan komponentin tilan muutosten seuraamisessa.
+Muista myös osan 1 luku [React-sovellusten debuggaus](#react-sovellusten-debuggaus), erityisesti [react developer tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) on välillä todella kätevä komponentin tilan muutosten seuraamisessa.
 
 Sovellus voi näyttää tässä vaiheessa seuraavalta
 
@@ -753,7 +753,7 @@ Kurssin seuraavasta osasta alkaen alamme määrittelemään sovelluksemme _teste
 
 Jos koko sovelluksesi on tehty yhteen komponenttiin, refaktoroi sitä eriyttämällä sopivia komponentteja. Pidä kuitenkin edelleen kaikki tila juurikomponentissa.
 
-Riittää että erotat sovelluksesta kaksi kompoenttia. Hyviä kandidaatteja ovat esim. filtteröintilomake, yksittäisten henkilön tietojen esittäminen ja uuden henkilön lisäävä lomake.
+Riittää että erotat sovelluksesta kaksi komponenttia. Hyviä kandidaatteja ovat esim. filtteröintilomake, yksittäisten henkilön tietojen esittäminen ja uuden henkilön lisäävä lomake.
 
 ### Datan hakeminen palvelimelta
 
@@ -868,7 +868,7 @@ Palvelimelta tiettyä henkilöä vastaava resurssi tuhotaan tekemällä HTTP DEL
 
 Muuta toiminnallisuutta siten, että jos jo olemassaolevalle henkilölle lisätään numero, korvaa lisätty numero aiemman numeron. Korvaaminen kannattaa tehdä HTTP PUT -pyynnöllä.
 
-Jos henkilön tiedot löytyvät jo luettelosta, voi ohjelma kysyä käyttäjältä varmistuksen korvataanko numero
+Jos henkilön tiedot löytyvät jo luettelosta, voi ohjelma kysyä käyttäjältä varmistuksen korvataanko numero:
 
 ![]({{ "/images/teht/16a.png" | absolute_url }})
 
@@ -888,7 +888,7 @@ Jos poistat jonkun henkilön toisesta selaimesta hieman ennen kun yrität _muutt
 ![]({{ "/assets/teht/18.png" | absolute_url }})
 
 
-Korjaa ongelma osan 2 esimerkin [promise ja virheet](/osa2/#promise-ja-virheet) tapaan. Loogisin korjaus lienee henkilön lisääminen uudelleen palvelimelle. Toinen vaihtoehto on ilmottaa käyttäjälle, että muutettavaksi yritettävän henkilön tiedot on jo poistettu.
+Korjaa ongelma osan 2 esimerkin [promise ja virheet](/osa2/#promise-ja-virheet) tapaan. Loogisin korjaus lienee henkilön lisääminen uudelleen palvelimelle. Toinen vaihtoehto on ilmoittaa käyttäjälle, että muutettavaksi yritettävän henkilön tiedot on jo poistettu.
 
 ### Tehtävien palautus
 
