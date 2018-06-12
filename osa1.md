@@ -1318,7 +1318,7 @@ Emme nyt viitsi käyttää tätä monimutkaisempaa muotoa, sillä emme välitä 
 
 Asia tulee kuitenkin ehdottomasti pitää mielessä, _setState_:n vääränlainen käyttö saattaa aiheuttaa hankalasti löydettäviä, harvoin toistuvia bugeja.
 
-Tärkeä mielessä pidettävä seikka on myös, se että **React kutsuu funktiota setState asynkroonisesti**, eli jos meillä on seuraava koodi
+Tärkeä mielessä pidettävä seikka on myös se, että **React kutsuu funktiota setState asynkroonisesti**, eli jos meillä on seuraava koodi
 
 ```js
 console.log(this.state.counter)
@@ -1736,7 +1736,7 @@ Metodiin _render_ on nyt määritelty apufunktio:
 const historia = () => this.state.kaikki.join(' ')
 ```
 
-Taulukon [join](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join)-metodilla muodostetaan taulukosta merkkijono, joka sisältää taulukon alkiot erotettuna välilyönnillä.
+Taulukon [join](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join)-metodilla muodostetaan taulukosta merkkijono, joka sisältää taulukon alkiot erotettuina välilyönnillä.
 
 ### Ehdollinen renderöinti
 
@@ -2060,7 +2060,7 @@ class App extends React.Component {
 }
 ```
 
-Koska _handler_ on nyt komponentin metodi, päästään siihen käsiki viitteen _this_ avulla:
+Koska _handler_ on nyt komponentin metodi, päästään siihen käsiksi viitteen _this_ avulla:
 
 ```bash
 <button onClick={this.handler}>nappi</button>
@@ -2170,7 +2170,7 @@ Toinen nappi määritellään seuraavasti
 <button onClick={hello('react')}>nappi</button>
 ```
 
-Tapahtumankäsittelijän määrittelevä funktiokutsu _hello('react')_.  palauttaa
+Tapahtumankäsittelijän määrittelevä funktiokutsu _hello('react')_ palauttaa
 
 ```bash
 () => { 
@@ -2274,7 +2274,7 @@ Tapahtumankäsittelijän muodostaa funktiokutsu _setToValue(this.state.value+1)_
 Internetissä on todella paljon Reactiin liittyvää materiaalia, tässä muutamia linkkejä:
 - Reactin [docs](https://reactjs.org/docs/hello-world.html) kannattaa ehdottomasti käydä läpi, ei välttämättä kaikkea nyt, osa on ajankohtaista vasta kurssin myöhemmissä osissa
 - Reactin sivuilla oleva [tutoriaali](https://reactjs.org/tutorial/tutorial.html) sen sijaan on aika huono
-- [Egghed.io](https://egghead.io):n kursseista [Start learning React](https://egghead.io/courses/start-learning-react) on laadukas ja hieman uudempi [The Beginner's guide to React](https://egghead.io/courses/the-beginner-s-guide-to-reactjs) myös kohtuullisen hyvä, molemmat sisältävät myös asiaa jotka tulevat tällä kurssilla vasta myöhemmissä osissa
+- [Egghead.io](https://egghead.io):n kursseista [Start learning React](https://egghead.io/courses/start-learning-react) on laadukas, ja hieman uudempi [The Beginner's guide to React](https://egghead.io/courses/the-beginner-s-guide-to-reactjs) on myös kohtuullisen hyvä; molemmat sisältävät myös asioita jotka tulevat tällä kurssilla vasta myöhemmissä osissa.
 
 ### Lisää React-tehtäviä
 
