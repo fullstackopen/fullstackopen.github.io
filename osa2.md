@@ -394,7 +394,7 @@ Tämä **ei kuitenkaan ole suositeltavaa** ja voi näennäisestä toimimisestaan
 Siistitään koodia hiukan. Koska olemme kiinnostuneita ainoastaan propsien kentästä _notes_, otetaan se vastaan suoraan [destrukturointia](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) hyödyntäen:
 
 ```react
-const App = (props) => {
+const App = ({ notes }) => {
   // ...
 
   return (
@@ -440,7 +440,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 ```
 
-[importtaavat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) eli ottavat käyttöönsä kaksi moduulia. Moduuli _react_ sijoitetaan muuttujan _React_ ja _react-dom_ muuttujaan _ReactDOM_.
+[importtaavat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) eli ottavat käyttöönsä kaksi moduulia. Moduuli _react_ sijoitetaan muuttujaan _React_ ja _react-dom_ muuttujaan _ReactDOM_.
 
 
 Siirretään nyt komponentti _Note_ omaan moduuliinsa.
@@ -1270,7 +1270,7 @@ Palvelimen palauttama data on pelkkää tekstiä, käytännössä yksi iso merkk
 ![]({{ "/assets/2/10.png" | absolute_url }})
 
 
-Axios-kirjasto osaa kuitenkin parsia datan Javascript-taulukoksi, sillä palvelin on kertonut headerin _content-type_ avulla että datan muoto on _application/json; charser=utf-8_ (ks ylempi kuva).
+Axios-kirjasto osaa kuitenkin parsia datan Javascript-taulukoksi, sillä palvelin on kertonut headerin _content-type_ avulla että datan muoto on _application/json; charset=utf-8_ (ks ylempi kuva).
 
 Voimme vihdoin siirtyä käyttämään sovelluksessamme palvelimelta haettavaa dataa.
 
@@ -1300,7 +1300,7 @@ Ei ole kuitenkaan ihan selvää, mihin kohtaan komponentin koodia komento _axios
 
 Reactin luokkien avulla määritellyillä komponenteilla voidaan määritellä joukko [lifecycle](https://reactjs.org/docs/state-and-lifecycle.html#adding-lifecycle-methods-to-a-class)-metodeita, eli metodeita, joita React kutsuu tietyssä komponentin "elinkaaren" vaiheessa.
 
-Yleinen tapa datan palvelimelta tapahtuvaan hakemiseen on suorittaa se metodissa [componentDidMount](https://reactjs.org/docs/react-component.html#componentDidMount). React kutsuu metodia sen jälkeen kun konstruktori on suoritettu ja _render_-metodi on suoritettu ensimmäistä kertaa.
+Yleinen tapa datan palvelimelta tapahtuvaan hakemiseen on suorittaa se metodissa [componentDidMount](https://reactjs.org/docs/react-component.html#componentdidmount). React kutsuu metodia sen jälkeen kun konstruktori on suoritettu ja _render_-metodi on suoritettu ensimmäistä kertaa.
 
 Muutetaan sovellusta nyt seuraavasti.
 
@@ -1363,7 +1363,7 @@ promise fulfilled
 render
 </pre>
 
-Ensin siis suoritetaan konstruktori, ja sen jälkeen metodi _componentDidMount_. Tämän jälkeen kutsutaan kuitenkin metodia _render_, miksi näin?
+Ensin siis suoritetaan konstruktori ja metodi _render_, ja sen jälkeen metodi _componentDidMount_. Tämän jälkeen kutsutaan kuitenkin vielä metodia _render_; miksi näin?
 
 Metodissa _componentDidMount_ suoritetaan axiosin avulla HTTP GET -pyyntö ja samalla _rekisteröidään_ pyynnön palauttamalle promiselle tapahtumankäsittelijä:
 
@@ -1374,9 +1374,9 @@ axios.get('http://localhost:3001/notes').then(response => {
 })
 ```
 
-Tapahtumankäsittelijän koodia, eli then:in parametrina olevaa _funktiota_ ei siis suoriteta vielä tässä vaiheessa. Javascriptin runtime kutsuu sitä jossain vaiheessa sen jälkeen kun palvelin on vastannut HTTP GET -pyyntöön. Tätä ennen kutsutaan metodia _render_ ja komponentti _App_ piirtyy ruudulle aluksi siten, että yhtään muistiinpanoa ei näytetä.
+Tapahtumankäsittelijän koodia, eli then:in parametrina olevaa _funktiota_ ei siis suoriteta vielä tässä vaiheessa. Javascriptin runtime kutsuu sitä jossain vaiheessa sen jälkeen kun palvelin on vastannut HTTP GET -pyyntöön.
 
-Emme kuitenkaan ehdi huomaamaan asiaa, sillä palvelimen vastaus tulee pian, ja se taas saa aikaan tapahtumankäsittelijän suorituksen. Tapahtumankäsittelijä päivittää komponentin tilaa kutsumalla _setState_ ja tämä saa aikaan komponentin uudelleenrenderöinnin.
+Kun kutsutaan metodia _render_ ensimmäistä kertaa (heti konstruktorin jälkeen) komponentti _App_ piirtyy ruudulle aluksi siten, että yhtään muistiinpanoa ei näytetä. Emme kuitenkaan ehdi huomaamaan asiaa, sillä palvelimen vastaus tulee pian, ja se taas saa aikaan tapahtumankäsittelijän suorituksen. Tapahtumankäsittelijä päivittää komponentin tilaa kutsumalla _setState_ ja tämä saa aikaan komponentin uudelleenrenderöinnin.
 
 Mieti tarkasti äsken läpikäytyä tapahtumasarjaa, sen ymmärtäminen on erittäin tärkeää!
 
@@ -1495,7 +1495,7 @@ Joskus on hyödyllistä tarkastella HTTP-pyyntöjä [osan 0 alussa](/osa0#http-g
 
 ![]({{ "/assets/2/12.png" | absolute_url }})
 
-Voimme, esim. tarkastaa onko POST-pyynnön mukana menevä data juuri se mitä oletimme, onko headerit asetettu oikein ym.
+Voimme esim. tarkastaa onko POST-pyynnön mukana menevä data juuri se mitä oletimme, onko headerit asetettu oikein ym.
 
 Koska POST-pyynnössä lähettämämme data oli Javascript-olio, osasi axios automaattisesti asettaa pyynnön _content-type_ headerille oikean arvon eli _application/json_.
 
@@ -1521,7 +1521,7 @@ addNote = (event) => {
 }
 ```
 
-Palvelimen palauttama uusi muistiinpano siis lisätään tilassa olevien muiden muistiinpanojen joukkoon (kannattaa [muistaa tärkeä detalji](/osa0#taulukon-käsittelyä) siitä, että metodi _concat_ ei muuta komponentin alkuperäistä tilaa, vaan luo uuden taulukon) ja tyhjennetään lomakkeen teksti.
+Palvelimen palauttama uusi muistiinpano siis lisätään tilassa olevien muiden muistiinpanojen joukkoon (kannattaa [muistaa tärkeä detalji](/osa1#taulukon-käsittelyä) siitä, että metodi _concat_ ei muuta komponentin alkuperäistä tilaa, vaan luo uuden taulukon) ja tyhjennetään lomakkeen teksti.
 
 Kun palvelimella oleva data alkaa vaikuttaa web-sovelluksen toimintalogiikkaan, tulee sovelluskehitykseen heti iso joukko uusia haasteita, joita tuo mukanaan mm. kommunikoinnin asynkronisuus. Debuggaamiseenkin tarvitaan uusia strategiota, debug-printtaukset ym. muuttuvat vain tärkeämmäksi, myös Javascriptin runtimen periaatteita ja React-komponenttien elinkaarta on pakko tuntea riittävällä tasolla, arvaileminen ei riitä.
 
@@ -1621,7 +1621,7 @@ toggleImportanceOf = (id) => {
       .put(url, changedNote)
       .then(response => {
         this.setState({
-          notes: this.state.notes.map(note => note.id !== id ? note : changedNote)
+          notes: this.state.notes.map(note => note.id !== id ? note : response.data)
         })
       })
   }
@@ -1642,7 +1642,7 @@ Kyseessä on vielä standardoimattoman [object spread](https://github.com/tc39/p
 
 Käytännössä <code>{...note}</code> luo olion, jolla on kenttinään kopiot olion _note_ kenttien arvoista. Kun aaltosulkeisiin lisätään asioita, esim. <code>{ ...note, important: true }</code>, tulee uuden olion kenttä _important_ saamaan arvon _true_. Eli esimerkissämme _important_ saa uudessa oliossa vanhan arvonsa käänteisarvon.
 
-Uusi olio olisi voitu luodan myös vanhemmalla komennolla [Object.assign](https://developer.mozilla.org/nl/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+Uusi olio olisi voitu luoda myös vanhemmalla komennolla [Object.assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 
 ```js
 const changedNote = Object.assign({}, note, {important: !note.important} }
@@ -1673,12 +1673,12 @@ axios
   .put(url, changedNote)
   .then(response => {
     this.setState({
-      notes: this.state.notes.map(note => note.id !== id ? note : changedNote)
+      notes: this.state.notes.map(note => note.id !== id ? note : response.data)
     })
   })
 ```
 
-Tämä saadaan aikaan metodilla _map_ joka siis luo uuden taulukon vanhan taulukon perusteella. Jokainen uuden taulukon alkio luodaan ehdollisesti siten, että jos ehto _note.id !== id_ on tosi, otetaan uuteen taulukkoon suoraan vanhan taulukon kyseinen alkio. Jos ehto on epätosi, eli kyseessä on muutettu muistiinpano, otetaan uuteen taulukkoon muuttujassa _changedNote_ oleva olio.
+Tämä saadaan aikaan metodilla _map_ joka siis luo uuden taulukon vanhan taulukon perusteella. Jokainen uuden taulukon alkio luodaan ehdollisesti siten, että jos ehto _note.id !== id_ on tosi, otetaan uuteen taulukkoon suoraan vanhan taulukon kyseinen alkio. Jos ehto on epätosi, eli kyseessä on muutettu muistiinpano, otetaan uuteen taulukkoon palvelimen palauttama olio.
 
 Käytetty _map_-kikka saattaa olla aluksi hieman hämmentävä. Asiaa kannattaakin miettiä tovi. Tapaa tullaan käyttämään kurssilla vielä kymmeniä kertoja.
 
@@ -1747,7 +1747,7 @@ toggleImportanceOf = (id) => {
       .update(id, changedNote)
       .then(response => {
         this.setState({
-          notes: this.state.notes.map(note => note.id !== id ? note : changedNote)
+          notes: this.state.notes.map(note => note.id !== id ? note : response.data)
         })
       })
   }
@@ -1994,7 +1994,7 @@ Tee nyt tehtävät [2.14-2.17](/tehtävät#palvelimella-olevan-datan-päivittäm
 
 ## Tyylien lisääminen
 
-Sovelluksemme ulkoasu on tällä hetkellä hyvin vaatimaton. Osaan 0 liittyvissä [tehtävässä 0-1](/tehtävät/#web-sovellusten-perusteet) oli tarkoitus tutustua Mozillan [CSS-tutoriaaliin](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics).
+Sovelluksemme ulkoasu on tällä hetkellä hyvin vaatimaton. Osaan 0 liittyvässä [tehtävässä 0.1](/tehtävät/#web-sovellusten-perusteet) oli tarkoitus tutustua Mozillan [CSS-tutoriaaliin](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics).
 
 Katsotaan vielä tämän osan lopussa nopeasti erästä tapaa liittää tyylejä React-sovellukseen. Tapoja on useita ja tulemme tarkastelemaan muita myöhemmin. Liitämme nyt CSS:n sovellukseemme vanhan kansan tapaan yksittäisenä, käsin eli ilman [esiprosessorien](https://developer.mozilla.org/en-US/docs/Glossary/CSS_preprocessor) apua kirjoitettuna tiedostona (tämä ei itseasiassa ole täysin totta, kuten myöhemmin tulemme huomaamaan).
 
