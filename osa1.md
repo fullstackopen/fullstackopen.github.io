@@ -429,7 +429,7 @@ const t = [1, -1, 3]
 t.push(5)
 
 console.log(t.length)  // tulostuu 4
-console.log(t[1])      // tuostuu -1
+console.log(t[1])      // tulostuu -1
 
 t.forEach((luku) => {
   console.log(luku)    // tulostuu 1, -1, 3 ja 5 omille riveilleen
