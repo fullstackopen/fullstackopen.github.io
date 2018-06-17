@@ -928,7 +928,7 @@ Tee Node-sovellus, joka tarjoaa osoitteessa <http://localhost:3001/api/persons> 
 
 <div class='important'>
 
-Koska nyt ei ole kyse fronendista ja Reactista, sovellusta <strong>ei luoda</strong> create-react-app:illa vaan komennolla <em>npm init</em> osan 3 luvun <a href="../osa3#node.js">Node.js</a> tapaan.
+Koska nyt ei ole kyse fronendista ja Reactista, sovellusta <strong>ei luoda</strong> create-react-app:illa vaan komennolla <em>npm init</em> osan 3 luvun <a href="../osa3/#nodejs">Node.js</a> tapaan.
 
 </div>
 
@@ -1173,7 +1173,7 @@ Varmista, että frontend toimii muutosten jälkeen.
 
 #### 3.17* puhelinluettelo ja tietokanta, osa 5
 
-Jos frontendissä annetaan numero henkilölle, joka on jo olemassa, päivittää frontend tehtävässä 2.17 tehdyn toteutuksen ansiosta tiedot uudella tekemällä HTTP PUT -pyynnön henkilön tietoja vastaavaan url:iin.
+Jos frontendissä annetaan numero henkilölle, joka on jo olemassa, päivittää frontend tehtävässä 2.17 tehdyn toteutuksen ansiosta tiedot uudella numerolla tekemällä HTTP PUT -pyynnön henkilön tietoja vastaavaan url:iin.
 
 Laajenna backendisi käsittelemään tämä tilanne.
 
