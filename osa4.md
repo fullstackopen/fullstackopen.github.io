@@ -293,7 +293,7 @@ module.exports = {
 
 > Metodi _average_ käyttää taulukoiden metodia [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce). Jos metodi ei ole vieläkään tuttu, on korkea aika katsoa youtubesta [Functional Javascript](https://www.youtube.com/watch?v=BMUiFMZr7vk&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84) -sarjasta ainakin kolme ensimmäistä videoa.
 
-Javascriptiin on tarjolla runsaasti erilaisia testikirjastoja eli _test runnereita_. Käytämme tällä kurssilla Facebookin kehittämää ja sisäisesti käyttämää [jest](https://facebook.github.io/jest/):iä, joka on toiminnaltaan ja syntakstiltaankin hyvin samankaltainen kuin tämän hetken eniten käytetty testikirjasto [Mocha](https://mochajs.org/). Muitakin mahdollisuuksia olisi, esim. eräissä piireissä suosiota nopeasti saavuttanut [ava](https://github.com/avajs/ava).
+Javascriptiin on tarjolla runsaasti erilaisia testikirjastoja eli _test runnereita_. Käytämme tällä kurssilla Facebookin kehittämää ja sisäisesti käyttämää [jest](https://facebook.github.io/jest/):iä, joka on toiminnaltaan ja syntaksiltaankin hyvin samankaltainen kuin tämän hetken eniten käytetty testikirjasto [Mocha](https://mochajs.org/). Muitakin mahdollisuuksia olisi, esim. eräissä piireissä suosiota nopeasti saavuttanut [ava](https://github.com/avajs/ava).
 
 Jest on tälle kurssille luonteva valinta, sillä se sopii hyvin backendien testaamiseen, mutta suorastaan loistaa Reactilla tehtyjen frontendien testauksessa.
 
@@ -429,7 +429,7 @@ describe('average', () => {
     expect(average([1])).toBe(1)
   })
 
-  test('of many is caclulated right', () => {
+  test('of many is calculated right', () => {
     expect(average([1, 2, 3, 4, 5, 6])).toBe(3.5)
   })
 
@@ -491,7 +491,7 @@ Koska sovelluksemme backend on koodiltaan kuitenkin suhteellisen yksinkertainen,
 
 ### test-ympäristö
 
-Edellisen osan luvussa [Sovelluksen vieminen tuotantoon](/osa3#sovelluksen-vieminen tuotantoon) mainitsimme, että kun sovellusta suoritetaan Herokussa, on se _production_-moodissa.
+Edellisen osan luvussa [Sovelluksen vieminen tuotantoon](/osa3/#sovelluksen-vieminen-tuotantoon) mainitsimme, että kun sovellusta suoritetaan Herokussa, on se _production_-moodissa.
 
 Noden konventiona on määritellä projektin suoritusmoodi ympäristömuuttujan _NODE_ENV_ avulla. Lataammekin sovelluksen nykyisessä versiossa tiedostossa _.env_ määritellyt ympäristömuuttujat ainoastaan jos sovellus _ei ole_ production moodissa:
 
@@ -503,7 +503,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 Yleinen käytäntö on määritellä sovelluksille omat moodinsa myös sovelluskehitykseen ja testaukseen.
 
-Määrtellään nyt tiedostossa _package.json_, että testejä suorittaessa sovelluksen _NODE_ENV_ saa arvokseen _test_:
+Määritellään nyt tiedostossa _package.json_, että testejä suorittaessa sovelluksen _NODE_ENV_ saa arvokseen _test_:
 
 ```bash
 {
@@ -545,7 +545,7 @@ Nyt sovelluksen toimintaa on mahdollista muokata sen suoritusmoodiin perustuen. 
 
 Sovelluksen testikanta voidaan luoda tuotantokäytön ja sovelluskehityksen tapaan [mlabiin](https://mlab.com/). Ratkaisu ei ole optimaalinen erityisesti, jos sovellusta on tekemässä yhtä aikaa useita henkilöitä. Testien suoritus nimittäin yleensä edellyttää, että samaa tietokantainstanssia ei ole yhtä aikaa käyttämässä useampia testiajoja.
 
-Testaukseen kannattaakin käyttää verkossa olevaa jaettua tietokantaa mielummin esim. sovelluskehittäjän paikallisen koneen tietokantaa. Optimiratkaisu olisi tietysti se, että jokaista testiajoa varten olisi käytettävissä oma tietokanta, sekin periaatteessa onnistuu "suhteellisen helposti" mm. [keskusmuistissa toimivan Mongon](https://docs.mongodb.com/manual/core/inmemory/) ja [docker](https://www.docker.com)-kontainereiden avulla. Etenemme kuitenkin nyt lyhyemmän kaavan mukaan ja käytetään testikantana normaalia Mongoa.
+Testaukseen kannattaakin käyttää verkossa olevaa jaettua tietokantaa mieluummin esim. sovelluskehittäjän paikallisen koneen tietokantaa. Optimiratkaisu olisi tietysti se, että jokaista testiajoa varten olisi käytettävissä oma tietokanta, sekin periaatteessa onnistuu "suhteellisen helposti" mm. [keskusmuistissa toimivan Mongon](https://docs.mongodb.com/manual/core/inmemory/) ja [docker](https://www.docker.com)-kontainereiden avulla. Etenemme kuitenkin nyt lyhyemmän kaavan mukaan ja käytetään testikantana normaalia Mongoa.
 
 Voisimme kirjoittaa ympäristökohtaiset konfiguraatiot, esim. oikean tietokannan valinnan suoraan tiedostoon _index.js_, se kuitenkin tekisi tiedoston koodista sekavan. Eristetään sovelluksen ympäristökohtainen konfigurointi omaan tiedostoon _utils/config.js_ sijoitettavaan moduuliin.
 
@@ -594,7 +594,7 @@ module.exports = {
 
 Koodi lataa ympäristömuuttujat tiedostosta _.env_ jos se _ei ole_ tuotantomoodissa. Tuotantomoodissa käytetään Herokuun asetettuja ympäristömuuttujia.
 
-Tiedostossa _.env_ on nyt määritelty _erikseen_ sekä sovelluskehitysympäristön ja testausympäristön tietokannan osoite (esimerkissä molemmat ovat sovelluskehityskoneen lokaaleja mongo-kantoja) ja portti:
+Tiedostossa _.env_ on nyt määritelty _erikseen_ sekä sovelluskehitysympäristön että testausympäristön tietokannan osoite (esimerkissä molemmat ovat sovelluskehityskoneen lokaaleja mongo-kantoja) ja portti:
 
 ```bash
 MONGODB_URI=mongodb://fullstack:sekred@ds111078.mlab.com:11078/fullstact-notes-dev
@@ -606,7 +606,7 @@ TEST_MONGODB_URI=mongodb://fullstack:sekred@ds113098.mlab.com:13098/fullstack-no
 
 Eri porttien käyttö mahdollistaa sen, että sovellus voi olla käynnissä testien suorituksen aikana.
 
-Omatekemämme eri ympäristöjen konfiguroinnista huolehtivaa _config_-moduuli toimii hieman samassa hengessä kuin [node-config](https://github.com/lorenwest/node-config)-kirjasto. Omatekemä konfigurointiympäristö sopii tarkoitukseemme, sillä sovellus on yksinkertainen ja oman konfiguraatio-moduulin tekeminen on myös jossain määrin opettavaista. Isommissa sovelluksissa kannattaa harkita valmiiden kirjastojen, kuten [node-config](https://github.com/lorenwest/node-config):in käyttöä.
+Omatekemämme eri ympäristöjen konfiguroinnista huolehtiva _config_-moduuli toimii hieman samassa hengessä kuin [node-config](https://github.com/lorenwest/node-config)-kirjasto. Omatekemä konfigurointiympäristö sopii tarkoitukseemme, sillä sovellus on yksinkertainen ja oman konfiguraatio-moduulin tekeminen on myös jossain määrin opettavaista. Isommissa sovelluksissa kannattaa harkita valmiiden kirjastojen, kuten [node-config](https://github.com/lorenwest/node-config):in käyttöä.
 
 Tiedosto _index.js_ muutetaan nyt muotoon:
 
@@ -699,12 +699,13 @@ Testimetodi tekee HTTP GET -pyynnön osoitteeseen _api/notes_ ja varmistaa, ett�
 
 Testissä on muutama detalji joihin tutustumme vasta [hieman myöhemmin](#async-await) tässä osassa. Testikoodin määrittelevä nuolifunktio alkaa sanalla _async_ ja _api_-oliolle tehtyä metodikutsua edeltää sama _await_. Teemme ensin muutamia testejä ja tutustumme sen jälkeen async/await-magiaan. Tällä hetkellä niistä ei tarvitse välittää, kaikki toimii kun kirjoitat testimetodit esimerkin mukaan. Async/await-syntaksin käyttö liittyy siihen, että palvelimelle tehtävät pyynnöt ovat _asynkronisia_ operaatioita. [Async/await-kikalla](https://facebook.github.io/jest/docs/en/asynchronous.html) saamme pyynnön näyttämään koodin tasolla synkroonisesti toimivalta.
 
-Huom! Jos eslint herjaa async -syntaksista, niin saat ongelman korjattua lisäämällä seuraavan `.eslintrc` tiedostoon
-```
+Huom! Jos eslint herjaa async -syntaksista, niin saat ongelman korjattua lisäämällä seuraavan `.eslintrc.js` tiedostoon ([lisätietoa parserin konfiguroinnista](https://eslint.org/docs/user-guide/configuring#specifying-parser-options)):
+
+```js
 module.exports = {
   //...
   "parserOptions": {
-    "ecmaVersion": 2017
+    "ecmaVersion": 2018
   }
 }
 ```
@@ -784,7 +785,7 @@ node    8318 mluukkai   14u  IPv6 0x5428af4833b85e8b      0t0  TCP *:redwood-bro
 
 Windowsissa portin varaavan prosessin näkee resmon.exe:n Verkko-välilehdeltä.
 
-Komennon avulla selviää ikävyyksiä aiheuttavan prosesin PID eli prosessi-id. Prosessin saa tapettua komennolla <code>KILL 8318</code> olettaen että PID on 8318 niin kuin kuvassa. Joskus prosessi on sitkeä eikä kuole ennen kuin se tapetaan komennolla <code>KILL -9 8318</code>.
+Komennon avulla selviää ikävyyksiä aiheuttavan prosessin PID eli prosessi-id. Prosessin saa tapettua komennolla <code>KILL 8318</code> olettaen että PID on 8318 niin kuin kuvassa. Joskus prosessi on sitkeä eikä kuole ennen kuin se tapetaan komennolla <code>KILL -9 8318</code>.
 
 Windowsissa vastaava komento on <code>taskkill /f /pid 8318</code>.
 
@@ -846,7 +847,7 @@ test('a specific note is within the returned notes', async () => {
 
 Huomaa jälkimmäisen testin ekspektaatio. Komennolla <code>response.body.map(r => r.content)</code> muodostetaan taulukko API:n palauttamien muistiinpanojen sisällöistä. Jestin [toContain](https://facebook.github.io/jest/docs/en/expect.html#tocontainitem)-ekspektaatiometodilla tarkistetaan että parametrina oleva muistiinpano on kaikkien API:n palauttamien muistiinpanojen joukossa.
 
-Ennen kun teemme lisää testejä, tarkastellaan tarkemmin mitä _async_ ja _await_ tarkoittavat.
+Ennen kuin teemme lisää testejä, tarkastellaan tarkemmin mitä _async_ ja _await_ tarkoittavat.
 
 ## async-await
 
@@ -987,7 +988,7 @@ saved
 saved
 </pre>
 
-Yllättäen ratkaisu ei async/awaitista huolimatta toimi niin kuin oletamme, testin suoritus aloitetaan ennen kun tietokannan tila on saatu alustettua!
+Yllättäen ratkaisu ei async/awaitista huolimatta toimi niin kuin oletamme, testin suoritus aloitetaan ennen kuin tietokannan tila on saatu alustettua!
 
 Ongelma on siinä, että jokainen forEach-loopin läpikäynti generoi oman asynkronisen operaation ja _beforeAll_ ei odota näiden suoritusta. Eli forEach:in sisällä olevat _await_-komennot eivät ole funktiossa _beforeAll_ vaan erillisissä funktioissa joiden päättymistä _beforeAll_ ei odota.
 
@@ -1048,11 +1049,11 @@ Voimme varmistaa refaktoroinnin onnistumisen selaimella, sekä suorittamalla juu
 
 ### ESlint ja async/await nuolifunktioissa
 
-Ennen testejä tehdään pieni täsmennyt ESlint-konfiguraatioon. Tällä hetkellä ESlint valittaa _async_-määreellä varustetuista nuolifunktioista:
+Ennen testejä tehdään pieni täsmennys ESlint-konfiguraatioon. Tällä hetkellä ESlint saattaa valittaa _async_-määreellä varustetuista nuolifunktioista:
 
 ![]({{ "/images/4/4b.png" | absolute_url }})
 
-kyse on siitä, että ESlint ei vielä osaa tulkita uutta syntaksia kunnolla. Pääsemme valituksesta eroon asentamalla _babel-eslint_-pluginin:
+Kyse on siitä, että ESlint ei vielä osaa tulkita uutta syntaksia kunnolla. Voi hyvin olla, että [aiemmassa luvussa](osa4/#supertest) tehty _parserOptions_ määrittely on jo korjannut ongelman. Muuten pääsemme valituksesta eroon asentamalla _babel-eslint_-pluginin:
 
 ```bash
 npm install babel-eslint --save-dev
@@ -1145,7 +1146,7 @@ Body:   { important: true }
 (node:28657) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
 </pre>
 
-Kuten jo edellisessä osassa mainittiin, tämä ei ole hyvä idea. Kannattaakin aloittaa lisäämällä promise-ketjuun metodilla _catch_ virheenkäisttelijä, joka tulostaa konsoliin virheen syyn:
+Kuten jo edellisessä osassa mainittiin, tämä ei ole hyvä idea. Kannattaakin aloittaa lisäämällä promise-ketjuun metodilla _catch_ virheenkäsittelijä, joka tulostaa konsoliin virheen syyn:
 
 ```js
 notesRouter.post('/', (request, response) => {
@@ -1362,13 +1363,13 @@ Jos huomaat kirjoittavasi sekaisin async/awaitia ja _then_-kutsuja, on 99% varma
 
 ## Tehtäviä
 
-Tee nyt tehtävät [4.8-4.11](/tehtävät#api:n-testaaminen)
+Tee nyt tehtävät [4.8-4.11](/tehtävät/#apin-testaaminen)
 
 ## Testien refaktorointi
 
 Testimme sisältävät tällä hetkellä jossain määrin toisteisuutta ja niiden rakenne ei ole optimaalinen. Testit ovat myös osittain epätäydelliset, esim. reittejä GET /api/notes/:id ja DELETE /api/notes/:id ei tällä hetkellä testata epävalidien id:iden osalta.
 
-Testeissä on myös eräs hieman ikävä ja jopa riskialtis piirre. Testit luottavat siihen, että ne suoritetaan siinä järjestyksessä, missä ne on kirjoitettu testitiedostoon. Tämä pitää kyllä paikkansa, vaikkakin se ei ole kovin selkeästi määritelty ominaisuus eli siihen ei ole hyvä luottaa. Testit tuleekin kirjoittaa siten, että yksittäiset testit ovat riippumattoimia toistensa suorituksesta.
+Testeissä on myös eräs hieman ikävä ja jopa riskialtis piirre. Testit luottavat siihen, että ne suoritetaan siinä järjestyksessä, missä ne on kirjoitettu testitiedostoon. Tämä pitää kyllä paikkansa, vaikkakin se ei ole kovin selkeästi määritelty ominaisuus eli siihen ei ole hyvä luottaa. Testit tuleekin kirjoittaa siten, että yksittäiset testit ovat riippumattomia toistensa suorituksesta.
 
 Parannellaan testejä hiukan.
 
@@ -1555,9 +1556,9 @@ describe('when there is initially some notes saved', async () => {
 })
 ```
 
-Muutama huomio testeistä. Olemme jaotelleet testejä [desribe](http://facebook.github.io/jest/docs/en/api.html#describename-fn)-lohkojen avulla ja muutamissa lohkoissa on oma [beforeAll](http://facebook.github.io/jest/docs/en/api.html#beforeallfn-timeout)-funktiolla suoritettava alustuskoodi.
+Muutama huomio testeistä. Olemme jaotelleet testejä [describe](http://facebook.github.io/jest/docs/en/api.html#describename-fn)-lohkojen avulla ja muutamissa lohkoissa on oma [beforeAll](http://facebook.github.io/jest/docs/en/api.html#beforeallfn-timeout)-funktiolla suoritettava alustuskoodi.
 
-Joissain tapauksissa tämä olisi parempi tehdä operaatioilla [beforeEach](https://facebook.github.io/jest/docs/en/api.html#beforeeachfn-timeout), joka suoritetaan _ennen jokaista testiä_, näin testeistä saisi varmemmin toisistaan riippumattomia. Esimerkissä beforeEachia ei kuitenkaan ole käytetty.
+Joissain tapauksissa tämä olisi parempi tehdä operaatiolla [beforeEach](https://facebook.github.io/jest/docs/en/api.html#beforeeachfn-timeout), joka suoritetaan _ennen jokaista testiä_, näin testeistä saisi varmemmin toisistaan riippumattomia. Esimerkissä beforeEachia ei kuitenkaan ole käytetty.
 
 Testien raportointi tapahtuu _describe_-lohkojen ryhmittelyn mukaan:
 
@@ -1623,7 +1624,7 @@ Olemassaoleva ratkaisumme tallentaa jokaisen luodun muistiinpanon tietokantaan _
 
 Mongossa voidaan kaikkien dokumenttitietokantojen tapaan käyttää olioiden id:itä viittaamaan muissa kokoelmissa talletettaviin dokumentteihin, vastaavasti kuten viiteavaimia käytetään relaatiotietokannoissa.
 
-Dokumenttitietokannat kuten Mongo eivät kuitenkaan tue relaatiotietokantojen _liitoskyselyitä_ vastaavaa toiminnallisuutta, joka mahdollistaisi useaan kokoelmaan kohdistuvan tietokantahaun (tämä ei ole tarkalleen ottaen enää välttämättä pidä paikkaansa, sillä versiosta 3.2. alkaen Mongo on tukenut useampaan kokoelmaan kohdistuvia [lookup-aggregaattikyselyitä](https://docs.mongodb.com/manual/reference/operator/aggregation/lookup/), emme kuitenkaan käsittele niitä kurssilla).
+Dokumenttitietokannat kuten Mongo eivät kuitenkaan tue relaatiotietokantojen _liitoskyselyitä_ vastaavaa toiminnallisuutta, joka mahdollistaisi useaan kokoelmaan kohdistuvan tietokantahaun (tämä ei tarkalleen ottaen enää välttämättä pidä paikkaansa, sillä versiosta 3.2. alkaen Mongo on tukenut useampaan kokoelmaan kohdistuvia [lookup-aggregaattikyselyitä](https://docs.mongodb.com/manual/reference/operator/aggregation/lookup/), emme kuitenkaan käsittele niitä kurssilla).
 
 Jos tarvitsemme liitoskyselyitä vastaavaa toiminnallisuutta, tulee se toteuttaa sovelluksen tasolla, eli käytännössä tekemällä tietokantaan useita kyselyitä. Tietyissä tilanteissa mongoose-kirjasto osaa hoitaa liitosten tekemisen, jolloin kysely näyttää mongoosen käyttäjälle toimivan liitoskyselyn tapaan. Mongoose tekee kuitenkin näissä tapauksissa taustalla useamman kyselyn tietokantaan.
 
@@ -1691,7 +1692,7 @@ Mikään ei kuitenkaan määrää dokumenttitietokannoissa, että viitteet on ta
 Koska käyttäjiin liittyy potentiaalisesti useita muistiinpanoja, niiden id:t talletetaan käyttäjän kentässä _notes_ olevaan taulukkoon.
 
 
-Dokumenttitietokannat tarjoavat myös radikaalisti erilaisen tavan datan organisointiin, joissain tilanteissa saattaisi olla mielekästä tallettaa muistiinpanot kokonaisuudessa käyttäjien sisälle:
+Dokumenttitietokannat tarjoavat myös radikaalisti erilaisen tavan datan organisointiin; joissain tilanteissa saattaisi olla mielekästä tallettaa muistiinpanot kokonaisuudessa käyttäjien sisälle:
 
 ```js
 [
@@ -1991,7 +1992,7 @@ const User = mongoose.model('User', userSchema)
 module.exports = User
 ```
 
-Näin määriteltyä metodia kutsutaan _User.format(user)_. Voimme muuttaa tiedostosta _controllesr/users.js_ olevat routet seuraavaan muotoon:
+Näin määriteltyä metodia kutsutaan _User.format(user)_. Voimme muuttaa tiedostossa _controllers/users.js_ olevat routet seuraavaan muotoon:
 
 ```js
 usersRouter.get('/', async (request, response) => {
@@ -2204,10 +2205,10 @@ Token-autentikaation periaatetta kuvaa seuraava sekvenssikaavio:
 
 ![]({{ "/images/4/12a.png" | absolute_url }})
 
-- Alussa käyttäjä kirjaantuu Reactilla toteutettua kirjautumislomaketta käyttäen
-  - lisäämme kirjautumislomakkeen frontendiin [osassa 5](osa5)
+- Alussa käyttäjä kirjautuu Reactilla toteutettua kirjautumislomaketta käyttäen
+  - lisäämme kirjautumislomakkeen frontendiin [osassa 5](/osa5)
 - Tämän seurauksena selaimen React-koodi lähettää käyttäjätunnuksen ja salasanan HTTP POST -pyynnöllä palvelimen osoitteeseen _/api/login_
-- Jos käyttäjätunnus ja salasana ovat oikein, generoi palvelin _Tokenin_, jonka yksilöi jollain tavalla kirjautumisen tehneen käyttäjän
+- Jos käyttäjätunnus ja salasana ovat oikein, generoi palvelin _Tokenin_, joka yksilöi jollain tavalla kirjautumisen tehneen käyttäjän
   - token on kryptattu, joten sen väärentäminen on (kryptografisesti) mahdotonta
 - backend vastaa selaimelle onnistumisesta kertovalla statuskoodilla ja palauttaa Tokenin vastauksen mukana
 - Selain tallentaa tokenin esimerkiksi React-sovelluksen tilaan
@@ -2422,7 +2423,7 @@ Toteutamme kirjautumisen frontendin puolelle kurssin [seuraavassa osassa](/osa5)
 
 ## Tehtäviä
 
-Tee nyt tehtävät [4.15-4.21](/tehtavat#blogilistan-käyttäjät)
+Tee nyt tehtävät [4.15-4.21](/tehtävät/#blogilistan-käyttäjät)
 
 
 <!---
