@@ -1383,7 +1383,7 @@ describe('total likes', () => {
 
 Jos et viitsi itse määritellä testisyötteenä käytettäviä blogeja, saat valmiin listan [täältä](https://github.com/FullStack-HY/part3-notes-backend/wiki/blogs-for-testing)
 
-Törmäät varmasti testien tekemisen yhteydessä erinäisiin ongelmiin. Pidä mielessä osassa 3 käsitellyt [debuggaukseen](osa3/#Node-sovellusten-debuggaaminen) liittyvät asiat, voit testejäkin suorittaessasi printtailla konsoliin komennolla _console.log_
+Törmäät varmasti testien tekemisen yhteydessä erinäisiin ongelmiin. Pidä mielessä osassa 3 käsitellyt [debuggaukseen](/osa3/#node-sovellusten-debuggaaminen) liittyvät asiat, voit testejäkin suorittaessasi printtailla konsoliin komennolla _console.log_
 
 
 #### 4.5* apufunktioita ja yksikkötestejä, osa 3
@@ -1400,7 +1400,7 @@ Paluuarvo voi olla esim. seuraavassa muodossa:
 }
 ```
 
-**Huom**, että kun vertailet olioita, metodi [toEqual](https://facebook.github.io/jest/docs/en/expect.html#toequalvalue) on todennäköisesti se mitä haluat käyttää sillä [toBe](https://facebook.github.io/jest/docs/en/expect.html#tobevalue)-vertailu, joka sopii esim. lukujen ja merkkijonojen vertailuun vaatisi olioiden vertailussa, että oliot ovat samat, pelkkä saman sisältöisyys ei riitä.
+**Huom**, että kun vertailet olioita, metodi [toEqual](https://facebook.github.io/jest/docs/en/expect.html#toequalvalue) on todennäköisesti se mitä haluat käyttää sillä [toBe](https://facebook.github.io/jest/docs/en/expect.html#tobevalue)-vertailu, joka sopii esim. lukujen ja merkkijonojen vertailuun vaatisi olioiden vertailussa, että oliot ovat samat, pelkkä sama sisältöisyys ei riitä.
 
 Tee myös tämän ja seuraavien kohtien testit kukin oman _describe_-lohkon sisälle.
 
@@ -1478,7 +1478,7 @@ describe.skip('list helpers', () => {
 
 tällöin komennolla _npm test_ suoritettaessa tiedoston testejä ei suoriteta ollenkaan.
 
-Kun testit ovat stabiilissa tilassa, tulee skiptit ja onlyt poistaa.
+Kun testit ovat stabiilissa tilassa, tulee skipit ja onlyt poistaa.
 
 #### 4.9 blogilistan testit, osa 2
 
