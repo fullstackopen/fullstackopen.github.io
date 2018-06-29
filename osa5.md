@@ -94,7 +94,7 @@ class App extends React.Component {
 
   login = (event) => {
     event.preventDefault()
-    console.log('login in with', this.state.username, this.state.password)
+    console.log('logging in with', this.state.username, this.state.password)
   }
 
   handleNoteChange = (event) => {
@@ -530,7 +530,7 @@ Kirjautuneen käyttäjän tiedot tallentuvat nyt local storageen ja niitä voida
 
 Sovellusta on vielä laajennettava siten, että kun sivulle tullaan uudelleen, esim. selaimen uudelleenlataamisen yhteydessä, tulee sovelluksen tarkistaa löytyykö local storagesta tiedot kirjautuneesta käyttäjästä. Jos löytyy, asetetaan ne sovelluksen tilaan ja _noteServicelle_.
 
-Sopiva paikka tähän on _App_-komponentin metodi [componentDidMount](https://reactjs.org/docs/react-component.html#componentDidMount) johon tutustuimme jo [osassa 2](/osa2#komponenttien-lifecycle-metodit).
+Sopiva paikka tähän on _App_-komponentin metodi [componentDidMount](https://reactjs.org/docs/react-component.html#componentdidmount) johon tutustuimme jo [osassa 2](/osa2#komponenttien-lifecycle-metodit).
 
 Kyseessä on siis ns. lifecycle-metodi, jota React-kutsuu heti komponentin ensimmäisen renderöinnin jälkeen. Metodissa on tällä hetkellä jo muistiinpanot palvelimelta lataava koodi. Laajennetaan koodia seuraavasti
 
@@ -654,7 +654,6 @@ const loginForm = () => {
       </div>
       <div style={showWhenVisible}>
         <LoginForm
-          visible={this.state.visible}
           username={this.state.username}
           password={this.state.password}
           handleChange={this.handleLoginFieldChange}
@@ -694,7 +693,7 @@ const showWhenVisible = { display: this.state.loginVisible ? '' : 'none' }
 </div>
 ```
 
-Käytössä on taas kysymysmerkkioperaattori, eli jos _this.state.visible_ on _true_, tulee napin CSS-määrittelyksi
+Käytössä on taas kysymysmerkkioperaattori, eli jos _this.state.loginVisible_ on _true_, tulee napin CSS-määrittelyksi
 
 ```css
 display: 'none';
@@ -713,7 +712,6 @@ Tavoitteena on luoda komponentti _Togglable_, jota käytetään seuraavalla tava
 ```html
 <Togglable buttonLabel="login">
   <LoginForm
-    visible={this.state.visible}
     username={this.state.username}
     password={this.state.password}
     handleChange={this.handleLoginFieldChange}
@@ -1007,7 +1005,7 @@ Tee nyt tehtävä [5.11](/tehtävät#proptypet)
 
 Reactilla tehtyjen frontendien testaamiseen on monia tapoja. Aloitetaan niihin tutustuminen nyt.
 
-Testit tehdään samaan tapaan kuin edellisessä osassa eli Facebookin [Jest](https://facebook.github.io/jest/)-kirjastolla. Jest onkin valmiiksi konfiguroitu create-react-app:illa luotuihin projekteihin.
+Testit tehdään samaan tapaan kuin edellisessä osassa eli Facebookin [Jest](http://jestjs.io/)-kirjastolla. Jest onkin valmiiksi konfiguroitu create-react-app:illa luotuihin projekteihin.
 
 Jestin lisäksi käytetään AirBnB:n kehittämää [enzyme](https://github.com/airbnb/enzyme)-kirjastoa.
 
@@ -1052,7 +1050,7 @@ Nyt olemme valmiina testien tekemiseen.
 
 Koska _Note_ on yksinkertainen komponentti, joka ei käytä yhtään monimutkaista alikomponenttia vaan renderöi suoraan HTML:ää, sopii sen testaamiseen hyvin enzymen [shallow](http://airbnb.io/enzyme/docs/api/shallow.html)-renderöijä.
 
-Tehdään testi tiedoston _src/components/Note.test.js_, eli samaan hakemistoon, missä komponentti itsekin sijaitsee.
+Tehdään testi tiedostoon _src/components/Note.test.js_, eli samaan hakemistoon, missä komponentti itsekin sijaitsee.
 
 Ensimmäinen testi varmistaa, että komponentti renderöi muistiinpanon sisällön:
 
@@ -1086,7 +1084,7 @@ const noteComponent = shallow(<Note note={note} />)
 
 Normaalisti React-komponentit renderöityvät _DOM_:iin. Nyt kuitenkin renderöimme komponentteja [shallowWrapper](http://airbnb.io/enzyme/docs/api/shallow.html)-tyyppisiksi, testaukseen sopiviksi olioiksi.
 
-ShallowWrapper-muotoon renderöidyillä React-komponenteilla on runsaasti metodeja, joiden avulla niiden sisältöä voidaan tutkia. Esimerkiksi [find](http://airbnb.io/enzyme/docs/api/ShallowWrapper/find.html) mahdollistaa komponentin sisällä olevien _elementtien_ etsimisen [enzyme-selektorien](http://airbnb.io/enzyme/docs/api/selector.html) avulla. Eräs tapa elementtien etsimiseen on [CSS-selektorien](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors) käyttö. Liitimme muisiinpanon sisällön kertovaan div-elementtiin luokan _content_, joten voimme etsiä elementin seuraavasti:
+ShallowWrapper-muotoon renderöidyillä React-komponenteilla on runsaasti metodeja, joiden avulla niiden sisältöä voidaan tutkia. Esimerkiksi [find](http://airbnb.io/enzyme/docs/api/ShallowWrapper/find.html) mahdollistaa komponentin sisällä olevien _elementtien_ etsimisen [enzyme-selektorien](http://airbnb.io/enzyme/docs/api/selector.html) avulla. Eräs tapa elementtien etsimiseen on [CSS-selektorien](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors) käyttö. Liitimme muistiinpanon sisällön kertovaan div-elementtiin luokan _content_, joten voimme etsiä elementin seuraavasti:
 
 ```js
 const contentDiv = noteComponent.find('.content')
@@ -1295,7 +1293,7 @@ describe('<Togglable />', () => {
 
 Ennen jokaista testiä suoritettava _beforeEach_ alustaa shallow-renderöimällä _Togglable_-komponentin muuttujaan _togglableComponent_.
 
-Ensimmäinen testi tarkastaa, että _Togglable_ renderöi lapsikomponentin _<div class="testDiv" />_. Loput testit varmistavat, että Togglablen sisältämä lapsikomponentti on alussa näkymättömissä, eli sen sisältävään _div_-elementin liittyy tyyli _{ display: 'none' }_, ja että nappia painettaessa komponentti näkyy, eli tyyli on _{ display: '' }_. Koska Togglablessa on kaksi nappia, painallusta simuloidessa niistä pitää valita oikea, eli tällä kertaa ensimmäinen.
+Ensimmäinen testi tarkastaa, että _Togglable_ renderöi lapsikomponentin _<div class="testDiv" />_. Loput testit varmistavat, että Togglablen sisältämä lapsikomponentti on alussa näkymättömissä, eli sen sisältävään _div_-elementtiin liittyy tyyli _{ display: 'none' }_, ja että nappia painettaessa komponentti näkyy, eli tyyli on _{ display: '' }_. Koska Togglablessa on kaksi nappia, painallusta simuloidessa niistä pitää valita oikea, eli tällä kertaa ensimmäinen.
 
 ## Tehtäviä
 
@@ -1451,7 +1449,7 @@ tulostuu todellinen HTML:
 </div>
 ```
 
-Komennon _mount_ palauttamaa renderöidyn "komponenttipuun" [ReactWrapper](http://airbnb.io/enzyme/docs/api/mount.htm)-tyyppisenä oliona, joka tarjoaa hyvin samantyyppisen rajapinnan komponentin sisällön tutkimiseen kuin _ShallowWrapper_.
+Komento _mount_ palauttaa renderöidyn "komponenttipuun" [ReactWrapper](https://airbnb.io/enzyme/docs/api/mount.html#mountnode-options--reactwrapper)-tyyppisenä oliona, joka tarjoaa hyvin samantyyppisen rajapinnan komponentin sisällön tutkimiseen kuin _ShallowWrapper_.
 
 ### Lomakkeiden testaus
 
@@ -1691,7 +1689,7 @@ Jos snapshot-testi huomaa muutoksen komponenttien määrittelemässä HTML:ssä,
 
 ## End to end -testaus
 
-Olemme tehneet sekä backendille että frontendille hieman niitä kokonaisuutena testavia integraatiotestejä. Eräs tärkeä testauksen kategoria on vielä käsittelemättä, [järjestelmää kokonaisuutena](https://en.wikipedia.org/wiki/System_testing) testaavat "end to end" (eli E2E) -testit.
+Olemme tehneet sekä backendille että frontendille hieman niitä kokonaisuutena testaavia integraatiotestejä. Eräs tärkeä testauksen kategoria on vielä käsittelemättä, [järjestelmää kokonaisuutena](https://en.wikipedia.org/wiki/System_testing) testaavat "end to end" (eli E2E) -testit.
 
 Web-sovellusten E2E-testaus tapahtuu simuloidun selaimen avulla esimerkiksi [Selenium](http://www.seleniumhq.org)-kirjastoa käyttäen. Toinen vaihtoehto on käyttää ns. [headless browseria](https://en.wikipedia.org/wiki/Headless_browser) eli selainta, jolla ei ole ollenkaan graafista käyttöliittymää. Esim. Chromea on mahdollista suorittaa Headless-moodissa.
 
@@ -1735,7 +1733,7 @@ npm install redux --save
 
 Fluxin tapaan Reduxissa sovelluksen tila talletetaan [storeen](https://redux.js.org/basics/store).
 
-Koko sovelluksen tila talletetaan _yhteen_ storen tallettamaan Javascript-objektiin. Koska sovelluksemme ei tarvitse mitään muuta tilaa kuin laskurin arvon, talletetaan se storeen suoraan. Jos sovelluksen tila olisi monipuolisempi, talletettaisiin "eri asiat" storessa olevan olioon erillisinä kenttinä.
+Koko sovelluksen tila talletetaan _yhteen_ storen tallettamaan Javascript-objektiin. Koska sovelluksemme ei tarvitse mitään muuta tilaa kuin laskurin arvon, talletetaan se storeen suoraan. Jos sovelluksen tila olisi monipuolisempi, talletettaisiin "eri asiat" storessa olevaan olioon erillisinä kenttinä.
 
 Storen tilaa muutetaan [actionien](https://redux.js.org/basics/actions) avulla. Actionit ovat olioita, joilla on vähintään actionin _tyypin_ määrittelevä kenttä _type_. Sovelluksessamme tarvitsemme esimerkiksi seuraavaa actionia:
 
@@ -1796,13 +1794,13 @@ const counterReducer = (state = 0, action) => {
 const store = createStore(counterReducer)
 ```
 
-Store käyttää nyt reduceria käsitelläkseen _actioneja_, jotka _dispatchataan_ eli "lähetetään" storagelle sen [dispatch](https://redux.js.org/api-reference/store#dispatch(action))-metodilla:
+Store käyttää nyt reduceria käsitelläkseen _actioneja_, jotka _dispatchataan_ eli "lähetetään" storelle sen [dispatch](https://redux.js.org/api-reference/store#dispatch-action)-metodilla:
 
 ```js
 store.dispatch({type: 'INCREMENT'})
 ```
 
-Storen tilan saa selville metodilla [getState](https://redux.js.org/api-reference/store#getstate()).
+Storen tilan saa selville metodilla [getState](https://redux.js.org/api-reference/store#getstate).
 
 Esim. seuraava koodi
 
@@ -1828,7 +1826,7 @@ tulostaisi konsoliin
 
 sillä ensin storen tila on 0. Kolmen _INCREMENT_-actionin jälkeen tila on 3, ja lopulta actionien _ZERO_ ja _DECREMENT_ jälkeen -1.
 
-Kolmas tärkeä metodi storella on [subscribe](https://redux.js.org/api-reference/store#subscribe(listener)), jonka avulla voidaan määritellä takaisinkutsufunktioita, joita store kutsuu sen tilan muuttumisen yhteydessä.
+Kolmas tärkeä metodi storella on [subscribe](https://redux.js.org/api-reference/store#subscribe-listener), jonka avulla voidaan määritellä takaisinkutsufunktioita, joita store kutsuu sen tilan muuttumisen yhteydessä.
 
 Jos esim. lisäisimme seuraavan funktion subscribellä, tulostuisi _jokainen storen muutos_ konsoliin.
 
@@ -2401,7 +2399,7 @@ export default App
 
 Jos sovelluksessa on enemmän storea tarvitsevia komponentteja, tulee _App_-komponentin välittää _store_ propseina kaikille sitä tarvitseville komponenteille.
 
-Eriytetään uuden muistiinpanon luominen sekä muistiinpanojen lista ja yksittäisen muisiinpanon esittäminen omiksi komponenteiksi:
+Eriytetään uuden muistiinpanon luominen sekä muistiinpanojen lista ja yksittäisen muistiinpanon esittäminen omiksi komponenteiksi:
 
 ```react
 class NoteForm extends React.Component {
@@ -2596,9 +2594,9 @@ class NoteForm extends React.Component {
 }
 ```
 
-Näin komponentit rekisteröityvät kuuntelemaan storessa tapahtuvia muutoksia ja niiden tapahtuessa uudelleenrenderöimään itsensä (ja lapsikomponenttinsa) metodilla [forceUpdate](https://reactjs.org/docs/react-component.html#forceupdate).
+Näin komponentit rekisteröityvät kuuntelemaan storessa tapahtuvia muutoksia ja niiden tapahtuessa uudelleenrenderöimään itsensä (ja lapsikomponenttinsa) metodilla [forceUpdate](https://reactjs.org/docs/react-component.html#forceupdate). Huomaa, että [subscribe palauttaa funktion](https://redux.js.org/api-reference/store#arguments-1), jolla voidaan peruuttaa rekisteröitymisen. Tässä viite siihen funktioon on tallessa muuttujassa _unsubscribe_, joten voidaan kutsua sitä sopivalla hetkellä lifecycle-metodissa [componentWillUnmount](https://reactjs.org/docs/react-component.html#componentwillunmount).
 
-Nyt pääsemme eroon tiedostossa _index.js_ tapahtuneesta koko sovelluksen uudelleenrenderöinnistä ja koodi yksinkertaistuu muotoon.
+Nyt pääsemme eroon tiedostossa _index.js_ tapahtuneesta koko sovelluksen uudelleenrenderöinnistä ja koodi yksinkertaistuu muotoon:
 
 ```react
 ReactDOM.render(

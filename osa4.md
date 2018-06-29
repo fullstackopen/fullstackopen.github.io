@@ -293,7 +293,7 @@ module.exports = {
 
 > Metodi _average_ käyttää taulukoiden metodia [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce). Jos metodi ei ole vieläkään tuttu, on korkea aika katsoa youtubesta [Functional Javascript](https://www.youtube.com/watch?v=BMUiFMZr7vk&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84) -sarjasta ainakin kolme ensimmäistä videoa.
 
-Javascriptiin on tarjolla runsaasti erilaisia testikirjastoja eli _test runnereita_. Käytämme tällä kurssilla Facebookin kehittämää ja sisäisesti käyttämää [jest](https://facebook.github.io/jest/):iä, joka on toiminnaltaan ja syntaksiltaankin hyvin samankaltainen kuin tämän hetken eniten käytetty testikirjasto [Mocha](https://mochajs.org/). Muitakin mahdollisuuksia olisi, esim. eräissä piireissä suosiota nopeasti saavuttanut [ava](https://github.com/avajs/ava).
+Javascriptiin on tarjolla runsaasti erilaisia testikirjastoja eli _test runnereita_. Käytämme tällä kurssilla Facebookin kehittämää ja sisäisesti käyttämää [jest](https://jestjs.io/):iä, joka on toiminnaltaan ja syntaksiltaankin hyvin samankaltainen kuin tämän hetken eniten käytetty testikirjasto [Mocha](https://mochajs.org/). Muitakin mahdollisuuksia olisi, esim. eräissä piireissä suosiota nopeasti saavuttanut [ava](https://github.com/avajs/ava).
 
 Jest on tälle kurssille luonteva valinta, sillä se sopii hyvin backendien testaamiseen, mutta suorastaan loistaa Reactilla tehtyjen frontendien testauksessa.
 
