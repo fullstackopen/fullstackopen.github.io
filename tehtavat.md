@@ -1858,7 +1858,7 @@ Järjestä sovellus näyttämään blogit _likejen_ mukaisessa suuruusjärjestyk
 
 Lisää nappi blogin poistamiselle.
 
-Toteuta myös poiston tekevä logiikka. Laajenna backendiä siten, että ne blogit, joihin ei liity lisääjää (joita syntyi ennen kun olimme lisänneet järjestelmään käyttäjiä), ovat kaikkien kirjautuneiden käyttäjien poistettavissa.
+Toteuta myös poiston tekevä logiikka. Laajenna backendiä siten, että ne blogit, joihin ei liity lisääjää (joita syntyi ennen kuin olimme lisänneet järjestelmään käyttäjiä), ovat kaikkien kirjautuneiden käyttäjien poistettavissa.
 
 Ohjelmasi voi näyttää esim. seuraavalta:
 
@@ -2103,7 +2103,7 @@ Varmista testeissä _deep-freeze_-kirjaston avulla, että kyseessä on _puhdas f
 
 Aloita laajentamalla reduceria siten, että molemmat testeistä menevät läpi. Lisää tämän jälkeen loput testit ja niiden toteuttava toiminnallisuus.
 
-Osan 2 luvun [Muistiinpanon tärkeyden muutos](/osa2#Muistiinpanon-tärkeyden-muutos) olion kopiointiin liittyvät asiat saattavat olla hyödyksi.
+Osan 2 luvun [Muistiinpanon tärkeyden muutos](/osa2/#muistiinpanon-tärkeyden-muutos) olion kopiointiin liittyvät asiat saattavat olla hyödyksi.
 
 #### 5.18 unicafe revisited, osa 2
 
@@ -2149,7 +2149,7 @@ Toteuta mahdollisuus anekdoottien äänestämiseen. Äänien määrä tulee tall
 
 #### 5.20* anekdootit, osa 2
 
-Huolehdi siitä, että anekdootit pysyvät äänten mukaisessa suuruusjärjetyksessä.
+Huolehdi siitä, että anekdootit pysyvät äänten mukaisessa suuruusjärjestyksessä.
 
 #### 5.21* anekdootit, osa 3
 
