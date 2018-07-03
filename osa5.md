@@ -1272,7 +1272,7 @@ describe('<Togglable />', () => {
   })
 
   it('renders its children', () => {
-    expect(togglableComponent.contains(<div class="testDiv" />)).toEqual(true)
+    expect(togglableComponent.contains(<div className="testDiv" />)).toEqual(true)
   })
 
   it('at start the children are not displayed', () => {
@@ -1293,7 +1293,7 @@ describe('<Togglable />', () => {
 
 Ennen jokaista testiä suoritettava _beforeEach_ alustaa shallow-renderöimällä _Togglable_-komponentin muuttujaan _togglableComponent_.
 
-Ensimmäinen testi tarkastaa, että _Togglable_ renderöi lapsikomponentin _<div class="testDiv" />_. Loput testit varmistavat, että Togglablen sisältämä lapsikomponentti on alussa näkymättömissä, eli sen sisältävään _div_-elementtiin liittyy tyyli _{ display: 'none' }_, ja että nappia painettaessa komponentti näkyy, eli tyyli on _{ display: '' }_. Koska Togglablessa on kaksi nappia, painallusta simuloidessa niistä pitää valita oikea, eli tällä kertaa ensimmäinen.
+Ensimmäinen testi tarkastaa, että _Togglable_ renderöi lapsikomponentin _<div className="testDiv" />_. Loput testit varmistavat, että Togglablen sisältämä lapsikomponentti on alussa näkymättömissä, eli sen sisältävään _div_-elementtiin liittyy tyyli _{ display: 'none' }_, ja että nappia painettaessa komponentti näkyy, eli tyyli on _{ display: '' }_. Koska Togglablessa on kaksi nappia, painallusta simuloidessa niistä pitää valita oikea, eli tällä kertaa ensimmäinen.
 
 ## Tehtäviä
 
