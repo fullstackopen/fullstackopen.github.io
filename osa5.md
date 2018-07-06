@@ -2047,7 +2047,7 @@ Testi on seuraavassa:
 import noteReducer from './noteReducer'
 import deepFreeze from 'deep-freeze'
 
-describe('noteRenderer', () => {
+describe('noteReducer', () => {
   it('returns new state with action NEW_NOTE', () => {
     const state = []
     const action = {
