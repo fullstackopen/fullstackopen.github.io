@@ -35,11 +35,11 @@ Tehdään koodiin muutamia rakenteellisia muutoksia. Siirretään reducerin mä�
 Sovelluskehitystä helpottaaksemme laajennetaan reduceria siten, että storelle määritellään alkutila, jossa on pari muistiinpanoa:
 
 ```js
-const initalState = [
+const initialState = [
   { content: 'reduxin storen toiminnan määrittelee reduceri', important: true, id: 1},
   { content: 'storen tilassa voi olla mielivaltaista dataa', important: false, id: 2}
 ]
-const noteReducer = (state = initalState, action) => {
+const noteReducer = (state = initialState, action) => {
   // ...
 }
 
@@ -49,12 +49,12 @@ export default noteReducer
 Siirretään [action creatorit](https://redux.js.org/advanced/async-actions#synchronous-action-creators), eli sopivia [action](https://redux.js.org/basics/actions)-olioita generoivat apufunktiot reducerin kanssa samaan moduuliin:
 
 ```js
-const initalState = [
+const initialState = [
   { content: 'reduxin storen toiminnan määrittelee reduceri', important: true, id: 1 },
   { content: 'storen tilassa voi olla mielivaltaista dataa', important: false, id: 2 }
 ]
 
-const noteReducer = (state = initalState, action) => {
+const noteReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'NEW_NOTE':
       return [...state, action.data]
@@ -81,7 +81,7 @@ export const noteCreation = (content) => {
   }
 }
 
-export const constimportanceToggling = (id) => {
+export const importanceToggling = (id) => {
   return {
     type: 'TOGGLE_IMPORTANCE',
     data: { id }
