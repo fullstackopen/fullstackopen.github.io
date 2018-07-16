@@ -1122,6 +1122,12 @@ const getAll = async () => {
 export default { getAll }
 ```
 
+Asennetaan myös axios projektiin
+
+```bash
+npm install axios --save
+```
+
 Muutetaan _nodeReducer_:issa tapahtuva muistiinpanojen tilan alustusta, siten että oletusarvoisesti mustiinpanoja ei ole:
 
 ```js
