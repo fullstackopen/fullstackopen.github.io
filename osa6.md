@@ -639,7 +639,7 @@ const ConnectedNoteList = connect(
 export default ConnectedNoteList
 ```
 
-Nyt komponentti voi dispatchata suoraan action creatorin _importanceToggling_ määrittelemän actionin kutsumalla prosien kautta saamaansa funktiota koodissa:
+Nyt komponentti voi dispatchata suoraan action creatorin _importanceToggling_ määrittelemän actionin kutsumalla propsien kautta saamaansa funktiota koodissa:
 
 ```js
 class NoteList extends React.Component {
