@@ -639,7 +639,7 @@ const ConnectedNoteList = connect(
 export default ConnectedNoteList
 ```
 
-Nyt komponentti voi dispatchata suoraan action creatorin _importanceToggling_ määrittelemän actionin kutsumalla prosien kautta saamaansa funktiota koodissa:
+Nyt komponentti voi dispatchata suoraan action creatorin _importanceToggling_ määrittelemän actionin kutsumalla propsien kautta saamaansa funktiota koodissa:
 
 ```js
 class NoteList extends React.Component {
@@ -1120,6 +1120,12 @@ const getAll = async () => {
 }
 
 export default { getAll }
+```
+
+Asennetaan myös axios projektiin
+
+```bash
+npm install axios --save
 ```
 
 Muutetaan _nodeReducer_:issa tapahtuva muistiinpanojen tilan alustusta, siten että oletusarvoisesti mustiinpanoja ei ole:
