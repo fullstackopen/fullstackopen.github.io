@@ -535,7 +535,7 @@ const config = {
     filename: 'main.js'
   },
   devServer: {
-    contentBase: path.resolve(__dirname, "dist"),
+    contentBase: path.resolve(__dirname, 'dist'),
     compress: true,
     port: 3000
   },
