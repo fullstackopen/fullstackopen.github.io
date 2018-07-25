@@ -2594,7 +2594,7 @@ class NoteForm extends React.Component {
 }
 ```
 
-Näin komponentit rekisteröityvät kuuntelemaan storessa tapahtuvia muutoksia ja niiden tapahtuessa uudelleenrenderöimään itsensä (ja lapsikomponenttinsa) metodilla [forceUpdate](https://reactjs.org/docs/react-component.html#forceupdate). Huomaa, että [subscribe palauttaa funktion](https://redux.js.org/api-reference/store#arguments-1), jolla voidaan peruuttaa rekisteröitymisen. Tässä viite siihen funktioon on tallessa muuttujassa _unsubscribe_, joten voidaan kutsua sitä sopivalla hetkellä lifecycle-metodissa [componentWillUnmount](https://reactjs.org/docs/react-component.html#componentwillunmount).
+Näin komponentit rekisteröityvät kuuntelemaan storessa tapahtuvia muutoksia ja niiden tapahtuessa uudelleenrenderöimään itsensä (ja lapsikomponenttinsa) metodilla [forceUpdate](https://reactjs.org/docs/react-component.html#forceupdate). Huomaa, että [subscribe palauttaa funktion](https://redux.js.org/api-reference/store#arguments-1), jolla voidaan peruuttaa rekisteröityminen. Tässä viite siihen funktioon on tallessa muuttujassa _unsubscribe_, joten voidaan kutsua sitä sopivalla hetkellä lifecycle-metodissa [componentWillUnmount](https://reactjs.org/docs/react-component.html#componentwillunmount).
 
 Nyt pääsemme eroon tiedostossa _index.js_ tapahtuneesta koko sovelluksen uudelleenrenderöinnistä ja koodi yksinkertaistuu muotoon:
 
