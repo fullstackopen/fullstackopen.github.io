@@ -512,7 +512,7 @@ Ratkaisun tarjoaa [webpack-dev-server](https://webpack.js.org/guides/development
 npm install --save-dev webpack-dev-server
 ```
 
-Määritellään dev-serverin käynnistävä npm-skripti (äsken lisätty skripti _watch_ on poistettu koska sille ei ole käyttöä):
+Määritellään dev-serverin käynnistävä npm-skripti:
 
 ```bash
 {
@@ -535,7 +535,7 @@ const config = {
     filename: 'main.js'
   },
   devServer: {
-    contentBase: path.resolve(__dirname, "dist"),
+    contentBase: path.resolve(__dirname, 'dist'),
     compress: true,
     port: 3000
   },
