@@ -320,6 +320,22 @@ määritellään _npm_ skripti _test_ suorittamaan testaus jestillä ja raportoi
 }
 ```
 
+Jestin uudemmissa versioissa näyttäisi olevan tarve kertoa, että suoritusympäristönä on käytössä Node. Tämä tapahtuu esim. lisäämällä _package.json_ tiedoston loppuun:
+ ```js
+{
+  //...
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
+```
+Tai vaihtoehtoisesti Jest löytää myös oletuksena asetustiedoston nimellä _jest.config.js_, jonne suoritusympäristön määrittely tapahtuu seuraavasti:
+ ```js
+module.exports = {
+    testEnvironment : "node"
+}
+```
+
 Tehdään testejä varten hakemisto _tests_ ja sinne tiedosto _palindrom.test.js_, jonka sisältö on seuraava
 
 ```js
