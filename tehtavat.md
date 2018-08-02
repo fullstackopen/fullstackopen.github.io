@@ -2257,7 +2257,7 @@ Laajenna sovellusta siten, että se näyttää _Notification_-komponentin avulla
 
 ![]({{ "/assets/teht/37.png" | absolute_url }})
 
-Notifikaation asettamista ja poistamista varten kannattaa kannattaa toteuttaa [action creatorit](https://redux.js.org/basics/actions#action-creators).
+Notifikaation asettamista ja poistamista varten kannattaa toteuttaa [action creatorit](https://redux.js.org/basics/actions#action-creators).
 
 #### 6.5 paremmat anekdootit, osa 4
 
@@ -2504,7 +2504,7 @@ Tutustu [bootstrapin](https://react-bootstrap.github.io/layout/grid/) tai [seman
 
 #### 6.23 styled anecdotes, osa 5
 
-Lisää vielä vapaavalintaisia tyylejä valitsemallasi UI frameworkilla. Voit merkata tehtävän, jos käytät aikaa vapaavalitaisten tyylien lisäämiseen noin 30 minuuttia.
+Lisää vielä vapaavalintaisia tyylejä valitsemallasi UI frameworkilla. Voit merkata tehtävän, jos käytät aikaa vapaavalintaisten tyylien lisäämiseen noin 30 minuuttia.
 
 ### Tehtävien palautus
 
@@ -2530,7 +2530,7 @@ Hyvä neuvo niin refaktorointiin kuin uudenkin koodin kirjoittamiseen on _pienis
 
 ### 7.1 käyttäjien näkymä
 
-Tee sovellukseen näkymä, joka näyttää kaikkin käyttäjiin liittyvät perustietot:
+Tee sovellukseen näkymä, joka näyttää kaikkiin käyttäjiin liittyvät perustietot:
 
 ![]({{ "/assets/teht/53.png" | absolute_url }})
 
@@ -2635,7 +2635,7 @@ Tee frontendille tai reducereille testejä. Voit merkitä rastin kun olet käytt
 
 ### 7.18 snapshot-testaus
 
-Ota sovellukseessasi käyttöön [snapshot testing](https://facebook.github.io/jest/docs/en/snapshot-testing.html)
+Ota sovelluksessasi käyttöön [snapshot testing](https://facebook.github.io/jest/docs/en/snapshot-testing.html)
 
 ### 7.19 headless-testaus
 
@@ -2655,7 +2655,7 @@ Toteuta sovelluksellesi esim. [Travis CI](https://travis-ci.org/):n avulla jatku
 
 ### 7.23 Kurssipalaute
 
-Anna kurssille palautetta osoitteessa *(osoite julkaistaan myöhemmin)*.
+Anna kurssille palautetta Moodlessa.
 
 ### Tehtävien palautus
 

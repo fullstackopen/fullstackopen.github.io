@@ -97,7 +97,7 @@ Koska osa importeista on kirjastoja, kuten React, Redux ja Axios, bundlattuun ja
 
 Tehdään nyt React-projektille sopiva webpack-konfiguraatio kokonaan käsin.
 
-Luodaan projektia varten hakemisto ja sen sisälle seuraavat hakemistot (build ja src) sekä tiedostot:
+Luodaan projektia varten hakemisto ja sen sisälle seuraavat hakemistot (dist ja src) sekä tiedostot:
 
 <pre>
 ├── dist
@@ -227,7 +227,7 @@ const path = require('path')
 const config = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'main.js'
   }
 }
@@ -395,7 +395,7 @@ Edellisen luvun konfiguraation avulla siis _transpiloimme_ JSX:ää sisältävä
 
 Kuten osassa 1 jo mainittiin, läheskään kaikki selaimet eivät vielä osaa Javascriptin uusimpien versioiden ES6:n ja ES7:n ominaisuuksia ja tämän takia koodi yleensä transpiloidaan käyttämään vanhempaa Javascript-syntaksia ES5:ttä.
 
-Babelin suorittama transpilointiprosessi määritellään _pluginien_ avulla. Käytännössä useimmiten käytetään valmiita [presetejä](https://babeljs.io/docs/plugins/), eli useamman sopivan pluginin joukkoa.
+Babelin suorittama transpilointiprosessi määritellään _pluginien_ avulla. Käytännössä useimmiten käytetään valmiita [presetejä](https://babeljs.io/docs/plugins/), eli useamman sopivan pluginin joukkoja.
 
 Tällä hetkellä sovelluksemme transpiloinnissa käytetään presetiä [react](https://babeljs.io/docs/plugins/preset-react/):
 
@@ -492,7 +492,7 @@ Transpilointi hajoaa, ja CSS:ää varten onkin otettava käyttöön [css](https:
 
 Näin konfiguroituna CSS-määrittelyt sisällytetään sovelluksen Javascriptin sisältävään tiedostoon _main.js_. Sovelluksen päätiedostossa _index.html_ ei siis ole tarvetta erikseen ladata CSS:ää.
 
-CSS voidaan tarpeen vaatiessa myös generoida omaan tiedostoonsa esim. [extract-text](https://github.com/webpack-contrib/extract-text-webpack-plugin)-pluginin avulla.
+CSS voidaan tarpeen vaatiessa myös generoida omaan tiedostoonsa esim. [mini-css-extract-pluginin](https://github.com/webpack-contrib/mini-css-extract-plugin) avulla.
 
 Kun loaderit asennetaan
 
@@ -687,7 +687,7 @@ Jos tiedoston sisältöä tarkastelee, huomaa että sitä voisi optimoida huomat
 
 Javascript-tiedostojen optimointiprosessista käytetään nimitystä _minifiointi_. Alan johtava työkalu tällä hetkellä lienee [UglifyJS](http://lisperator.net/uglifyjs/).
 
-Webpackin versiosta 4 alkaen pluginia ei ole tarvinnut konfiguroida erikseen, riittää että muutetaan tiedoston _package.json_ määrittelyä siten, että koodin bundlaus tapahtumaan _production_-moodissa:
+Webpackin versiosta 4 alkaen pluginia ei ole tarvinnut konfiguroida erikseen, riittää että muutetaan tiedoston _package.json_ määrittelyä siten, että koodin bundlaus tapahtuu _production_-moodissa:
 
 ```json
 {
@@ -714,7 +714,7 @@ Kun sovellus bundlataan uudelleen, pienenee tuloksena oleva _main.js_ mukavasti
 -rw-r--r--  1 mluukkai  984178727  101944 Mar  3 21:29 main.js
 ```
 
-Minifioinnin lopputulos on kuin vanhan liiton c-koodia, kommentit ja jopa turhat välilyönnit ja rivinvaihtot on poistettu ja muuttujanimet ovat yksikirjaimisia:
+Minifioinnin lopputulos on kuin vanhan liiton c-koodia, kommentit ja jopa turhat välilyönnit ja rivinvaihdot on poistettu ja muuttujanimet ovat yksikirjaimisia:
 
 ```js
 function h(){if(!d){var e=u(p);d=!0;for(var t=c.length;t;){for(s=c,c=[];++f<t;)s&&s[f].run();f=-1,t=c.length}s=null,d=!1,function(e){if(o===clearTimeout)return clearTimeout(e);if((o===l||!o)&&clearTimeout)return o=clearTimeout,clearTimeout(e);try{o(e)}catch(t){try{return o.call(null,e)}catch(t){return o.call(this,e)}}}(e)}}a.nextTick=function(e){var t=new Array(arguments.length-1);if(arguments.length>1)
@@ -908,7 +908,7 @@ Selaimien yhteensopivuus käytettävien API:en suhteen kannattaakin tarkistaa es
 
 ### Eject
 
-Create-react-app käyttää taustalla webpackia. Jos peruskonfiguraatio ei riitä, on projektit mahdollista [ejektoida](https://github.com/facebookincubator/create-react-app#converting-to-a-custom-setup), jolloin kaikki konepellin alla oleva magia häviää, ja konfiguraatiot tallettuvat hakemistoon _config_ ja muokattuun _package.json_-tiedostoon.
+Create-react-app käyttää taustalla webpackia. Jos peruskonfiguraatio ei riitä, on projektit mahdollista [ejektoida](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#npm-run-eject), jolloin kaikki konepellin alla oleva magia häviää, ja konfiguraatiot tallettuvat hakemistoon _config_ ja muokattuun _package.json_-tiedostoon.
 
 Jos create-react-app:illa tehdyn sovelluksen ejektoi, paluuta ei ole, sen jälkeen kaikesta konfiguroinnista on huolehdittava itse. Konfiguraatiot eivät ole triviaaleimmasta päästä ja create-react-appin ja ejektoinnin sijaan parempi vaihtoehto saattaa joskus olla tehdä itse koko webpack-konfiguraatio.
 
@@ -928,11 +928,11 @@ Laitoksen [kurssilistasivun](https://www.cs.helsinki.fi/courses) alaosassa on it
 
 ![]({{ "/assets/7/15.png" | absolute_url }})
 
-Sivulla on monessa paikassa määriteltyjä tyylejä, osa määrittelyistä tulee Drupal-sisällönhallintajärjestelmän oletuskonfiguraatiosta, osa on Drupaliin laitoksella tehtyjä lisäyksiä, osa taas tulee sivun yläosan olemassaolevaa opetustarjontaa näyttävistä syksyllä lisätystä komponenteista. Vika on niin hankala korjata, ettei kukaan ole viitsinyt sitä tehdä.
+Sivulla on monessa paikassa määriteltyjä tyylejä, osa määrittelyistä tulee Drupal-sisällönhallintajärjestelmän oletuskonfiguraatiosta, osa on Drupaliin laitoksella tehtyjä lisäyksiä, osa taas tulee sivun yläosan olemassaolevaa opetustarjontaa näyttävistä syksyllä lisätyistä komponenteista. Vika on niin hankala korjata, ettei kukaan ole viitsinyt sitä tehdä.
 
 Demonstroidaan vastaavankaltaista ongelmatilannetta esimerkkisovelluksessamme.
 
-Muutetaan esimerkkitietostoamme siten, että komponentista _App_ irrotetaan osa toiminnallisuudesta komponentteihin _Hello_ ja _NoteCount_:
+Muutetaan esimerkkitiedostoamme siten, että komponentista _App_ irrotetaan osa toiminnallisuudesta komponentteihin _Hello_ ja _NoteCount_:
 
 ```react
 import './Hello.css'
@@ -1135,7 +1135,7 @@ Sovelluksen ulkoasu seuraavassa:
 
 ## Sovelluksen end to end -testaus
 
-Palataan vielä hetkeksi testauksen pariin. Aiemmissa osissa teimme sovelluksille yksikkötestejä sekä integraatiotestejä. Katsotaa nyt erästä tapaa tehdä [järjestelmää kokonaisuutena](https://en.wikipedia.org/wiki/System_testing) tutkivia _End to End (E2E) -testejä_.
+Palataan vielä hetkeksi testauksen pariin. Aiemmissa osissa teimme sovelluksille yksikkötestejä sekä integraatiotestejä. Katsotaan nyt erästä tapaa tehdä [järjestelmää kokonaisuutena](https://en.wikipedia.org/wiki/System_testing) tutkivia _End to End (E2E) -testejä_.
 
 Web-sovellusten E2E-testaus tapahtuu simuloidun selaimen avulla esimerkiksi [Selenium](http://www.seleniumhq.org/)-kirjastoa käyttäen. Toinen vaihtoehto on käyttää ns. [headless browseria](https://en.wikipedia.org/wiki/Headless_browser) eli selainta, jolla ei ole ollenkaan graafista käyttöliittymää.
 
@@ -1314,7 +1314,7 @@ Lisää aiheesta [Puppeteerin Github-sivujen](https://github.com/GoogleChrome/pu
 
 ## Tyypitys
 
-Javascriptin muuttujien [dynaaminen tyypitys](https://developer.mozilla.org/en-US/docs/Glossary/Dynamic_typing) aiheuttaa välillä ikäviä bugeja. Osassa 5 käsittelimme lyhyesti [PropTypejä](/osa5#propTypes), eli mekanismia, jonka avulla React-komponenteille välitettävile propseille on mahdollista tehdä tyyppitarkastuksia.
+Javascriptin muuttujien [dynaaminen tyypitys](https://developer.mozilla.org/en-US/docs/Glossary/Dynamic_typing) aiheuttaa välillä ikäviä bugeja. Osassa 5 käsittelimme lyhyesti [PropTypejä](/osa5/#proptypes), eli mekanismia, jonka avulla React-komponenteille välitettävile propseille on mahdollista tehdä tyyppitarkastuksia.
 
 Viime aikoina on ollut havaittavissa nousevaa kiinnostusta [staattiseen tyypitykseen](https://en.wikipedia.org/wiki/Type_system#Static_type_checking).
 
@@ -1409,9 +1409,9 @@ WebSocket API:n suoran käyttämisen sijaan onkin suositeltavaa käyttää [Sock
 
 ### Virtual DOM
 
-Reactin yhteydessä mainitaan usein käsite Virtual DOM. Mistä oikein on kyseä? Kuten [osassa 0](/osa0#document-object-model-eli-dom) mainittiin, selaimet tarjoavat [DOM API](https://developer.mozilla.org/fi/docs/DOM):n, jota hyväksikäyttäen selaimessa toimiva Javascript voi muokata sivun ulkoasun määritteleviä elementtejä.
+Reactin yhteydessä mainitaan usein käsite Virtual DOM. Mistä oikein on kyse? Kuten [osassa 0](/osa0#document-object-model-eli-dom) mainittiin, selaimet tarjoavat [DOM API](https://developer.mozilla.org/fi/docs/DOM):n, jota hyväksikäyttäen selaimessa toimiva Javascript voi muokata sivun ulkoasun määritteleviä elementtejä.
 
-Reactia käyttäessä ohjelmoija ei koskaan (tai parempi sanoa yleensä) manipuloi DOM:ia suoraan. React-komponenttien ulkoasun määrittelevä _render_-metodi palauttaa joukon [React](https://reactjs.org/docs/glossary.html#elements)-elementtejä. Vaikka osa elementeistä näyttää normaaleilta HTML-elementeiltä
+Reactia käyttäessä ohjelmoija ei koskaan (tai parempi sanoa yleensä) manipuloi DOM:ia suoraan. React-komponenttien ulkoasun määrittelevä _render_-metodi palauttaa joukon [React-elementtejä](https://reactjs.org/docs/glossary.html#elements). Vaikka osa elementeistä näyttää normaaleilta HTML-elementeiltä
 
 ```react
 const element = <h1>Hello, world</h1>
@@ -1452,7 +1452,7 @@ The Open Web Application Security Project eli [OWASP](https://www.owasp.org) jul
 
 Listaykkösenä on _injection_, joka tarkoittaa sitä, että sovellukseen esim. lomakkeen avulla lähetettävä teksti tulkitaankin aivan eri tavalla kun sovelluskehittäjä on tarkoittanut. Kuuluisin injektioiden muoto lienevät [SQL-injektiot](https://stackoverflow.com/questions/332365/how-does-the-sql-injection-from-the-bobby-tables-xkcd-comic-work).
 
-Esim. jos ei-turvallisessa koodissa tehtäisiin seuravasti muotoiltu SQL-kysely:
+Esim. jos ei-turvallisessa koodissa tehtäisiin seuraavasti muotoiltu SQL-kysely:
 
 ```js
 let query = "SELECT * FROM Users WHERE name = '" + userName + "';"
@@ -1470,9 +1470,9 @@ eli nimi sisältäisi hipsun <code>'</code>, jonka on SQL:ssä merkkijonon aloit
 SELECT * FROM Users WHERE name = 'Arto Hell-as'; DROP TABLE Users; --'
 ```
 
-SQL-injektiot estetään [sanitoimalla](https://security.stackexchange.com/questions/172297/sanitizing-input-for-parameterized-queries) syöte, eli tarkastamalla, että kyselyjen parametrit eivät sisällä kiellettyjä merkkejä, kuten tässä tapauksessa hipsun. Jos kiellettyjä merkkejä löytyy, ne poistetaan korvataan turvallisilla vastineilla [escapettamalla](https://en.wikipedia.org/wiki/Escape_character#JavaScript).
+SQL-injektiot estetään [sanitoimalla](https://security.stackexchange.com/questions/172297/sanitizing-input-for-parameterized-queries) syöte, eli tarkastamalla, että kyselyjen parametrit eivät sisällä kiellettyjä merkkejä, kuten tässä tapauksessa hipsun. Jos kiellettyjä merkkejä löytyy, ne korvataan turvallisilla vastineilla [escapettamalla](https://en.wikipedia.org/wiki/Escape_character#JavaScript).
 
-Myös NoSQL-kantoihin tehtävät injektiohyökkäykset ovat mahdollisia. Mongoose kuitenkin estää ne [sanitoimalla](https://zanon.io/posts/nosql-injection-in-mongodb) kyselyt. Lisää aiheeta esim. [täällä](https://blog.websecurify.com/2014/08/hacking-nodejs-and-mongodb.html).
+Myös NoSQL-kantoihin tehtävät injektiohyökkäykset ovat mahdollisia. Mongoose kuitenkin estää ne [sanitoimalla](https://zanon.io/posts/nosql-injection-in-mongodb) kyselyt. Lisää aiheesta esim. [täällä](https://blog.websecurify.com/2014/08/hacking-nodejs-and-mongodb.html).
 
 _Cross-site scripting eli XSS_ on hyökkäys, missä sovellukseen on mahdollista injektoida suoritettavaksi vihollismielistä Javascript-koodia. Jos kokeilemme injektoida esim. muistiinpanosovellukseen seuraavan
 
@@ -1498,21 +1498,17 @@ npm outdated --depth 0
 
 Riippuvuudet saa ajantasaistettua päivittämällä tiedostoa _package.json_ ja suorittamalla komennon _npm install_. Riippuvuuksien vanhat versiot eivät tietenkään välttämättä ole tietoturvariski.
 
-[Node Security Platform](https://nodesecurity.io/) valvoo npm:ssä olevien riippuvuuksien turvallisuutta ja tallettaa tietokantaansa kaikki riippuvuuksissa havaitut tietoturvaongelmat. Oman projektin käyttämien riippuvuuksien turvallisuustilanne on helppo tarkistaa komentoriviltä toimivan [nsp](https://www.npmjs.com/package/nsp)-työkalun avulla.
+Aiemmissa Noden ja npm:n versioissa [Node Security Platform](https://nodesecurity.io/) valvoi npm:ssä olevien riippuvuuksien turvallisuutta; Noden versiosta 10.0.0 ja npm:n versiosta 6.0.0 alkaen Node Security Platform [on osa npm:ää](https://medium.com/npm-inc/npm-acquires-lift-security-258e257ef639), eli riippuvuuksien turvallisuutta voidaan tarkistaa [_audit_-komennolla](https://docs.npmjs.com/cli/audit) (ja npm tarkistaa sitä automaattisesti kun sovellukselle asetetaan uusia pakkauksia).
 
-Vaikka työkalumme sisältää muutaman ei-ajantasaisen riippuvuuden, ei tietoturvaongelmia ole:
-
-![]({{ "/assets/7/25.png" | absolute_url }})
-
-Toinen vastaava palvelu riippuvuuksien turvallisuuden tarkkailuun on [Snyk](https://snyk.io).
+Toinen palvelu riippuvuuksien turvallisuuden tarkkailuun on [Snyk](https://snyk.io).
 
 Eräs OWASP:in listan mainitsemista uhista on _Broken Authentication_ ja siihen liittyvä _Broken Access Control_. Käyttämämme token-perustainen autentikointi on kohtuullisen robusti, jos sovellusta käytetään tietoliikenteen salaavalla HTTPS-protokollalla. Access Controlin eli pääsynhallinnan toteuttamisessa on aina syytä muistaa tehdä esim. käyttäjän identiteetin tarkastus selaimen lisäksi myös palvelimella. Huonoa tietoturvaa olisi estää jotkut toimenpiteet ainoastaan piilottamalla niiden suoritusmahdollisuus selaimessa olevasta koodista.
 
-Mozillan MDN:n erittäin hyvä [Website security -guide](https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security) nostaakin esiin tämän tärkän seikan:
+Mozillan MDN:n erittäin hyvä [Website security -guide](https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security) nostaakin esiin tämän tärkeän seikan:
 
 ![]({{ "/assets/7/25a.png" | absolute_url }})
 
-Expressin dokumentaatio sisältää tietoturvaa käsittelvän osan [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security.html) joka kannattaa lukea läpi. Erittäin suositeltavaa on ottaa backendissa käyttöön [Helmet](https://helmetjs.github.io/)-kirjasto, joka sisältää joukon Express-sovelluksista tunnettuja turvallisuusriskejä eliminoivia middlewareja.
+Expressin dokumentaatio sisältää tietoturvaa käsittelevän osan [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security.html) joka kannattaa lukea läpi. Erittäin suositeltavaa on ottaa backendissa käyttöön [Helmet](https://helmetjs.github.io/)-kirjasto, joka sisältää joukon Express-sovelluksista tunnettuja turvallisuusriskejä eliminoivia middlewareja.
 
 Myös ESlintin [security-plugininen](https://github.com/nodesecurity/eslint-plugin-security) käyttöönotto kannattaa.
 
@@ -1535,7 +1531,7 @@ React ja Node tarjoavatkin varteenotettavan vaihtoehdon isomorfisten sovellusten
 Universaalin koodin kirjoittaminen suoraan Reactin avulla on vielä toistaiseksi melko vaivalloista.
 Viime aikoina paljon huomiota saanut Reactin päälle toteutettu [Next.js](https://github.com/zeit/next.js/)-kirjasto on hyvä vaihtoehto universaalien sovellusten tekemiseen.
 
-# Progessive web apps
+# Progressive web apps
 
 Viime aikona on myös ruvettu käyttämään Googlen lanseeraamaa termiä [progressive web app](https://developers.google.com/web/progressive-web-apps/) (PWA). Googlen sivuilla oleva määritelmä kuulostaa markkinapuheelta ja sen perusteella on hankala saada selkeää käsitystä mistä on kyse. [Checklista](https://developers.google.com/web/progressive-web-apps/checklist) tuo mukaan konkretiaa.
 
@@ -1557,7 +1553,7 @@ Seuraava kuva havainnollistaa mikropalveluarkkitehtuuriin perustuvan sovelluksen
 
 ![]({{ "/assets/7/26.png" | absolute_url }})
 
-Frontendin (kuvassa neliöitynä) rooli ei välttämättä poikkea malleissa kovinkaan paljoa, mikropalveluiden ja frontendin välissä on usein [API gateway](http://microservices.io/patterns/apigateway) jonka tarjoaa frontendille perinteisen kaltaisen, "yhdessä palvelimessa" olevan näkymän backendiin, esim. [Netflix](https://medium.com/netflix-techblog/optimizing-the-netflix-api-5c9ac715cf19) käyttää tätä ratkaisua.
+Frontendin (kuvassa neliöitynä) rooli ei välttämättä poikkea malleissa kovinkaan paljoa, mikropalveluiden ja frontendin välissä on usein [API gateway](http://microservices.io/patterns/apigateway) joka tarjoaa frontendille perinteisen kaltaisen, "yhdessä palvelimessa" olevan näkymän backendiin, esim. [Netflix](https://medium.com/netflix-techblog/optimizing-the-netflix-api-5c9ac715cf19) käyttää tätä ratkaisua.
 
 Mikropalveluarkkitehtuurit ovat syntyneet ja kehittyneet suurten internetskaalan sovellusten tarpeisiin. Trendin aloitti Amazon jo kauan ennen termin microservice lanseeraamista. Tärkeä lähtölaukaus oli CEO Jeff Bezosin vuonna 2002 kaikille työntekijöille lähettämä email:
 
@@ -1585,7 +1581,7 @@ Emme voi valitettavasti syventyä tällä kurssilla tähän tärkeään aihepiir
 
 Loppuvuodesta 2014 tapahtuneen Amazonin [lambda](https://aws.amazon.com/lambda/)-palvelun julkaisun jälkeen alkoi web-sovellusten kehittämiseen nousta jälleen uusi trendi, [serverless](https://serverless.com/).
 
-Kyse on siitä, että lambda ja nyttemmin Googlen [Cloud functions](https://cloud.google.com/functions/) ja [Azuren vastaava toiminnallisuus](https://azure.microsoft.com/en-us/services/functions/) mahdollistava _yksittäisten funktioiden suorittamisen_ pilvessä, kun ennen tätä pienin pilvessä suoritettava yksikkö oli käytännössä yksittäinen _prosessi_, eli esim. Node-backendiä suorittava ajoympäristö.
+Kyse on siitä, että lambda ja nyttemmin Googlen [Cloud functions](https://cloud.google.com/functions/) ja [Azuren vastaava toiminnallisuus](https://azure.microsoft.com/en-us/services/functions/) mahdollistavat _yksittäisten funktioiden suorittamisen_ pilvessä, kun ennen tätä pienin pilvessä suoritettava yksikkö oli käytännössä yksittäinen _prosessi_, eli esim. Node-backendiä suorittava ajoympäristö.
 
 Esim. Amazonin [API-gateway](https://aws.amazon.com/api-gateway/):n avulla on mahdollista tehdä "palvelimettomia" sovelluksia, missä määritellyn HTTP API:n kutsuihin vastataan suoraan pilvifunktioilla. Funktiot yleensä operoivat jo valmiiksi pilvipalvelun tietokantoihin talletetun datan avulla.
 
@@ -1607,7 +1603,7 @@ Jos palvelin toteuttaisi REST API:n, joutuisimme todennäköisesti tekemään mo
 
 Jos kyseessä olisi usein käytetty toiminnallisuus, voitaisiin sitä varten toteuttaa oma REST-endpoint. Jos vastaavia skeaarioita olisi paljon, esim. kymmeniä, tulisi erittäin työlääksi toteuttaa kaikille toiminnallisuuksille oma REST-endpoint.
 
-GraphQL:n avulla toteutettava palvelin sopii tämänkaltaisiin tilanteiseen hyvin.
+GraphQL:n avulla toteutettava palvelin sopii tämänkaltaisiin tilanteisiin hyvin.
 
 GraphQL:ssä periaatteena, on että selaimen koodi muodostaa _kyselyn_, joka kuvailee haluttua dataa ja lähettää sen API:lle HTTP POST -pyynnöllä. Toisin kuin REST:issä, GraphQL:ssä kaikki kyselyt kohdistetaan samaan osoitteeseen ja ovat POST-tyyppisiä.
 
@@ -1659,9 +1655,9 @@ Sovelluslogiikka säilyy yksinkertaisena ja selaimen koodi saa täsmälleen halu
 
 GraphQL:ää käytettäessä sovelluksen datasta on määriteltävä [skeema](http://graphql.org/learn/schema/), joka kuvailee datan entiteettejä, eli esimerkkimme tapauksessa käyttäjiä, blogeja ja kommentteja sekä niiden suhteita, ks. lisää esim. blogista [Navigating your transition to GraphQL](https://dev-blog.apollodata.com/navigating-your-transition-to-graphql-28a4dfa3acfb).
 
-GraphQL:n nimi tuleekin siitä, että entiteetit ja niiden suhteet muodostavat usein, etenkin sosiaalisen median tapaisissa sovelluksessa eräänlaisen verkon, missä entiteetit liittyvät toisiin entiteetteihin erilaisten _suhteiden_ kautta.
+GraphQL:n nimi tuleekin siitä, että entiteetit ja niiden suhteet muodostavat usein, etenkin sosiaalisen median tapaisissa sovelluksissa eräänlaisen verkon, missä entiteetit liittyvät toisiin entiteetteihin erilaisten _suhteiden_ kautta.
 
-Nimestään huolimatta GraphQL:llä ei ole suoranaisesti mitään tekemistä tietokantojen kanssa, se ei ota mitään kantaa siihen miten data on tallennettu. GraphQL-periaattella toimivan API:n käyttämä data voi siis olla talletettu relaatiotietokantaan, dokumenttitietokantaan tai muille palvelimeille, joita GraphQL-palvelin käyttää vaikkapa REST:in välityksellä. GraphQL on täysin ohjelmointikieliriippumaton, sekä GraphQL-clientien että -servereiden toteuttamisen tueksi on olemassa kirjastoja useilla ohjelmointikielillä.
+Nimestään huolimatta GraphQL:llä ei ole suoranaisesti mitään tekemistä tietokantojen kanssa, se ei ota mitään kantaa siihen miten data on tallennettu. GraphQL-periaattella toimivan API:n käyttämä data voi siis olla talletettu relaatiotietokantaan, dokumenttitietokantaan tai muille palvelimille, joita GraphQL-palvelin käyttää vaikkapa REST:in välityksellä. GraphQL on täysin ohjelmointikieliriippumaton, sekä GraphQL-clientien että -servereiden toteuttamisen tueksi on olemassa kirjastoja useilla ohjelmointikielillä.
 
 GraphQL on jo melko iäkäs teknologia, se on ollut Facebookin sisäisessä käytössä jo vuodesta 2012 lähtien, teknologian voi siis todeta olevan "battle tested". Facebook julkaisi GraphQL:n vuonna 2015 ja se on pikkuhiljaa saanut enenevissä määrin huomiota ja nousee ehkä lähivuosina uhmaamaan REST:in valta-asemaa.
 
@@ -1688,9 +1684,9 @@ Pilvinatiiviuteen liittyvät usein äsken mainitut mikropalvelut ja serverless-a
 
 ## Hyödyllisiä kirjastoja ja mielenkiintoisia linkkejä
 
-Facebookin ylläpitämä kirjasto [immutable.js](immutable.js) tarjoaa muutamista tietorakenteista nimensä mukaisia _muuttumattomia_ toteutuksia. Kirjastosta voi olla hyötyä Reduxia käytettäessä, sillä kuten osasta 5 [muistamme](/osa5#puhtaat-funktiot,-immutable) reducerien on oltava puhtaita funktioita eli ne eivät saa muuttaa storen tilaa vaan niiden on korvattava se muutostilanteissa uudella.
+Facebookin ylläpitämä kirjasto [immutable.js](https://github.com/facebook/immutable-js/) tarjoaa muutamista tietorakenteista nimensä mukaisia _muuttumattomia_ toteutuksia. Kirjastosta voi olla hyötyä Reduxia käytettäessä, sillä kuten osasta 5 [muistamme](/osa5/#puhtaat-funktiot-immutable) reducerien on oltava puhtaita funktioita eli ne eivät saa muuttaa storen tilaa vaan niiden on korvattava se muutostilanteissa uudella.
 
-[Redux-saga](https://redux-saga.js.org/) tarjoaa osassa 5 käsitellylle [redux thunkille](/osa5#redux-thunk) vaihtoehtoisen tavan tehdä asynkronisia actioneja. Jotkut hypettää ja tykkää, itse en.
+[Redux-saga](https://redux-saga.js.org/) tarjoaa osassa 6 käsitellylle [redux thunkille](/osa6/#asynkroniset-actionit-ja-redux-thunk) vaihtoehtoisen tavan tehdä asynkronisia actioneja. Jotkut hypettää ja tykkää, itse en.
 
 Single page -sovelluksissa analytiikkatietojen kerääminen käyttäjien sivuston kanssa käymästä vuorovaikutuksesta on [haastavampaa](https://developers.google.com/analytics/devguides/collection/analyticsjs/single-page-applications) kuin perinteisissä, kokonaiseen sivun lataamiseen perustuvissa web-sovelluksissa. [React Google Analytics](https://github.com/react-ga/react-ga) -kirjasto tuo tähän avun.
 
