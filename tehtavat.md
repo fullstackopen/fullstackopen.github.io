@@ -1011,9 +1011,7 @@ Joudut todennäköisesti tekemään frontendiin erinäisiä pieniä muutoksia ai
 Vie sovelluksen backend internetiin, esim. Herokuun. Toinen, käyttäjän kannalta helpompi vaihtoehto on Zeit.co:n [now](
 https://zeit.co/now).
 
-**Huom1** komento _heroku_ toimii laitoksen koneilla ja fuksikannettavilla 9.2. alkaen. Jos et jostain syystä saa [asennettua](https://devcenter.heroku.com/articles/heroku-cli) herokua koneellesi, voit käyttää komentoa [npx heroku-cli](https://www.npmjs.com/package/heroku-cli).
-
-**Huom2** eihän hakemisto _build_ ole gitignoroituna projektissasi?
+**Huom** komento _heroku_ toimii laitoksen koneilla ja fuksikannettavilla 9.2. alkaen. Jos et jostain syystä saa [asennettua](https://devcenter.heroku.com/articles/heroku-cli) herokua koneellesi, voit käyttää komentoa [npx heroku-cli](https://www.npmjs.com/package/heroku-cli).
 
 Testaa selaimen ja postmanin tai VS Code REST clientin avulla, että internetissä oleva backend toimii.
 
@@ -1026,6 +1024,8 @@ Tee repositorion juureen tiedosto README.md ja lisää siihen linkki internetiss
 #### 3.11 puhelinluettelo full stack
 
 Generoi frontendistä tuotantoversio ja lisää se internetissä olevaan sovellukseesi osan 3 [tapaa noudatellen](/osa3/#staattisten-tiedostojen-tarjoaminen-backendistä)
+
+**Huom** eihän hakemisto _build_ ole gitignoroituna projektissasi?
 
 Huolehdi myös, että frontend toimii edelleen myös paikallisesti.
 
