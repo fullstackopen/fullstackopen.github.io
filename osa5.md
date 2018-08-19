@@ -1106,6 +1106,11 @@ Jos haluat ajaa testit "normaalisti", se onnistuu komennolla
 CI=true npm test
 ```
 
+Konsoli saattaa herjata virhettä, jos sinulla ei ole asennettuna watchmania. Watchman on Facebookin kehittämä tiedoston muutoksia tarkkaileva ohjelma. Ohjelma nopeuttaa testien ajoa ja ainakin osx sierrasta ylöspäin jatkuva testien vahtiminen aiheuttaa käyttäjillä virheilmoituksia. Näistä ilmoituksista pääsee eroon asentamalla Watchmanin.
+
+Ohjeet ohjelman asentamiseen eri käyttöjärjestelmille löydät Watchmanin sivulta:
+https://facebook.github.io/watchman/
+
 Mikäli testejä suoritettaessa ei löydetä tiedostossa _src/setupTests.js_ tehtyä adapterin konfigurointia, auttaa seuraavan asetuksen lisääminen tiedostoon package-lock.json:
 
 ```
