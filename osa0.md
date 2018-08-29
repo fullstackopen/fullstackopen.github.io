@@ -54,7 +54,7 @@ Kolmen opintopisteen suorituksen edellytyksenä on osien 0-3 kaikkien tähdellä
 
 Koe suoritetaan _Moodlessa_. Pääset Moodleen Avoimen yliopiston [kurssisivun](https://courses.helsinki.fi/fi/aytkt21009/123929162) kautta. Kokeen voi suorittaa 1.5. alkaen. Kokeen viimeinen suorituspäivä on 15.12. Voit osallistua kokeeseen vasta siinä vaiheessa kun olet tehnyt _kaikki_ kolmen opintopisteen suorituksen edellyttämät tehtävät.
 
-Kokeen tuloksen näet [palautussovelluksen](https://studies.cs.helsinki.fi/fullstackopen) välilehdeltä _my submissions_ viimeistään 4 viikkoa kokeen suorittamisen jälkeen (heinäkuu saatta aiheuttaa kokeen tarkastamiseen pidemmän viiveen). Muista tallettaa opiskelijanumerosi palautussovellukseen.
+Kokeen tuloksen näet [palautussovelluksen](https://studies.cs.helsinki.fi/fullstackopen) välilehdeltä _my submissions_ viimeistään 4 viikkoa kokeen suorittamisen jälkeen (heinäkuu saattaa aiheuttaa kokeen tarkastamiseen pidemmän viiveen). Muista tallettaa opiskelijanumerosi palautussovellukseen.
 
 Suoritus rekisteröidään arvosanalla _hyväksytty_.
  
