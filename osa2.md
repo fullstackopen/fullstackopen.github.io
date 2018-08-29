@@ -10,7 +10,7 @@ permalink: /osa2/
   />
 </a>
 
-## osan 2 oppimistavoitteet
+## Osan 2 oppimistavoitteet
 
 - Web-sovellusten toiminnan perusteet
   - lisää CSS:ää
@@ -78,20 +78,20 @@ kun taas pilkulla erotellessa saat tulostettavat asiat developer-konsoliin olion
 
 Pajan ja telegrammin havaintojen perusteella tapahtumankäsittely on osoittautunut haastavaksi.
 
-Osassa 1 on nyt uusi luku [tapahtumäakasittely revisited](/osa1#tapahtumankäsittely-revisited) joka käy aihepiiriä läpi.
+Osassa 1 on nyt uusi luku [tapahtumankäsittely revisited](/osa1#tapahtumankäsittely-revisited) joka käy aihepiiriä läpi.
 
 ### Visual Studio Coden snippetit
 
 VS Codeen on helppo määritellä "snippettejä", eli Netbeansin "sout":in tapaisia oikoteitä yleisesti käytettyjen koodinpätkien generointiin. Ohje snippetien luomiseen [täällä](https://github.com/FullStack-HY/FullStack-Hy.github.io/blob/master/snippet_ohje.md)
 
-VS Code -plugineina löytyy myös hyödyllisiä valmiiksi määriteltyjä snippetejä, esim.
+VS Code -plugineina löytyy myös hyödyllisiä valmiiksi määriteltyjä snippettejä, esim.
 [tämä](https://marketplace.visualstudio.com/items?itemName=xabikos.ReactSnippets)
 
 ### Pakolliset tehtävät, tehtävien vaikutus arvosanaan
 
-Joissain yhteyksissä on ollut pientä epäselvyyttä mitä tiettyjen tehtävien pakollisuus tarkoittaa, ja mikä eipakollisten tehtävien rooli on. Tarkennusta asiaan tehtävien sivun [alussa](/tehtävät)
+Joissain yhteyksissä on ollut pientä epäselvyyttä mitä tiettyjen tehtävien pakollisuus tarkoittaa, ja mikä ei-pakollisten tehtävien rooli on. Tarkennusta asiaan tehtävien sivun [alussa](/tehtävät)
 
-### linkkivinkit
+### Linkkivinkit
 
 Kurssisivun alaisuudessa on nyt [osio](https://fullstack-hy.github.io/linkit/), jonne kaikkien toivotaan lisäilevän hyödylliseksi kokemiaan linkkejä. Lisääminen onnistuu tekemällä pull request [tänne](https://github.com/FullStack-HY/FullStack-Hy.github.io/blob/master/linkit.md)
 
@@ -101,7 +101,7 @@ Kun lisäät linkin, laita linkin yhteyteen pieni kuvaus mitä linkin takaa löy
 
 Tästä osasta lähtien käytämme runsaasti Javascriptin [taulukkojen](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) funktionaalisia käsittelymetodeja, kuten _find_, _filter_ ja _map_. Periaate niissä on täysin sama kuin Java 8:sta tutuissa streameissa, joita on käytetty jo runsaan vuoden ajan laitoksen Ohjelmoinnin perusteissa ja jatkokurssilla.
 
-Jos taulukon funktionaalinen käsittely tuntuu vielä vieraalta, kannattaa katsoa Youtubessa olevasta videosarjasarjasta _Functional Programming in JavaScript_ ainakin kolme ensimmäistä osaa
+Jos taulukon funktionaalinen käsittely tuntuu vielä vieraalta, kannattaa katsoa Youtubessa olevasta videosarjasta _Functional Programming in JavaScript_ ainakin kolme ensimmäistä osaa
 -  [Higher-order functions](https://www.youtube.com/watch?v=BMUiFMZr7vk&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84)
 -  [Map](https://www.youtube.com/watch?v=bCqtb-Z5YGQ&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84&index=2)
 - [Reduce basics](https://www.youtube.com/watch?v=Wl98eZpkp-c&t=31s)
@@ -1457,7 +1457,7 @@ REST:issä yksittäisiä asioita esim. meidän tapauksessamme muistiinpanoja kut
 
 Resursseja haetaan palvelimelta HTTP GET -pyynnöillä. Esim. HTTP GET osoitteeseen _notes/3_ palauttaa muistiinpanon, jonka id-kentän arvo on 3. Kun taas HTTP GET -pyyntö osoitteeseen _notes_ palauttaa kaikki muistiinpanot.
 
-Uuden muistiinpanoa vastaavan resurssin luominen tapahtuu json-serverin noudattamassa REST-konventiossa tekemällä HTTP POST -pyyntö, joka kohdistuu myös samaan osoiteeseen _notes_. Pyynnön mukana sen runkona eli _bodynä_ lähetetään luotavan muistiinpanon tiedot.
+Uuden muistiinpanoa vastaavan resurssin luominen tapahtuu json-serverin noudattamassa REST-konventiossa tekemällä HTTP POST -pyyntö, joka kohdistuu myös samaan osoitteeseen _notes_. Pyynnön mukana sen runkona eli _bodynä_ lähetetään luotavan muistiinpanon tiedot.
 
 json-server vaatii, että tiedot lähetetään JSON-muodossa, eli käytännössä sopivasti muotoiltuna merkkijonona ja asettamalla headerille _Content-Type_ arvo _application/json_.
 
@@ -1978,7 +1978,7 @@ toggleImportanceOf = (id) => {
 
 Virheilmoitus annetaan vanhan kunnon [alert](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert)-dialogin avulla ja palvelimelta poistettu muistiinpano poistetaan tilasta.
 
-Olemattoman muistiinpanon poistaminen siis tapahtuu metodilla [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), joka muodostaa uuden taulukon, jonka sisällöksi tulee aluperäisen taulukon sisällöstä ne alkiot, joille parametrina oleva funktio palauttaa arvon true:
+Olemattoman muistiinpanon poistaminen siis tapahtuu metodilla [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), joka muodostaa uuden taulukon, jonka sisällöksi tulee alkuperäisen taulukon sisällöstä ne alkiot, joille parametrina oleva funktio palauttaa arvon true:
 
 ```js
 this.state.notes.filter(n => n.id !== id) }
