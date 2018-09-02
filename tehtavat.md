@@ -22,7 +22,7 @@ Kaikkien osien deadline on 15.12.2018 klo 23:59
 
 Osa tehtävistä on seuraavaan osaan etenemisen kannalta suositeltavia ja osa vapaaehtoisia. Vapaaehtoiset on merkattu tähdellä. 
 
-Voit toki jättää tähdellä merkkaamattomiakin tehtäviä tekemättä. mutta niiden tekemättä jättäminen saattaa aiheuttaa haasteita seuraaviin osiin. Huomaa myös, että kaikkien osien 0-3 tähdellä merkkaamattomien tehtävien tekeminen on edellytyksenä 3 opintopisteen laajuiseen suoritukseen!.
+Voit toki jättää tähdellä merkkaamattomiakin tehtäviä tekemättä, mutta niiden tekemättä jättäminen saattaa aiheuttaa haasteita seuraaviin osiin. Huomaa myös, että kaikkien osien 0-3 tähdellä merkkaamattomien tehtävien tekeminen on edellytyksenä 3 opintopisteen laajuiseen suoritukseen.
 
 Arvosana ja opintopistemäärä lasketaan _kaikkien_ tehtävien summan perusteella. Katso tarkemmin osan 0 luvut [suoritustapa](/osa0#suoritustapa) ja [arvosteluperusteet](/osa0#arvosteluperusteet). 
 
@@ -94,13 +94,13 @@ Kaikki oleellinen tämän ja seuraavien kolmen tehtävän tekemiseen liittyvä i
 
 #### 0.4 Uusi muistiinpano
 
-Tee kaavio tilanteesta, missä käyttäjä luo uuden muistiinpanon ollessaan sivulla <https://fullstack-exampleapp.herokuapp.com/notes>, eli kirjoittaa tekstikenttään jotain ja painaa nappia _Talleta_
+Tee kaavio tilanteesta, missä käyttäjä luo uuden muistiinpanon ollessaan sivulla <https://fullstack-exampleapp.herokuapp.com/notes>, eli kirjoittaa tekstikenttään jotain ja painaa nappia _Talleta_.
 
 Kirjoita tarvittaessa palvelimella tai selaimessa tapahtuvat operaatiot sopivina kommentteina kaavion sekaan.
 
 #### 0.5 Single page app
 
-Tee kaavio tilanteesta, missä käyttäjä menee selaimella osoitteeseen <https://fullstack-exampleapp.herokuapp.com/spa> eli muistiinpanojen [single page app](../osa0/#single-page-app)-versioon
+Tee kaavio tilanteesta, missä käyttäjä menee selaimella osoitteeseen <https://fullstack-exampleapp.herokuapp.com/spa> eli muistiinpanojen [single page app](../osa0/#single-page-app) -versioon.
 
 #### 0.6 Uusi muistiinpano SPA:ssa
 
@@ -346,9 +346,9 @@ Muuta sovellusta siten, että numeeriset tilastot näytetään ainoastaan jos pa
 
 #### 1.10* unicafe osa5
 
-Jos olet määritellyt jokaiselle napille oman tapahtumankäsittelijän, refaktoroi sovellustasi siten, että kaikki napit käyttävät samaa tapahtumankäsittelijäfunktiota samaan tapaan kuin materiaalin luvussa [funktio joka palauttaa funktion](/osa1/#funktio-joka-palauttaa-funktion)
+Jos olet määritellyt jokaiselle napille oman tapahtumankäsittelijän, refaktoroi sovellustasi siten, että kaikki napit käyttävät samaa tapahtumankäsittelijäfunktiota samaan tapaan kuin materiaalin luvussa [funktio joka palauttaa funktion](/osa1/#funktio-joka-palauttaa-funktion).
 
-Pari vihjettä. Ensinnäkin kannattaa muistaa, että olion kenttiin voi viitata pistenotaation lisäksi hakasulkeilla, eli
+Pari vihjettä. Ensinnäkin kannattaa muistaa, että olion kenttiin voi viitata pistenotaation lisäksi hakasulkeilla, eli:
 
 ```js
 const olio = {
@@ -370,12 +370,12 @@ Myös ns. [Computed property names](https://developer.mozilla.org/en-US/docs/Web
 
 #### 1.11 unicafe osa6
 
-Toteuta tilastojen näyttäminen HTML:n [taulukkona](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics) siten, että saat sovelluksesi näyttämään suunnilleen seuraavanlaiselta
+Toteuta tilastojen näyttäminen HTML:n [taulukkona](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics) siten, että saat sovelluksesi näyttämään suunnilleen seuraavanlaiselta:
 
 ![]({{ "/images/teht/6a.png" | absolute_url }})
 
 
-Muista pitää konsoli koko ajan auki. Jos saat konsoliin seuraavan warningin
+Muista pitää konsoli koko ajan auki. Jos saat konsoliin seuraavan warningin:
 
 ![]({{ "/assets/teht/7.png" | absolute_url }})
 
@@ -530,7 +530,7 @@ const App = () => {
 
 Määrittele sovellukseen yksittäisen kurssin muotoilusta huolehtiva komponentti _Kurssi_.
 
-Sovelluksen komponenttirakenne voi olla esim. seuraava
+Sovelluksen komponenttirakenne voi olla esim. seuraava:
 
 <pre>
 App
@@ -554,13 +554,13 @@ Varmista, että konsolissa ei näy mitään virheilmoituksia!
 
 #### 2.2 tehtävien määrä
 
-Ilmoita myös kurssin yhteenlaskettu tehtävien lukumäärä
+Ilmoita myös kurssin yhteenlaskettu tehtävien lukumäärä:
 
 ![]({{ "/images/teht/9.png" | absolute_url }})
 
 #### 2.3* reduce
 
-Jos et jo niin tehnyt, laske koodissasi tehtävien määrä taulukon metodilla [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+Jos et jo niin tehnyt, laske koodissasi tehtävien määrä taulukon metodilla [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce).
 
 #### 2.4 monta kurssia
 
@@ -680,7 +680,7 @@ Joskus tilan muuttujia ja tarvittaessa muitakin voi olla hyödyllistä renderöi
 
 Muista myös osan 1 luku [React-sovellusten debuggaus](#react-sovellusten-debuggaus), erityisesti [react developer tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) on välillä todella kätevä komponentin tilan muutosten seuraamisessa.
 
-Sovellus voi näyttää tässä vaiheessa seuraavalta
+Sovellus voi näyttää tässä vaiheessa seuraavalta:
 
 ![]({{ "/images/teht/11.png" | absolute_url }})
 
@@ -759,7 +759,7 @@ Riittää että erotat sovelluksesta kaksi komponenttia. Hyviä kandidaatteja ov
 
 #### 2.11 puhelinluettelo osa 6
 
-Talleta sovelluksen alkutila projektin juureen sijoitettavaan tiedostoon _db.json_
+Talleta sovelluksen alkutila projektin juureen sijoitettavaan tiedostoon _db.json_:
 
 ```json
 {
@@ -790,7 +790,7 @@ Talleta sovelluksen alkutila projektin juureen sijoitettavaan tiedostoon _db.jso
 
 Käynnistä json-server porttiin 3001 ja varmista selaimella osoitteesta <http://localhost:3001/persons>, että palvelin palauttaa henkilölistan.
 
-Jos saat virheilmoituksen
+Jos saat virheilmoituksen:
 
 ```bash
 events.js:182
@@ -814,11 +814,11 @@ Tee sovellus, jonka avulla voit tarkastella eri maiden tietoja. Sovelluksen kann
 
 Sovelluksen käyttöliittymä on yksinkertainen. Näytettävä maa haetaan kirjoittamalla hakuehto etsintäkenttään.
 
-Jos ehdon täyttäviä maita on liikaa (yli 10), kehoitetaan tarkentamaan hakuehtoa
+Jos ehdon täyttäviä maita on liikaa (yli 10), kehoitetaan tarkentamaan hakuehtoa:
 
 ![]({{ "/assets/teht/13.png" | absolute_url }})
 
-Jos maita on alle kymmenen, mutta yli 1 näytetään hakuehdon täyttävät maat
+Jos maita on alle kymmenen, mutta yli 1 näytetään hakuehdon täyttävät maat:
 
 ![]({{ "/assets/teht/14.png" | absolute_url }})
 
@@ -842,7 +842,7 @@ Huomaa, että saat "nimestä" klikattavan kiinnittämällä nimen sisältävää
 </div>
 ```
 
-### palvelimella olevan datan päivittäminen
+### Palvelimella olevan datan päivittäminen
 
 #### 2.14 puhelinluettelo osa 7
 
