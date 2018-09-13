@@ -156,7 +156,7 @@ Kun nyt reloadaat sivun, kertoo konsoli, että tapahtuu kaksi asiaa
 
 ![]({{ "/images/1/2.png" | absolute_url }})
 
-Jos ruutusi on pieni, saatat joutua isontamaan konsoli-ikkunaa, jotta saat selaimen tekemät haut näkyviin.
+Jos ruutusi on pieni, saatat joutua suurentamaan konsoli-ikkunaa, jotta saat selaimen tekemät haut näkyviin.
 
 Klikkaamalla näistä ensimmäistä, paljastuu tarkempaa tietoa siitä mistä on kyse:
 
