@@ -777,7 +777,7 @@ Palataan taas sovelluksen pariin. Kun tiedämme, että sovellus vastaanottaa tie
 
 ```js
 app.post('/notes', (request, response) => {
-  notes.length > 0 ? notes.map(n => n.id).sort((a,b) => a - b).reverse()[0] : 1
+  const maxId = notes.length > 0 ? notes.map(n => n.id).sort((a,b) => a - b).reverse()[0] : 1
   const note = request.body
   note.id = maxId + 1
 
@@ -793,7 +793,7 @@ Tämän hetkisessä versiossa on vielä se ongelma, että voimme HTTP POST -pyyn
 
 ```js
 const generateId = () => {
-  notes.length > 0 ? notes.map(n => n.id).sort((a,b) => a - b).reverse()[0] : 1
+  const maxId = notes.length > 0 ? notes.map(n => n.id).sort((a,b) => a - b).reverse()[0] : 1
   return maxId + 1
 }
 
