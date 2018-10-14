@@ -818,7 +818,7 @@ const person = {
 }
 ```
 
-koska muuttujien ja luotavan olio kenttien nimi nyt on sama, riittää ES6:ssa kirjoittaa:
+koska muuttujien ja luotavan olion kenttien nimi nyt on sama, riittää ES6:ssa kirjoittaa:
 
 ```js
 const person = { name, age }
