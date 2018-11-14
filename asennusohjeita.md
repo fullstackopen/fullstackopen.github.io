@@ -28,6 +28,9 @@ Tapoja on monia, tässä eräs (ei edellytä pääkäyttöoikeuksia):
 3. Lisää polkuun uuden hakemiston sisällä oleva bin-hakemisto (eli .bashrc tiedostoon, korvaa VERSIO:
 ```export PATH=~/node-VERSIO-linux-x64/bin:$PATH```
 
+4. Pakota Linux lataamaan.bashrc:n uudelleen:
+```source .bashrc```
+
 Tarkista komennoilla _node -v_ ja _npm -v_ että asennus onnistui ja koneella on riittävän uudet versiot Nodesta (8.9.4 tai suurempi) ja npm:stä (5.3 tai suurempi).
 
 Jos sinulla on pääkäyttäjän oikeudet, on asennus mahdollista suorittaa paketinhallintaa käyttäen. Tällöin täytyy kuitenkin varmistaa, että Nodesta tulee käyttöön riittävän tuore versio (vähintään 8.6). Jos ei, voi päivityksen hoitaa _nvm_-työkalulla. Jos jollakin on ohje tämän tekemiseen, niin otan mielellään pull requestin vastaan.
