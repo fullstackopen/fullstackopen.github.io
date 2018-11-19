@@ -1129,7 +1129,7 @@ test('note without content is not added ', async () => {
     important: true
   }
 
-  const intialNotes = await api
+  const initialNotes = await api
     .get('/api/notes')
 
   await api
@@ -1140,7 +1140,7 @@ test('note without content is not added ', async () => {
   const response = await api
     .get('/api/notes')
 
-  expect(response.body.length).toBe(intialNotes.body.length)
+  expect(response.body.length).toBe(initialNotes.length)
 })
 ```
 
