@@ -1594,7 +1594,7 @@ Laajenna blogia siten, että blogiin tulee tieto sen lisänneestä käyttäjäst
 
 Muokkaa blogien lisäystä osan 4 luvun [populate](/osa4/#populate) tapaan siten, että blogin lisäämisen yhteydessä määritellään blogin lisääjäksi _joku_ järjestelmän tietokannassa olevista käyttäjistä (esim. ensimmäisenä löytyvä). Tässä vaiheessa ei ole väliä kuka käyttäjistä määritellään lisääväksi. Toiminnallisuus viimeistellään tehtävässä 4.19.
 
-Muokaa kaikkien blogien listausta siten, että blogien yhteydessä näytetään lisääjän tiedot:
+Muokkaa kaikkien blogien listausta siten, että blogien yhteydessä näytetään lisääjän tiedot:
 
 ![](https://raw.githubusercontent.com/mluukkai/mluukkai.github.io/master/assets/teht/25.png)
 
