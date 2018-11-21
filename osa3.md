@@ -1126,7 +1126,7 @@ rm -rf ../../osa3/notebackend/build
 cp -r build ../../osa3/notebackend/
 ```
 
-Skripille pitää antaa vielä suoritusoikeudet:
+Skriptille pitää antaa vielä suoritusoikeudet:
 
 ```bash
 chmod u+x deploy.sh
