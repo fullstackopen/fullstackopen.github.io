@@ -1926,7 +1926,7 @@ Kun storessa olevan tilan arvo muuttuu, ei React osaa automaattisesti renderöid
 
 ## Redux-muistiinpanot
 
-Tavoitteenamme on muuttaa muistiinpanosovellus käyttämään tilanhallintaan reduxia. Katsotaan kuitenkin ensin eräitä konsepteja hieman yksinkertaistetun muistiinpanosovelluksen kautta.
+Tavoitteenamme on muuttaa muistiinpanosovellus käyttämään tilanhallintaan Reduxia. Katsotaan kuitenkin ensin eräitä konsepteja hieman yksinkertaistetun muistiinpanosovelluksen kautta.
 
 Sovelluksen ensimmäinen versio seuraavassa
 
@@ -2009,7 +2009,7 @@ const noteReducer = (state = [], action) => {
 
 Tila on nyt taulukko. _NEW_NOTE_-tyyppisen actionin seurauksena tilaan lisätään uusi muistiinpano metodilla [push](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push).
 
-Sovellus näyttää toimivan, mutta määrittelemämme reduceri on huono, se rikkoo Reactin reducerien [perusolettamusta](https://github.com/reactjs/redux/blob/master/docs/basics/Reducers.md#handling-actions) siitä, että reducerien tulee olla [puhtaita funktioita](https://en.wikipedia.org/wiki/Pure_function).
+Sovellus näyttää toimivan, mutta määrittelemämme reduceri on huono, se rikkoo Reduxin reducerien [perusolettamusta](https://github.com/reactjs/redux/blob/master/docs/basics/Reducers.md#handling-actions) siitä, että reducerien tulee olla [puhtaita funktioita](https://en.wikipedia.org/wiki/Pure_function).
 
 Puhtaat funktiot ovat sellaisia, että ne _eivät aiheuta mitään sivuvaikutuksia_ ja niiden tulee aina palauttaa sama vastaus samoilla parametreilla kutsuttaessa.
 
