@@ -1,8 +1,8 @@
 ---
 layout: page
-title: osa 6
+title: osa 8
 inheader: yes
-permalink: /osa6/
+permalink: /osa8/
 ---
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
@@ -10,4 +10,4 @@ permalink: /osa6/
   />
 </a>
 
-# Ketterä laadunhallinta
+# Lean
